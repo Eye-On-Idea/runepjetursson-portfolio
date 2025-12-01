@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import GlassCard from "~/components/GlassCard.vue";
+
 const { getPersonal, getContactCta } = useRuneContent();
 const { t } = useI18n();
 const personal = computed(() => getPersonal());
@@ -36,66 +38,162 @@ const form = ref({
 </script>
 
 <template>
-  <div class="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50">
-    <div class="max-w-4xl mx-auto px-6 md:px-10 py-16 space-y-12">
-      <header class="space-y-3 text-center">
-        <p class="text-sm font-semibold text-brand-600">{{ personal.company_freelance }}</p>
-        <h1 class="text-4xl md:text-5xl font-extrabold">{{ contact.heading }}</h1>
-        <p class="text-lg text-zinc-700 dark:text-zinc-300">{{ contact.body }}</p>
+  <div class="min-h-screen bg-neutral-950 text-neutral-50 overflow-hidden">
+    <!-- Animated background gradients -->
+    <div class="fixed inset-0 pointer-events-none opacity-15">
+      <div class="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full blur-[120px] bg-brand-500/40 animate-[pulse-slow_9s_ease-in-out_infinite]" />
+      <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] rounded-full blur-[120px] bg-accent-500/30 animate-[pulse-slow_11s_ease-in-out_infinite]" />
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-5 sm:px-6 md:px-10 lg:px-12 py-12 md:py-20 space-y-12 md:space-y-16">
+      <!-- Header -->
+      <header class="space-y-6 text-center max-w-3xl mx-auto">
+        <div class="inline-block">
+          <p class="text-sm font-bold text-brand-300 uppercase tracking-[0.12em] px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/20">
+            {{ personal.company_freelance }}
+          </p>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight">
+          {{ contact.heading }}
+        </h1>
+        <p class="text-xl md:text-2xl text-neutral-200 leading-relaxed">{{ contact.body }}</p>
       </header>
 
-      <section class="grid md:grid-cols-2 gap-8">
-        <div class="space-y-4">
-          <h2 class="text-xl font-bold">{{ t("portfolio.sections.contact.preferred") }}</h2>
-          <ul class="space-y-3 text-zinc-700 dark:text-zinc-300">
-            <li v-for="item in contact.preferred_collaborations" :key="item" class="flex gap-2">
-              <span class="i-lucide-check text-brand-500 mt-1" />
-              <span>{{ item }}</span>
-            </li>
-          </ul>
-
-          <div class="space-y-3">
-            <h2 class="text-xl font-bold">{{ t("portfolio.sections.contact.contactInfo") }}</h2>
-            <div
-              v-for="method in methods"
-              :key="method.label"
-              class="p-4 rounded-xl bg-white/80 dark:bg-white/5 border border-white/30 dark:border-white/10 flex gap-3 items-start"
-            >
-              <UIcon :name="method.icon" class="h-5 w-5 text-brand-500 mt-1" />
-              <div>
-                <p class="font-semibold">{{ method.label }}</p>
-                <a :href="method.link" class="text-brand-700 dark:text-brand-200 font-semibold hover:underline">
-                  {{ method.value }}
-                </a>
-                <p class="text-sm text-zinc-600 dark:text-zinc-400">{{ method.description }}</p>
+      <!-- Main Content Grid -->
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        <!-- Left Column - Info & Methods -->
+        <div class="space-y-8">
+          <!-- Preferred Collaborations -->
+          <GlassCard
+            :displacement-scale="40"
+            :blur-amount="0.07"
+            :corner-radius="20"
+            wrapper-class="p-8 rounded-2xl bg-white/5 border border-white/10 space-y-6 glass-card-hover"
+          >
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-linear-to-br from-brand-500/20 to-accent-500/20 border border-white/10 flex items-center justify-center shrink-0">
+                <UIcon name="i-lucide-sparkles" class="w-5 h-5 text-brand-300" />
               </div>
+              <h2 class="text-xl font-bold text-white">{{ t("portfolio.sections.contact.preferred") }}</h2>
+            </div>
+            <ul class="space-y-4">
+              <li v-for="item in contact.preferred_collaborations" :key="item" class="flex gap-3 items-start">
+                <UIcon name="i-lucide-check-circle" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5" />
+                <span class="text-base text-neutral-200">{{ item }}</span>
+              </li>
+            </ul>
+          </GlassCard>
+
+          <!-- Contact Methods -->
+          <div class="space-y-5">
+            <div class="flex items-center gap-3 px-2">
+              <UIcon name="i-lucide-mail" class="w-6 h-6 text-brand-300" />
+              <h2 class="text-xl font-bold text-white">{{ t("portfolio.sections.contact.contactInfo") }}</h2>
+            </div>
+            <div class="space-y-4">
+              <a
+                v-for="method in methods"
+                :key="method.label"
+                :href="method.link"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group block p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 smooth-hover"
+              >
+                <div class="flex gap-4 items-start">
+                  <div class="w-12 h-12 rounded-lg bg-linear-to-br from-brand-500/20 to-accent-500/20 border border-white/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                    <UIcon :name="method.icon" class="w-6 h-6 text-brand-300" />
+                  </div>
+                  <div class="flex-1 space-y-2">
+                    <p class="text-lg font-bold text-white group-hover:text-brand-300 transition-colors">{{ method.label }}</p>
+                    <p class="text-brand-300 font-semibold">{{ method.value }}</p>
+                    <p class="text-sm text-neutral-300">{{ method.description }}</p>
+                  </div>
+                  <UIcon name="i-lucide-external-link" class="w-5 h-5 text-neutral-400 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </a>
             </div>
           </div>
         </div>
 
-        <div class="p-6 rounded-2xl bg-white/80 dark:bg-white/5 border border-white/30 dark:border-white/10 shadow space-y-4">
-          <h2 class="text-xl font-bold">{{ t("portfolio.form.title") }}</h2>
-          <form class="space-y-3" @submit.prevent>
-            <label class="block space-y-1">
-              <span class="text-sm font-semibold">{{ t("portfolio.form.name") }}</span>
-              <input v-model="form.name" type="text" class="w-full px-4 py-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-brand-500" :placeholder="t('portfolio.form.name')" />
+        <!-- Right Column - Contact Form -->
+        <GlassCard
+          :displacement-scale="48"
+          :blur-amount="0.08"
+          :corner-radius="24"
+          wrapper-class="p-8 lg:p-10 rounded-3xl bg-white/5 border border-white/10 space-y-6 glass-card-hover"
+        >
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-10 h-10 rounded-lg bg-linear-to-br from-brand-500/20 to-accent-500/20 border border-white/10 flex items-center justify-center shrink-0">
+              <UIcon name="i-lucide-send" class="w-5 h-5 text-brand-300" />
+            </div>
+            <h2 class="text-2xl font-bold text-white">{{ t("portfolio.form.title") }}</h2>
+          </div>
+          <form class="space-y-5" @submit.prevent>
+            <label class="block space-y-2">
+              <span class="text-sm font-bold text-neutral-200 flex items-center gap-2">
+                <UIcon name="i-lucide-user" class="w-4 h-4" />
+                {{ t("portfolio.form.name") }}
+              </span>
+              <input
+                v-model="form.name"
+                type="text"
+                class="w-full px-5 py-3.5 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all"
+                :placeholder="t('portfolio.form.name')"
+              />
             </label>
-            <label class="block space-y-1">
-              <span class="text-sm font-semibold">{{ t("portfolio.form.email") }}</span>
-              <input v-model="form.email" type="email" class="w-full px-4 py-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="you@example.com" />
+            <label class="block space-y-2">
+              <span class="text-sm font-bold text-neutral-200 flex items-center gap-2">
+                <UIcon name="i-lucide-mail" class="w-4 h-4" />
+                {{ t("portfolio.form.email") }}
+              </span>
+              <input
+                v-model="form.email"
+                type="email"
+                class="w-full px-5 py-3.5 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all"
+                placeholder="you@example.com"
+              />
             </label>
-            <label class="block space-y-1">
-              <span class="text-sm font-semibold">{{ t("portfolio.form.project") }}</span>
-              <input v-model="form.project" type="text" class="w-full px-4 py-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-brand-500" :placeholder="t('portfolio.form.project')" />
+            <label class="block space-y-2">
+              <span class="text-sm font-bold text-neutral-200 flex items-center gap-2">
+                <UIcon name="i-lucide-briefcase" class="w-4 h-4" />
+                {{ t("portfolio.form.project") }}
+              </span>
+              <input
+                v-model="form.project"
+                type="text"
+                class="w-full px-5 py-3.5 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all"
+                :placeholder="t('portfolio.form.project')"
+              />
             </label>
-            <label class="block space-y-1">
-              <span class="text-sm font-semibold">{{ t("portfolio.form.message") }}</span>
-              <textarea v-model="form.message" rows="4" class="w-full px-4 py-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 focus:outline-none focus:ring-2 focus:ring-brand-500" :placeholder="t('portfolio.form.message')"></textarea>
+            <label class="block space-y-2">
+              <span class="text-sm font-bold text-neutral-200 flex items-center gap-2">
+                <UIcon name="i-lucide-message-square" class="w-4 h-4" />
+                {{ t("portfolio.form.message") }}
+              </span>
+              <textarea
+                v-model="form.message"
+                rows="5"
+                class="w-full px-5 py-3.5 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all resize-none"
+                :placeholder="t('portfolio.form.message')"
+              ></textarea>
             </label>
-            <UButton type="submit" color="primary" size="lg" block>{{ t("portfolio.form.submit") }}</UButton>
+            <button
+              type="submit"
+              class="group w-full px-6 py-4 rounded-xl bg-brand-500 text-neutral-900 font-bold shadow-lg shadow-brand-500/30 hover:bg-brand-400 hover:shadow-xl hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <span>{{ t("portfolio.form.submit") }}</span>
+              <UIcon name="i-lucide-send" class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
           </form>
-        </div>
-      </section>
+        </GlassCard>
+      </div>
+
+      <!-- Additional Info or CTA -->
+      <div class="text-center space-y-4 pt-8">
+        <p class="text-neutral-300 text-lg">
+          You can also reach out directly via email or LinkedIn for a quicker response.
+        </p>
+      </div>
     </div>
   </div>
 </template>

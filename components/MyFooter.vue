@@ -11,15 +11,9 @@ const ecosystemLinks = [
   { name: "Erfaring", href: "/#experience" },
 ];
 
-const companyLinks = [
-  { name: "Om mig", href: "/about" },
-];
+const companyLinks = [{ name: "Om mig", href: "/about" }];
 
-const supportLinks = [
-  { name: "Kontakt", href: "/contact" },
-];
-
-const legalLinks = [];
+const supportLinks = [{ name: "Kontakt", href: "/contact" }];
 
 const socialLinks = [
   {
@@ -36,29 +30,32 @@ const socialLinks = [
 </script>
 
 <template>
-  <footer class="bg-zinc-900 dark:bg-zinc-900 border-t border-zinc-800">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 py-16">
+  <footer
+    class="relative bg-neutral-950 border-t border-white/10 overflow-hidden"
+  >
+    <!-- Decorative background gradient -->
+    <div class="absolute inset-0 pointer-events-none opacity-10">
+      <div
+        class="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full blur-[120px] bg-brand-500/30"
+      ></div>
+      <div
+        class="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full blur-[120px] bg-accent-500/30"
+      ></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
       <!-- Main Footer Content -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
         <!-- Brand Section -->
         <div class="lg:col-span-2">
-          <div class="flex items-center gap-3 mb-6">
-            <div
-              class="flex items-center justify-center w-12 h-12 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20"
-            >
-              <img
-                src="/assets/logo/logosvg_sunrise.svg"
-                alt="Rune Pjetursson logo"
-                class="w-8 h-8"
-              />
-            </div>
+          <div class="flex items-center gap-4 mb-6 group">
             <span
-              class="text-2xl font-extrabold tracking-widest text-brand-50 uppercase"
+              class="text-2xl font-extrabold tracking-widest text-white uppercase group-hover:text-brand-300 transition-colors"
             >
               {{ personal.full_name }}
             </span>
           </div>
-          <p class="text-zinc-400 mb-6 max-w-sm leading-relaxed">
+          <p class="text-neutral-300 text-lg mb-8 max-w-sm leading-relaxed">
             {{ headline.short }}
           </p>
 
@@ -70,10 +67,13 @@ const socialLinks = [
               :href="social.href"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-center w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-200 group"
+              class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/25 transition-all duration-300 smooth-hover"
               :aria-label="social.name"
             >
-              <UIcon :name="social.icon" class="size-6" />
+              <UIcon
+                :name="social.icon"
+                class="w-6 h-6 text-neutral-300 group-hover:text-brand-300 transition-colors"
+              />
             </a>
           </div>
         </div>
@@ -81,7 +81,7 @@ const socialLinks = [
         <!-- Ecosystem Links -->
         <div>
           <h3
-            class="text-sm font-bold text-brand-200 uppercase tracking-wider mb-4"
+            class="text-sm font-bold text-brand-300 uppercase tracking-[0.12em] mb-5"
           >
             Sektioner
           </h3>
@@ -89,8 +89,11 @@ const socialLinks = [
             <li v-for="link in ecosystemLinks" :key="link.name">
               <a
                 :href="link.href"
-                class="text-zinc-400 hover:text-brand-300 transition-colors duration-200 text-sm"
+                class="group text-neutral-300 hover:text-white transition-colors duration-300 text-base font-medium flex items-center gap-2"
               >
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-brand-400 opacity-0 group-hover:opacity-100 transition-opacity"
+                ></span>
                 {{ link.name }}
               </a>
             </li>
@@ -100,7 +103,7 @@ const socialLinks = [
         <!-- Company Links -->
         <div>
           <h3
-            class="text-sm font-bold text-brand-200 uppercase tracking-wider mb-4"
+            class="text-sm font-bold text-brand-300 uppercase tracking-[0.12em] mb-5"
           >
             Om
           </h3>
@@ -108,8 +111,11 @@ const socialLinks = [
             <li v-for="link in companyLinks" :key="link.name">
               <NuxtLink
                 :to="link.href"
-                class="text-zinc-400 hover:text-brand-300 transition-colors duration-200 text-sm"
+                class="group text-neutral-300 hover:text-white transition-colors duration-300 text-base font-medium flex items-center gap-2"
               >
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-brand-400 opacity-0 group-hover:opacity-100 transition-opacity"
+                ></span>
                 {{ link.name }}
               </NuxtLink>
             </li>
@@ -119,7 +125,7 @@ const socialLinks = [
         <!-- Support Links -->
         <div>
           <h3
-            class="text-sm font-bold text-brand-200 uppercase tracking-wider mb-4"
+            class="text-sm font-bold text-brand-300 uppercase tracking-[0.12em] mb-5"
           >
             Kontakt
           </h3>
@@ -127,8 +133,11 @@ const socialLinks = [
             <li v-for="link in supportLinks" :key="link.name">
               <NuxtLink
                 :to="link.href"
-                class="text-zinc-400 hover:text-brand-300 transition-colors duration-200 text-sm"
+                class="group text-neutral-300 hover:text-white transition-colors duration-300 text-base font-medium flex items-center gap-2"
               >
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-brand-400 opacity-0 group-hover:opacity-100 transition-opacity"
+                ></span>
                 {{ link.name }}
               </NuxtLink>
             </li>
@@ -160,20 +169,22 @@ const socialLinks = [
       -->
       <!-- Bottom Bar -->
       <div
-        class="pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4"
+        class="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6"
       >
-        <p class="text-sm text-zinc-500">
-          © {{ currentYear }} {{ personal.full_name }} · {{ personal.company_freelance }}
+        <p class="text-base text-neutral-400 font-medium">
+          © {{ currentYear }}
+          <span class="text-white font-bold">{{ personal.full_name }}</span> ·
+          {{ personal.company_freelance }}
         </p>
 
-        <div class="flex flex-wrap gap-6">
+        <div class="flex flex-wrap gap-8">
           <NuxtLink
             v-for="link in legalLinks"
             :key="link.name"
             :to="link.href"
-            class="text-sm text-zinc-500 hover:text-brand-300 transition-colors duration-200"
+            class="text-base text-neutral-400 hover:text-brand-300 transition-colors duration-300 font-medium"
           >
-            {{ t(link.name) }}
+            {{ link.name }}
           </NuxtLink>
         </div>
       </div>
