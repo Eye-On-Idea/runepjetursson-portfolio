@@ -20,32 +20,59 @@ const { t } = useI18n();
 </script>
 
 <template>
-  <section id="hero" class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center pt-8 md:pt-12">
+  <section
+    id="hero"
+    class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center pt-8 md:pt-12"
+  >
     <header class="space-y-7 lg:space-y-8">
-      <p class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-white/15 bg-white/6 backdrop-blur-sm smooth-hover">
-        <span class="text-sm font-bold text-neutral-50">{{ props.personal.company_freelance }}</span>
+      <p
+        class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-white/15 bg-white/6 backdrop-blur-sm smooth-hover"
+      >
+        <span class="text-sm font-bold text-neutral-50">{{
+          props.personal.company_freelance
+        }}</span>
         <span class="text-neutral-400" aria-hidden="true">&bull;</span>
-        <span class="text-sm font-medium text-neutral-200">{{ props.personal.location }}</span>
+        <span class="text-sm font-medium text-neutral-200">{{
+          props.personal.location
+        }}</span>
       </p>
       <div class="space-y-4">
-        <p class="text-base md:text-lg text-accent-300 font-bold uppercase tracking-wide">{{ props.personal.title_secondary }}</p>
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] text-white bg-clip-text">
+        <p
+          class="text-base md:text-lg text-accent-300 font-bold uppercase tracking-wide"
+        >
+          {{ props.personal.title_secondary }}
+        </p>
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] text-white bg-clip-text"
+        >
           {{ props.personal.full_name }}
         </h1>
-        <p class="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-300 leading-tight">
+        <p
+          class="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-300 leading-tight"
+        >
           {{ props.personal.title_primary }}
         </p>
       </div>
-      <p class="text-lg md:text-xl text-neutral-200 leading-relaxed max-w-2xl">{{ props.headline.short }}</p>
-      <p class="text-base md:text-lg text-neutral-300 leading-relaxed max-w-xl">{{ props.headline.tagline }}</p>
-      <nav aria-label="Primary calls to action" class="flex flex-wrap gap-4 pt-4">
+      <p class="text-lg md:text-xl text-neutral-200 leading-relaxed max-w-2xl">
+        {{ props.headline.short }}
+      </p>
+      <p class="text-base md:text-lg text-neutral-300 leading-relaxed max-w-xl">
+        {{ props.headline.tagline }}
+      </p>
+      <nav
+        aria-label="Primary calls to action"
+        class="flex flex-wrap gap-4 pt-4"
+      >
         <NuxtLink
           to="/contact"
           class="group px-6 py-3.5 rounded-xl bg-brand-500 text-neutral-900 font-bold shadow-lg shadow-brand-500/30 hover:bg-brand-400 hover:shadow-xl hover:shadow-brand-500/40 hover:-translate-y-0.5 transition-all duration-300"
         >
           <span class="flex items-center gap-2">
             {{ t("portfolio.hero.ctaPrimary") }}
-            <UIcon name="i-lucide-arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <UIcon
+              name="i-lucide-arrow-right"
+              class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+            />
           </span>
         </NuxtLink>
         <NuxtLink
@@ -57,38 +84,18 @@ const { t } = useI18n();
       </nav>
       <ul class="flex flex-wrap gap-2.5 pt-2 list-none p-0">
         <li v-for="chip in props.focusChips" :key="chip">
-          <UBadge color="primary" variant="soft" class="font-bold text-sm px-3 py-1.5">
+          <UBadge
+            color="primary"
+            variant="soft"
+            class="font-bold text-sm px-3 py-1.5"
+          >
             {{ chip }}
           </UBadge>
         </li>
       </ul>
     </header>
 
-    <aside class="space-y-5 lg:space-y-6" aria-label="About summary">
-      <GlassCard
-        :displacement-scale="64"
-        :blur-amount="0.08"
-        :corner-radius="24"
-        wrapper-class="p-8 lg:p-10 rounded-3xl bg-white/5 border border-white/10 space-y-6 glass-card-hover h-full"
-      >
-        <article class="space-y-6">
-          <header class="flex items-center gap-3">
-            <div class="w-2 h-8 bg-linear-to-b from-brand-400 to-accent-400 rounded-full"></div>
-            <h3 class="text-2xl font-bold text-white">{{ t("portfolio.about.cardTitle") }}</h3>
-          </header>
-          <p class="text-neutral-200 leading-relaxed text-lg">{{ props.profileShort }}</p>
-          <dl class="grid grid-cols-2 gap-4">
-            <div
-              v-for="stat in props.stats"
-              :key="stat.label"
-              class="rounded-2xl bg-linear-to-br from-white/10 to-white/5 border border-white/15 px-5 py-4 smooth-hover hover:border-white/25 flex flex-col-reverse"
-            >
-              <dt class="text-sm font-medium text-neutral-300">{{ stat.label }}</dt>
-              <dd class="text-3xl font-bold text-white mb-1">{{ stat.value }}</dd>
-            </div>
-          </dl>
-        </article>
-      </GlassCard>
-    </aside>
+    <!-- INSERT IMAGE HERE -->
+    <div class="image"></div>
   </section>
 </template>

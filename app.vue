@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 
-<template class="bg-default">
+<template>
   <UApp>
     <NuxtLayout>
       <NuxtPage />

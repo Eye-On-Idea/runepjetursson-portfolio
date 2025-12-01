@@ -3,16 +3,14 @@ const colorMode = useColorMode();
 
 // Force dark mode
 onMounted(() => {
-  colorMode.preference = 'dark';
+  colorMode.preference = "dark";
 });
 </script>
 
 <template>
-  <div
-    class="default-layout min-h-screen bg-default text-default flex flex-col"
-  >
+  <div class="default-layout min-h-screen text-default flex flex-col">
     <MyHeader />
-    <main class="flex-1 bg-default">
+    <main class="flex-1">
       <slot />
     </main>
     <MyFooter />

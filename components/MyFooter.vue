@@ -1,7 +1,7 @@
 <!-- components/MyFooter.vue -->
 <script setup lang="ts">
 const currentYear = new Date().getFullYear();
-const { getPersonal, getHeadline, getContactCta } = useRuneContent();
+const { getPersonal, getHeadline } = useRuneContent();
 const personal = computed(() => getPersonal());
 const headline = computed(() => getHeadline());
 
@@ -14,6 +14,12 @@ const ecosystemLinks = [
 const companyLinks = [{ name: "Om mig", href: "/about" }];
 
 const supportLinks = [{ name: "Kontakt", href: "/contact" }];
+
+const legalLinks = [
+  { name: "Privatliv", href: "/privacy" },
+  { name: "Vilkår", href: "/terms" },
+  { name: "Cookies", href: "/cookies" },
+];
 
 const socialLinks = [
   {
@@ -171,18 +177,20 @@ const socialLinks = [
       <div
         class="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6"
       >
-        <p class="text-base text-neutral-400 font-medium">
-          © {{ currentYear }}
-          <span class="text-white font-bold">{{ personal.full_name }}</span> ·
+        <p
+          class="text-base text-neutral-400 font-medium text-center md:text-left"
+        >
+          &copy; {{ currentYear }}
+          <span class="text-white font-bold">{{ personal.full_name }}</span>
+          <span class="text-neutral-500">&middot;</span>
           {{ personal.company_freelance }}
         </p>
-
-        <div class="flex flex-wrap gap-8">
+        <div class="flex items-center gap-4 text-sm text-neutral-400">
           <NuxtLink
             v-for="link in legalLinks"
             :key="link.name"
             :to="link.href"
-            class="text-base text-neutral-400 hover:text-brand-300 transition-colors duration-300 font-medium"
+            class="hover:text-white transition-colors"
           >
             {{ link.name }}
           </NuxtLink>

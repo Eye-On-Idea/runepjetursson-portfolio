@@ -1,6 +1,7 @@
 <!-- components/MyHeader.vue -->
 <script lang="ts" setup>
 import type { NavigationMenuItem } from "@nuxt/ui";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const route = useRoute();
 const { t } = useI18n();
@@ -13,12 +14,45 @@ const navLinks = computed(() => [
   { label: t("portfolio.nav.about"), to: "/about" },
   { label: t("portfolio.nav.contact"), to: "/contact" },
 ]);
+
+// Scroll bar
+const progressMax = 10000;
+const scrollProgress = ref(0);
+
+const updateScrollProgress = () => {
+  const doc = document.documentElement;
+  const scrollTop = window.scrollY || doc.scrollTop;
+  const scrollHeight = doc.scrollHeight - window.innerHeight;
+
+  // Prevent division by zero on very short pages
+  const ratio = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
+
+  scrollProgress.value = Math.round(ratio * progressMax);
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", updateScrollProgress, { passive: true });
+  updateScrollProgress();
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", updateScrollProgress);
+});
 </script>
 
 <template>
   <UHeader
     class="sticky top-0 z-50 backdrop-blur-xl bg-neutral-950/80 border-b border-white/10 shadow-lg shadow-black/20"
-  >
+    ><div
+      class="absolute -bottom-4.5 left-0 right-0 w-full h-auto z-49 bg-transparent"
+    >
+      <progress
+        id="progressBar"
+        :value="scrollProgress"
+        :max="progressMax"
+        class="w-full h-3"
+      ></progress>
+    </div>
     <template #title>
       <NuxtLink to="/" class="flex items-center gap-3 group smooth-hover">
         <span
@@ -42,7 +76,7 @@ const navLinks = computed(() => [
             : 'text-neutral-200 hover:text-white hover:bg-white/10'
         "
       >
-        <span class="relative z-10">{{ link.label }}</span>
+        <span class="relative z-10 text-accent-50!">{{ link.label }}</span>
         <div
           v-if="route.path === link.to.replace('/#', '/')"
           class="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-brand-400 to-accent-400"
@@ -91,5 +125,35 @@ a:hover svg {
   circle {
     fill: var(--color-brand-400);
   }
+}
+
+// Progress bar background (the empty track)
+progress {
+  appearance: none;
+  border: none;
+  overflow: hidden;
+}
+
+// WebKit browsers (Chrome, Edge, Safari)
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+// VALUE (the filled part)
+progress::-webkit-progress-value {
+  background: linear-gradient(
+    to right,
+    var(--color-brand-400),
+    var(--color-accent-400)
+  );
+}
+
+// Firefox
+progress::-moz-progress-bar {
+  background: linear-gradient(
+    to right,
+    var(--color-brand-400),
+    var(--color-accent-400)
+  );
 }
 </style>
