@@ -1,0 +1,127 @@
+<!-- components/MyHeader.vue -->
+<script lang="ts" setup>
+import type { NavigationMenuItem } from "@nuxt/ui";
+
+const route = useRoute();
+const { t } = useI18n();
+const { getPersonal } = useRuneContent();
+const personal = computed(() => getPersonal());
+
+const navLinks = computed(() => [
+  { label: t("portfolio.nav.home"), to: "/" },
+  { label: t("portfolio.nav.services"), to: "/#services" },
+  { label: t("portfolio.nav.projects"), to: "/#projects" },
+  { label: t("portfolio.nav.experience"), to: "/#experience" },
+  { label: t("portfolio.nav.about"), to: "/about" },
+  { label: t("portfolio.nav.contact"), to: "/contact" },
+]);
+</script>
+
+<template>
+  <UHeader class="border-b border-zinc-200 dark:border-zinc-800">
+    <template #title>
+      <NuxtLink to="/" class="flex items-center gap-3 group">
+        <svg
+          viewBox="0 0 412 387"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-[50px] transition-transform duration-200 group-hover:scale-105"
+        >
+          <path
+            d="M119 233V81C152.493 90.4392 172.419 95.7713 171 104V163C198.631 157.845 217.426 160.637 253.5 170C244.802 166.72 239.3 164.473 228 159.5V101C227.285 94.4693 252.528 88.7511 279.5 80L278.5 254.5C272.4 266.502 263.701 272.393 242.5 282L227.5 278V202C187.313 200.306 166.35 200.235 147.5 210.5C156.838 207.184 162.044 205.612 171 206V255.5L119 233Z"
+            fill="#A6A6A6"
+          />
+          <path
+            d="M286.22 62.4193C241.221 2.41905 170.221 -3.58095 117.721 62.4192H103.221C103.221 62.1103 103.221 61.4189 103.221 59.9191C108.537 47.6437 197.72 -64.081 296.72 52.9193V62.4193H286.22Z"
+            fill="#A6A6A6"
+          />
+          <path
+            d="M74.0037 200.419C73.8575 162.433 78.0035 144.919 90.5037 106.419C102.504 104.419 102.504 104.419 102.504 104.419C89.4712 139.741 86.4583 163.265 86.5037 209.919L74.0037 200.419Z"
+            fill="#A6A6A6"
+          />
+          <path
+            d="M325.5 200.419C325.646 162.433 321.5 144.919 309 106.419C297 104.419 297 104.419 297 104.419C310.032 139.741 313.045 163.265 313 209.919L325.5 200.419Z"
+            fill="#A6A6A6"
+          />
+          <circle cx="335" cy="60.4189" r="24" fill="#A6A6A6" />
+          <path
+            d="M109.082 77.919L102.582 91.919C52.0824 91.919 17.4819 108.351 13.5822 141.919C6.43146 217.1 381.582 381.419 387.582 264.419C387.772 255.142 382.009 242.042 373.082 220.419L381.582 213.919C501.582 425.919 3.08215 264.419 0.0822119 141.919C-1.89117 115.279 31.5822 75.919 109.082 77.919Z"
+            fill="#A6A6A6"
+          />
+          <path
+            d="M367 87.9189L356.5 96.9189C380.08 108.997 397 123.919 397 141.919C397.379 181.105 316 228.419 296 237.419L297.5 252.919C354 222.419 412 184.919 412 140.919C408.848 117.235 400.377 105.345 367 87.9189Z"
+            fill="#A6A6A6"
+          />
+          <path
+            d="M313.942 255.482C309.62 270.695 304.444 279.464 294 295.212L306.522 297.419C319.361 276.688 320.923 266.783 326 248.419L313.942 255.482Z"
+            fill="#A6A6A6"
+          />
+          <path
+            d="M132.5 329.919L124 338.419C144.5 363.419 172 386.419 210.5 386.419C252 386.419 279.5 350.919 297 329.419L282.5 326.419C257.5 353.919 238.5 372.419 210.5 372.419C178.5 372.419 159.374 356.611 132.5 329.919Z"
+            fill="#A6A6A6"
+          />
+          <path
+            d="M140 317.919V306.272C158.723 303.736 166.851 300.933 181.297 295.951L181.389 295.919C183.096 297.644 192.057 298.939 198 302.39C177.411 309.335 166.732 315.237 140 317.919Z"
+            fill="#A6A6A6"
+          />
+          <circle cx="108" cy="305.419" r="23" fill="#A6A6A6" />
+          <path
+            d="M56.2 227.764L48.1 221.419C37.3565 238.03 31 254.049 31 270.818C32.9711 296.125 53.95 309.34 76 313.419V302.089C48.7543 293.616 42.7 279.429 42.7 267.646C42.7 255.409 49.1109 241.903 56.2 227.764Z"
+            fill="#A6A6A6"
+          />
+        </svg>
+        <span
+          class="hidden sm:block text-xl font-extrabold tracking-widest text-zinc-900 dark:text-brand-50"
+        >
+          {{ personal.full_name }}
+        </span>
+      </NuxtLink>
+    </template>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center gap-2">
+      <NuxtLink
+        v-for="link in navLinks"
+        :key="link.to"
+        :to="link.to"
+        class="px-3 py-2 text-sm transition-colors flex items-center gap-2 rounded-lg border-b-2 border-transparent"
+        :class="
+          route.path === link.to.replace('/#', '/')
+            ? 'font-bold text-brand-600 dark:text-brand-400 border-brand-600 dark:border-brand-400'
+            : 'font-medium text-zinc-700 dark:text-zinc-300 hover:text-brand-600 dark:hover:text-brand-400 hover:bg-zinc-100 dark:hover:bg-zinc-800'
+        "
+      >
+        {{ link.label }}
+      </NuxtLink>
+    </nav>
+
+    <template #right>
+      <LanguageSwitcher />
+    </template>
+
+    <!-- Mobile Navigation -->
+    <template #body>
+      <div class="space-y-4">
+        <div class="flex flex-col gap-2">
+          <NuxtLink
+            v-for="link in navLinks"
+            :key="link.to"
+            :to="link.to"
+            class="block px-3 py-2 rounded-lg text-sm font-semibold text-zinc-800 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+          >
+            {{ link.label }}
+          </NuxtLink>
+        </div>
+      </div>
+    </template>
+  </UHeader>
+</template>
+
+<style lang="scss" scoped>
+svg {
+  path,
+  circle {
+    fill: var(--color-brand-500);
+  }
+}
+</style>

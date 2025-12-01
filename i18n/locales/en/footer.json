@@ -1,0 +1,35 @@
+{
+  "tagline": "Your complete health and fitness ecosystem. Train smarter, eat better, and recover faster with our integrated platform.",
+  "ecosystem": {
+    "title": "Ecosystem",
+    "coreFitness": "Core Fitness",
+    "nutrition": "Nutrition Coach",
+    "recovery": "Recovery & Sleep"
+  },
+  "company": {
+    "title": "Company",
+    "about": "About Us",
+    "careers": "Careers",
+    "blog": "Blog",
+    "press": "Press Kit"
+  },
+  "support": {
+    "title": "Support",
+    "help": "Help Center",
+    "contact": "Contact Us",
+    "faq": "FAQ",
+    "status": "System Status"
+  },
+  "legal": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy"
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "description": "Get the latest fitness tips, updates, and exclusive offers delivered to your inbox.",
+    "placeholder": "Enter your email",
+    "subscribe": "Subscribe"
+  },
+  "copyright": "© {year} Rune Pjetursson. All rights reserved."
+}

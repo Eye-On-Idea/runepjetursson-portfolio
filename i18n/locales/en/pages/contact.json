@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "badge": "Contact Us",
+    "title": "Get in Touch",
+    "description": "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible."
+  },
+  "methods": {
+    "email": {
+      "title": "Email Us",
+      "description": "Get in touch via email"
+    },
+    "chat": {
+      "title": "Live Chat",
+      "value": "Available 24/7",
+      "description": "Chat with our support team"
+    },
+    "phone": {
+      "title": "Call Us",
+      "description": "Monday to Friday, 9am-5pm PST"
+    }
+  },
+  "form": {
+    "title": "Send Us a Message",
+    "name": {
+      "label": "Full Name",
+      "placeholder": "John Doe"
+    },
+    "email": {
+      "label": "Email Address",
+      "placeholder": "Enter your email address"
+    },
+    "subject": {
+      "label": "Subject",
+      "placeholder": "Select a subject"
+    },
+    "subjects": {
+      "general": "General Inquiry",
+      "support": "Technical Support",
+      "sales": "Sales Question",
+      "press": "Press & Media",
+      "partnerships": "Partnership Inquiry",
+      "careers": "Career Opportunities"
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Tell us how we can help..."
+    },
+    "submit": "Send Message",
+    "success": {
+      "title": "Message Sent!",
+      "description": "Thank you for contacting us. We'll get back to you within 24 hours."
+    },
+    "error": {
+      "title": "Oops!",
+      "description": "Something went wrong. Please try again later."
+    }
+  },
+  "offices": {
+    "title": "Our Offices",
+    "sanfrancisco": {
+      "city": "San Francisco",
+      "address": "123 Market Street, Suite 400\nSan Francisco, CA 94103"
+    },
+    "newyork": {
+      "city": "New York",
+      "address": "456 Broadway, 10th Floor\nNew York, NY 10013"
+    }
+  },
+  "responseTime": {
+    "title": "Quick Response Time",
+    "description": "We typically respond to all inquiries within 24 hours during business days."
+  },
+  "social": {
+    "title": "Follow Us"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "home": "Hjem",
+  "news": "Nyheder & Opdateringer",
+  "figma": "Figma Designs",
+  "profile": "Profil",
+  "settings": "Indstillinger",
+  "signIn": "Log ind",
+  "signOut": "Log ud",
+  "openProfile": "Åbn Profil",
+  "launchApp": "Start App",
+  "status": "Status",
+  "company": {
+    "title": "Virksomhed",
+    "about": "Om os",
+    "aboutDesc": "Lær om vores mission og team",
+    "careers": "Karriere",
+    "careersDesc": "Bliv en del af vores voksende team",
+    "blog": "Blog",
+    "blogDesc": "Fitness tips og indsigter",
+    "press": "Presse",
+    "pressDesc": "Nyheder og medieressourcer"
+  },
+  "resources": {
+    "title": "Ressourcer",
+    "help": "Hjælpecenter",
+    "helpDesc": "Få support og find svar",
+    "faq": "FAQ",
+    "faqDesc": "Ofte stillede spørgsmål",
+    "contact": "Kontakt os",
+    "contactDesc": "Kom i kontakt med vores team"
+  },
+  "sections": {
+    "pages": "Sider",
+    "app": "Applikation"
+  }
+}

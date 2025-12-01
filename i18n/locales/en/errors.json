@@ -1,0 +1,12 @@
+{
+  "generic": "Something went wrong. Please try again.",
+  "network": "Network error. Please check your connection.",
+  "notFound": "Page not found.",
+  "unauthorized": "Unauthorized. Please sign in.",
+  "forbidden": "Access denied.",
+  "validation": "Please check your input.",
+  "required": "This field is required.",
+  "invalidEmail": "Invalid email address.",
+  "invalidPassword": "Invalid password.",
+  "passwordMismatch": "Passwords do not match."
+}

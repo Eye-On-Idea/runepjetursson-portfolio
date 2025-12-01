@@ -1,0 +1,13 @@
+{
+  // Cloudflare Pages configuration for Nuxt 3
+  // Documentation: https://developers.cloudflare.com/pages/functions/wrangler-configuration/
+  "name": "runepjetursson",
+
+  // Use latest compatibility date for best performance
+  "compatibility_date": "2025-01-11",
+
+  // Enable Node.js compatibility for Nuxt SSR with environment variable support
+  // nodejs_compat_populate_process_env: Enables Node.js APIs AND populates process.env
+  // This is required for Nuxt SSR and accessing environment variables
+  "compatibility_flags": ["nodejs_compat_populate_process_env"]
+}

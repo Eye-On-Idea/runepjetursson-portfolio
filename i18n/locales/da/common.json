@@ -1,0 +1,21 @@
+{
+  "welcome": "Velkommen",
+  "loading": "Indlæser...",
+  "error": "Fejl",
+  "success": "Succes",
+  "cancel": "Annuller",
+  "save": "Gem",
+  "delete": "Slet",
+  "edit": "Rediger",
+  "close": "Luk",
+  "confirm": "Bekræft",
+  "back": "Tilbage",
+  "next": "Næste",
+  "previous": "Forrige",
+  "search": "Søg",
+  "filter": "Filtrer",
+  "sort": "Sorter",
+  "refresh": "Opdater",
+  "upload": "Upload",
+  "download": "Download"
+}

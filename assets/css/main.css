@@ -1,0 +1,238 @@
+/* variables */
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border: transparent;
+  scroll-behavior: smooth;
+}
+@theme static {
+  /* brand = deep crimson */
+  --color-brand-50: #fff1f2;
+  --color-brand-100: #ffe2e5;
+  --color-brand-200: #ffb9c0;
+  --color-brand-300: #f88a99;
+  --color-brand-400: #e75262;
+  --color-brand-500: #cc1f35; /* Primary – AA on white */
+  --color-brand-600: #a9192c; /* Darker – AA on white */
+  --color-brand-700: #891424;
+  --color-brand-800: #6a101d;
+  --color-brand-900: #4d0c16;
+  --color-brand-950: #2f070c;
+  /* accent = slate blue / steel blue */
+  --color-accent-50: #f2f6ff;
+  --color-accent-100: #e2eaff;
+  --color-accent-200: #c6d4ff;
+  --color-accent-300: #a4baff;
+  --color-accent-400: #7ea0ff;
+  --color-accent-500: #537cff; /* AA on white */
+  --color-accent-600: #355be0; /* AA on white */
+  --color-accent-700: #2846b4;
+  --color-accent-800: #1d3589;
+  --color-accent-900: #14255f;
+  --color-accent-950: #0d183d;
+  /* neutral / gray */
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5f5;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #020617;
+  /* semantic roles */
+  --color-primary: var(--color-brand-500);
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: var(--color-accent-500);
+  --color-secondary-foreground: #ffffff;
+
+  --color-background: var(--color-neutral-950); /* fx neutral-950 */
+  --color-foreground: var(--color-neutral-200); /* lys tekstfarve */
+
+  --color-muted: var(--color-neutral-800);
+  --color-muted-foreground: var(--color-neutral-300);
+
+  --color-border: var(--color-neutral-700);
+
+  /* status colors */
+  --color-success: #16a34a; /* grøn */
+  --color-warning: #f59e0b; /* gul/orange */
+  --color-danger: #dc2626; /* rød */
+}
+
+/* Pick which shade each semantic var uses (light & dark) */
+:root {
+  --ui-primary: var(--ui-color-primary-500); /* brand-500 */
+  --ui-secondary: var(--ui-color-secondary-500); /* accent-500 */
+  --ui-text: var(--ui-color-neutral-700);
+  --ui-bg: white;
+  --font-heading: "Exo 2", sans-serif;
+  --font-text: "Maven Pro", sans-serif;
+}
+.dark {
+  --ui-primary: var(--ui-color-primary-400); /* slightly brighter on dark */
+  --ui-secondary: var(--ui-color-secondary-400);
+  --ui-text: var(--ui-color-neutral-200);
+  --ui-bg: var(--ui-color-neutral-900);
+}
+body {
+  margin: 0 auto;
+  background-color: var(--color-neutral-900);
+}
+
+main {
+  margin: 0 auto;
+  width: 100%;
+  min-width: 390px;
+  min-height: 99lvh;
+  max-width: 1920px;
+}
+
+h1 {
+  font-weight: 400;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--color-brand-200);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-heading);
+}
+
+p,
+button,
+a,
+li,
+span,
+button,
+aside {
+  font-family: var(--font-text);
+}
+
+/* Add cursor pointer to all buttons and interactive elements */
+button,
+a[role="button"],
+[role="button"] {
+  cursor: pointer;
+}
+
+/* Override Nuxt UI Button primary color text for readability with yellow brand */
+/* Target all primary/brand buttons with solid variants */
+button[class*="bg-brand"],
+button[class*="bg-primary"],
+a[class*="bg-brand"],
+a[class*="bg-primary"],
+.bg-primary-500,
+.bg-brand-500 {
+  --ui-button-text-color: theme("colors.zinc.900") !important;
+  color: theme("colors.zinc.900") !important;
+}
+
+.dark button[class*="bg-brand"],
+.dark button[class*="bg-primary"],
+.dark a[class*="bg-brand"],
+.dark a[class*="bg-primary"],
+.dark .bg-primary-500,
+.dark .bg-brand-500 {
+  --ui-button-text-color: theme("colors.zinc.900") !important;
+  color: theme("colors.zinc.900") !important;
+}
+
+/* Specifically target Nuxt UI Button component */
+button.bg-primary-500,
+a.bg-primary-500,
+button.bg-brand-500,
+a.bg-brand-500 {
+  color: theme("colors.zinc.900") !important;
+}
+
+/* Force text color on children of primary buttons */
+button[class*="bg-primary"] *,
+button[class*="bg-brand"] *,
+a[class*="bg-primary"] *,
+a[class*="bg-brand"] * {
+  color: inherit !important;
+}
+
+/* Scroll-triggered animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+ * Simple scroll animation system
+ * - Start hidden with pure CSS
+ * - Animate in when 'visible' class is added by JavaScript
+ * - No complex timing, no flash prevention hacks
+ */
+
+/* Default hidden state - applied immediately */
+[data-scroll-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Visible state - triggered by Intersection Observer */
+[data-scroll-animate].visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animations for child elements */
+.animate-in > * {
+  animation: fadeIn 800ms ease-out forwards;
+  animation-delay: 200ms;
+}
+
+/* Skeleton loading shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}

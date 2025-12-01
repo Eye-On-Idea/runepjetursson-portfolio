@@ -1,0 +1,12 @@
+{
+  "generic": "Noget gik galt. Prøv venligst igen.",
+  "network": "Netværksfejl. Tjek venligst din forbindelse.",
+  "notFound": "Side ikke fundet.",
+  "unauthorized": "Uautoriseret. Log venligst ind.",
+  "forbidden": "Adgang nægtet.",
+  "validation": "Tjek venligst din indtastning.",
+  "required": "Dette felt er påkrævet.",
+  "invalidEmail": "Ugyldig e-mailadresse.",
+  "invalidPassword": "Ugyldig adgangskode.",
+  "passwordMismatch": "Adgangskoderne matcher ikke."
+}

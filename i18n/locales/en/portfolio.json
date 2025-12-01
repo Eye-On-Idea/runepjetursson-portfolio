@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "ctaPrimary": "Contact me",
+    "ctaSecondary": "View projects"
+  },
+  "sections": {
+    "services": {
+      "title": "What I help with",
+      "subtitle": "Websites, UX/UI, concept development and QA with a balance of design, structure and frontend."
+    },
+    "skills": {
+      "title": "My focus areas",
+      "core": "Core",
+      "tech": "Technologies",
+      "tools": "Tools & methods"
+    },
+    "projects": "Selected cases",
+    "experience": "Roles & responsibility",
+    "education": "Education",
+    "educationSubtitle": "Studies and continuous learning",
+    "experienceSubtitle": "Background in freelance, startup and studies",
+    "values": "How I work",
+    "contact": {
+      "title": "Contact",
+      "preferred": "Preferred collaborations",
+      "contactInfo": "Contact",
+      "emailDesc": "Write me and I will get back to you as soon as possible.",
+      "linkedinDesc": "Connect for collaborations, projects, or networking.",
+      "ctaPrimary": "Send a message",
+      "ctaSecondary": "See my cases"
+    }
+  },
+  "about": {
+    "title": "About me",
+    "cardTitle": "Short intro",
+    "sections": {
+      "background": "Background",
+      "skills": "Skills",
+      "cases": "Selected cases",
+      "approach": "Approach"
+    }
+  },
+  "valuesLabels": {
+    "environment": "Environment",
+    "management": "Leadership",
+    "strengths": "Strengths",
+    "approach": "Approach"
+  },
+  "stats": {
+    "experience": "Experience",
+    "services": "Services",
+    "projects": "Projects",
+    "education": "Education"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "experience": "Experience",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "form": {
+    "title": "Tell me about your project",
+    "name": "Name",
+    "email": "Email",
+    "project": "Project",
+    "message": "Message",
+    "submit": "Send"
+  }
+}

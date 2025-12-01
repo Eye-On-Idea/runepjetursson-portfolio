@@ -1,0 +1,396 @@
+{
+  "meta": {
+    "version": 1,
+    "owner": "Rune Pjetursson",
+    "purpose": "Refaktorering af herqulez.com til personlig portfolio",
+    "language": "da"
+  },
+  "personal": {
+    "full_name": "Rune Pjetursson",
+    "title_primary": "Digital Product & UI Designer",
+    "title_secondary": "UX/UI Designer & Frontend Developer",
+    "location": "Aalborg, Danmark",
+    "company_freelance": "Eye On Idea",
+    "status": "Studerende på Digital Concept Development og aktiv freelancer/iværksætter"
+  },
+  "headline": {
+    "short": "Digital Product & UI Designer med fokus på brugeroplevelser, frontend og forretningsværdi.",
+    "tagline": "Jeg designer og udvikler digitale løsninger, der forbinder god UX, visuelt stærk UI og realistisk forretningsstrategi."
+  },
+  "profile": {
+    "short": "Jeg er digitalt produkt- og UI-designer med en baggrund i Multimediedesign og Digital Concept Development. Jeg arbejder i krydsfeltet mellem UX, visuel design, frontend-udvikling og forretningsudvikling – og trives bedst, når jeg kan omsætte komplekse idéer til simple, brugbare og æstetiske digitale løsninger.",
+    "long": "Jeg, Rune Pjetursson, arbejder som digitalt produkt- og UI-designer med et stærkt fundament i UX, UI og frontend-udvikling. Med uddannelser i Multimediedesign og Digital Concept Development på UCN Aalborg kombinerer jeg kreativ tænkning, teknisk forståelse og forretningsorienteret struktur. Gennem mit arbejde i min egen virksomhed Eye On Idea og som cofounder på softwareprojektet Herqulez har jeg erfaring med at tage digitale løsninger hele vejen fra idé, koncept og validering til konkret design, prototyper og implementering.\n\nJeg ser mig selv som en løsningsorienteret profil, der er god til at spotte muligheder og tænke i systemer, flows og brugerrejser. Jeg trives med ansvar, udfordringer og et vist tempo – men også med frihed til at tænke, teste og justere. Jeg fungerer bedst i roller, hvor jeg både kan være hands-on i design og udvikling og samtidig bidrage til prioritering, retning og struktur i projekter."
+  },
+  "skills": {
+    "core": [
+      "UX-design",
+      "UI-design",
+      "Digital produktdesign",
+      "Frontend-udvikling (web)"
+    ],
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Vue",
+      "Nuxt",
+      "Grundlæggende backend-forståelse (API’er, Firebase)",
+      "Webhosting, domæner og e-mailopsætning"
+    ],
+    "tools": [
+      "Figma",
+      "Adobe Creative Cloud",
+      "Cubase (musik- og lydproduktion)"
+    ],
+    "methods": [
+      "Design Thinking",
+      "Brugercentreret design",
+      "Prototyping og user flows",
+      "Digital konceptudvikling",
+      "Projektledelse",
+      "Kvalitetssikring (QA)"
+    ],
+    "domains": [
+      "Sundhed og træning (fitness, health tech)",
+      "Digitale produkter og services",
+      "Websites og mindre webplatforme"
+    ],
+    "languages": [
+      "Dansk (modersmål)",
+      "Engelsk (flydende, professionelt niveau)"
+    ]
+  },
+  "services": [
+    {
+      "id": "websites",
+      "title": "Websites & weboplevelser",
+      "description": "Planlægning, design og udvikling af moderne websites med fokus på brugervenlighed, æstetik og performance. Fra struktur og wireframes til færdig implementering.",
+      "keywords": ["website", "frontend", "UX", "UI", "responsivt design"]
+    },
+    {
+      "id": "ux_ui",
+      "title": "UX/UI-design",
+      "description": "Udvikling af brugerrejser, wireframes og UI-design, der skaber klare flows, stærk visuel identitet og overskuelige grænseflader.",
+      "keywords": ["UX", "UI", "prototyper", "Figma", "designsystemer"]
+    },
+    {
+      "id": "concept",
+      "title": "Digital konceptudvikling",
+      "description": "Hjælp til at forme digitale koncepter, afklare målgrupper, definere funktioner og skabe en realistisk roadmap fra idé til første version.",
+      "keywords": ["konceptudvikling", "produktstrategi", "idéudvikling"]
+    },
+    {
+      "id": "qa",
+      "title": "QA & kvalitetssikring",
+      "description": "Systematisk test og kvalitetssikring af digitale løsninger, med fokus på brugeroplevelse, fejl, konsistens og tekniske detaljer.",
+      "keywords": ["QA", "test", "kvalitet", "brugervenlighed"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Eye On Idea",
+      "role": "Founder & CEO",
+      "type": "Freelance / enkeltmandsvirksomhed",
+      "period": {
+        "start": "2025-02",
+        "end": null
+      },
+      "location": "Aalborg, Danmark",
+      "summary": "Eye On Idea er min enkeltmandsvirksomhed, hvor jeg tilbyder webudvikling, UX/UI-design og kvalitetssikring til mindre og mellemstore virksomheder.",
+      "highlights": [
+        "Ansvarlig for design og udvikling af websites inkl. struktur, UX, UI og frontend-implementering.",
+        "Opsætning af hosting, domæner og e-mail-løsninger med custom domæner.",
+        "QA-arbejde for digital platform, herunder længerevarende samarbejde med norsk kunde W3Schools.",
+        "Projektledelse, kundedialog, behovsafklaring og løbende sparring om digital retning.",
+        "Drift af virksomheden ved siden af studier og andre projekter, som en langsigtet freelancedagsorden."
+      ]
+    },
+    {
+      "company": "Herqulez",
+      "role": "Co-founder & CEO",
+      "type": "Startup / softwareprojekt",
+      "period": {
+        "start": "2025-01",
+        "end": null
+      },
+      "location": "Aalborg, Danmark",
+      "summary": "Herqulez er et softwareprojekt inden for sundhed og fitness, der sigter mod at blive et modulært digitalt økosystem til B2C, B2B og B2G.",
+      "status": "I udviklingsfase, CVR forventes oprettet i Q1 2026",
+      "highlights": [
+        "Co-founder og CEO med ansvar for produktvision, konceptudvikling og forretningsstrategi.",
+        "Arbejder med UX/UI-design, brugerrejser og informationsarkitektur for app-løsninger.",
+        "Deltaget i idékonkurrence og validering via FFEfonden og ekspertinterviews.",
+        "Medansvarlig for investorforberedelse, pitchmateriale og overordnet produkt-roadmap.",
+        "Fokus på at skabe et sundheds- og fitnessunivers, der samler flere digitale moduler i én helhed."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "UCN Aalborg",
+      "program": "Professionsbachelor i Digital Concept Development",
+      "level": "Professionsbachelor",
+      "period": {
+        "start": "2024-09",
+        "end": "2026-01"
+      },
+      "status": "Under uddannelse (forventet færdig januar 2026)",
+      "highlights": [
+        "Fokus på digital strategi, konceptudvikling, brugerindsigt og forretningsmodeller.",
+        "Arbejder med at koble UX, teknologi og forretning i konkrete digitale projekter.",
+        "Herqulez fungerer som centralt case- og projektforløb."
+      ]
+    },
+    {
+      "institution": "UCN Aalborg",
+      "program": "Erhvervsakademiuddannelse i Multimediedesign",
+      "level": "Erhvervsakademiuddannelse",
+      "period": {
+        "start": "2022-09",
+        "end": "2024-06"
+      },
+      "status": "Afsluttet",
+      "highlights": [
+        "Speciale i UX/UI, digitalt design og frontend-orienteret produktion.",
+        "Udvikling af websites, prototyper og visuelle identiteter.",
+        "Træning i samarbejde, projektdrevne forløb og digitale designprocesser."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Herqulez – Digitalt fitness-økosystem",
+      "role": "Co-founder, produkt- og UI-ansvarlig",
+      "type": "Koncept- og appudvikling",
+      "summary": "Et digitalt sundheds- og fitnessunivers under udvikling, med fokus på at samle træning, vaner og data i et modulært system.",
+      "contributions": [
+        "Produktvision og konceptudvikling.",
+        "UX/UI-design af centrale flows og skærmbilleder.",
+        "Deltagelse i brugerinterviews og ekspertevalueringer.",
+        "Udarbejdelse af pitch, præsentationer og faglige oplæg."
+      ]
+    },
+    {
+      "name": "Eye On Idea – kundeprojekter",
+      "role": "Designer og frontend-udvikler",
+      "type": "Webprojekter",
+      "summary": "Udvikling af websites og mindre webprojekter for mindre virksomheder, med fokus på UI, UX og teknisk opsætning.",
+      "contributions": [
+        "Koncept og struktur for website, sitemap og vigtigste sider.",
+        "Design og prototyper i Figma.",
+        "Implementering i HTML, CSS, JavaScript og relevante frameworks.",
+        "Hosting, domæneopsætning og e-mailkonfiguration."
+      ]
+    }
+  ],
+  "values_and_workstyle": {
+    "work_environment": "Jeg trives bedst i miljøer med energi, tillid og frihed – ikke for stille, og med mulighed for at tage en pause, gå en tur eller skifte kontekst for at holde hovedet skarpt.",
+    "management_preference": "Jeg fungerer bedst i roller, hvor jeg både kan tage ansvar og være hands-on. Mikromanagement er ikke motiverende; klare mål, sparring og frihed til at løse opgaven er.",
+    "approach": "Jeg er løsningsorienteret, nysgerrig og ser hurtigt muligheder og forbedringspotentiale i digitale produkter. Jeg kan godt lide udfordringer, så længe der er plads til kreativitet og refleksion.",
+    "strengths": [
+      "Kombination af kreativitet og struktur",
+      "Evne til at oversætte idéer til konkrete digitale løsninger",
+      "Forståelse for både brugeroplevelse og forretningsmål",
+      "Ansvarsbevidst og selvkørende"
+    ]
+  },
+  "contact_cta": {
+    "heading": "Lad os tage en snak",
+    "body": "Har du brug for hjælp til et digitalt projekt, et nyt website eller sparring på et koncept, er du velkommen til at tage kontakt. Jeg er åben for freelanceopgaver, samarbejder og relevante jobmuligheder.",
+    "preferred_collaborations": [
+      "Freelanceopgaver inden for UX/UI og frontend",
+      "Deltid eller projektansættelse i digitale teams",
+      "Samarbejde med startups og mindre virksomheder"
+    ]
+  },
+  "translations": {
+    "en": {
+      "personal": {
+        "full_name": "Rune Pjetursson",
+        "title_primary": "Digital Product & UI Designer",
+        "title_secondary": "UX/UI Designer & Frontend Developer",
+        "location": "Aalborg, Denmark",
+        "company_freelance": "Eye On Idea",
+        "status": "Student in Digital Concept Development and active freelancer/entrepreneur"
+      },
+      "headline": {
+        "short": "Digital Product & UI designer focused on user experiences, frontend, and business value.",
+        "tagline": "I design and build digital solutions that connect strong UX, visual UI, and realistic business strategy."
+      },
+      "profile": {
+        "short": "I am a digital product and UI designer with a background in Multimedia Design and Digital Concept Development. I work in the intersection of UX, visual design, frontend development, and business strategy—thriving when I can translate complex ideas into simple, usable, and aesthetic digital solutions.",
+        "long": "I, Rune Pjetursson, work as a digital product and UI designer with a strong foundation in UX, UI, and frontend development. With studies in Multimedia Design and Digital Concept Development at UCN Aalborg, I combine creative thinking, technical understanding, and business-oriented structure. Through my work in my own company Eye On Idea and as cofounder of the software project Herqulez, I have experience taking digital solutions all the way from idea, concept, and validation to concrete design, prototypes, and implementation.\n\nI see myself as a solution-oriented profile who quickly spots opportunities and thinks in systems, flows, and user journeys. I enjoy responsibility, challenges, and a certain pace—but also the freedom to think, test, and adjust. I function best in roles where I can be hands-on in design and development while contributing to prioritization, direction, and structure in projects."
+      },
+      "skills": {
+        "core": [
+          "UX design",
+          "UI design",
+          "Digital product design",
+          "Frontend development (web)"
+        ],
+        "technologies": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Vue",
+          "Nuxt",
+          "Basic backend understanding (APIs, Firebase)",
+          "Web hosting, domains, and email setup"
+        ],
+        "tools": [
+          "Figma",
+          "Adobe Creative Cloud",
+          "Cubase (music and audio production)"
+        ],
+        "methods": [
+          "Design Thinking",
+          "User-centered design",
+          "Prototyping and user flows",
+          "Digital concept development",
+          "Project management",
+          "Quality assurance (QA)"
+        ],
+        "domains": [
+          "Health and fitness (fitness, health tech)",
+          "Digital products and services",
+          "Websites and small web platforms"
+        ],
+        "languages": [
+          "Danish (native)",
+          "English (fluent, professional)"
+        ]
+      },
+      "services": [
+        {
+          "id": "websites",
+          "title": "Websites & web experiences",
+          "description": "Planning, design, and development of modern websites focused on usability, aesthetics, and performance—from structure and wireframes to implementation.",
+          "keywords": ["website", "frontend", "UX", "UI", "responsive design"]
+        },
+        {
+          "id": "ux_ui",
+          "title": "UX/UI design",
+          "description": "Designing user journeys, wireframes, and UI that create clear flows, strong visual identity, and accessible interfaces.",
+          "keywords": ["UX", "UI", "prototypes", "Figma", "design systems"]
+        },
+        {
+          "id": "concept",
+          "title": "Digital concept development",
+          "description": "Helping shape digital concepts, clarify target groups, define features, and build a realistic roadmap from idea to first version.",
+          "keywords": ["concept development", "product strategy", "ideation"]
+        },
+        {
+          "id": "qa",
+          "title": "QA & quality assurance",
+          "description": "Systematic testing and quality assurance of digital solutions with focus on UX, bugs, consistency, and technical details.",
+          "keywords": ["QA", "testing", "quality", "usability"]
+        }
+      ],
+      "experience": [
+        {
+          "company": "Eye On Idea",
+          "role": "Founder & CEO",
+          "type": "Freelance / sole proprietorship",
+          "period": { "start": "2025-02", "end": null },
+          "location": "Aalborg, Denmark",
+          "summary": "Eye On Idea is my one-person company, offering web development, UX/UI design, and quality assurance to small and mid-sized businesses.",
+          "highlights": [
+            "Responsible for website design and development including structure, UX, UI, and frontend implementation.",
+            "Setup of hosting, domains, and email solutions with custom domains.",
+            "QA work for a digital platform, including a long-term collaboration with Norwegian client W3Schools.",
+            "Project management, client dialogue, needs clarification, and ongoing sparring on digital direction.",
+            "Running the business alongside studies and other projects as a long-term freelance agenda."
+          ]
+        },
+        {
+          "company": "Herqulez",
+          "role": "Co-founder & CEO",
+          "type": "Startup / software project",
+          "period": { "start": "2025-01", "end": null },
+          "location": "Aalborg, Denmark",
+          "summary": "Herqulez is a software project in health and fitness aiming to become a modular digital ecosystem for B2C, B2B, and B2G.",
+          "status": "In development; CVR expected Q1 2026",
+          "highlights": [
+            "Co-founder and CEO responsible for product vision, concept development, and business strategy.",
+            "Working on UX/UI design, user journeys, and information architecture for app solutions.",
+            "Participated in idea competition and validation via FFEfonden and expert interviews.",
+            "Co-responsible for investor preparation, pitch materials, and overall product roadmap.",
+            "Focus on creating a health and fitness universe that unites several digital modules in one whole."
+          ]
+        }
+      ],
+      "education": [
+        {
+          "institution": "UCN Aalborg",
+          "program": "Professional Bachelor in Digital Concept Development",
+          "level": "Professional Bachelor",
+          "period": { "start": "2024-09", "end": "2026-01" },
+          "status": "Currently studying (expected January 2026)",
+          "highlights": [
+            "Focus on digital strategy, concept development, user insights, and business models.",
+            "Working to connect UX, technology, and business in concrete digital projects.",
+            "Herqulez serves as a central case and project track."
+          ]
+        },
+        {
+          "institution": "UCN Aalborg",
+          "program": "Academy Profession Degree in Multimedia Design",
+          "level": "Academy Profession",
+          "period": { "start": "2022-09", "end": "2024-06" },
+          "status": "Completed",
+          "highlights": [
+            "Specialized in UX/UI, digital design, and frontend-oriented production.",
+            "Development of websites, prototypes, and visual identities.",
+            "Training in collaboration, project-driven courses, and digital design processes."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Herqulez – Digital fitness ecosystem",
+          "role": "Co-founder, product & UI lead",
+          "type": "Concept and app development",
+          "summary": "A digital health and fitness universe under development, focused on uniting training, habits, and data in a modular system.",
+          "contributions": [
+            "Product vision and concept development.",
+            "UX/UI design of core flows and screens.",
+            "Participation in user interviews and expert evaluations.",
+            "Preparation of pitches, presentations, and professional talks."
+          ]
+        },
+        {
+          "name": "Eye On Idea – client projects",
+          "role": "Designer and frontend developer",
+          "type": "Web projects",
+          "summary": "Development of websites and small web projects for smaller businesses, focusing on UI, UX, and technical setup.",
+          "contributions": [
+            "Concept and structure for site, sitemap, and key pages.",
+            "Design and prototypes in Figma.",
+            "Implementation in HTML, CSS, JavaScript, and relevant frameworks.",
+            "Hosting, domain setup, and email configuration."
+          ]
+        }
+      ],
+      "values_and_workstyle": {
+        "work_environment": "I thrive in environments with energy, trust, and freedom—not too silent—and with the option to take a break, walk, or shift context to stay sharp.",
+        "management_preference": "I work best in roles where I can take responsibility and be hands-on. Micromanagement is not motivating; clear goals, sparring, and freedom to solve the task are.",
+        "approach": "I am solution-oriented, curious, and quickly see opportunities and improvement potential in digital products. I like challenges as long as there is room for creativity and reflection.",
+        "strengths": [
+          "Combination of creativity and structure",
+          "Ability to translate ideas into concrete digital solutions",
+          "Understanding of both user experience and business goals",
+          "Responsible and self-driven"
+        ]
+      },
+      "contact_cta": {
+        "heading": "Let’s talk",
+        "body": "Need help with a digital project, a new website, or sparring on a concept? Feel free to reach out. I’m open to freelance work, collaborations, and relevant job opportunities.",
+        "preferred_collaborations": [
+          "Freelance work within UX/UI and frontend",
+          "Part-time or project-based roles in digital teams",
+          "Collaboration with startups and small businesses"
+        ]
+      }
+    }
+  }
+}

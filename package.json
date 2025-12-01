@@ -1,0 +1,44 @@
+{
+  "name": "runepjetursson-portfolio",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "dev:typecheck": "nuxt typecheck --watch",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "deploy": "npm run build",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@nuxt/image": "^1.11.0",
+    "@nuxt/ui": "^4.1.0",
+    "@nuxtjs/i18n": "^10.2.0",
+    "@pinia/nuxt": "^0.11.3",
+    "@tresjs/cientos": "^5.1.0",
+    "@tresjs/core": "^5.1.0",
+    "@tresjs/nuxt": "^5.1.0",
+    "@wxperia/liquid-glass-vue": "^1.0.9",
+    "nuxt": "^4.2.0",
+    "pinia": "^3.0.4",
+    "sass": "^1.93.3",
+    "three": "^0.181.0",
+    "typescript": "^5.9.3",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3",
+    "vuedraggable": "^4.1.0"
+  },
+  "devDependencies": {
+    "@iconify-json/circle-flags": "^1.2.10",
+    "@iconify-json/fluent": "^1.2.34",
+    "@iconify-json/hugeicons": "^1.2.17",
+    "@iconify-json/lucide": "^1.2.72",
+    "@iconify-json/material-symbols": "^1.2.44",
+    "@iconify-json/mingcute": "^1.2.5",
+    "@iconify-json/stash": "^1.2.4",
+    "@iconify-json/streamline-plump": "^1.2.0",
+    "@types/three": "^0.181.0"
+  }
+}

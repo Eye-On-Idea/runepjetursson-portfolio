@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "badge": "Kontakt os",
+    "title": "Kom i kontakt",
+    "description": "Har du spørgsmål? Vi vil elske at høre fra dig. Send os en besked og vi svarer så hurtigt som muligt."
+  },
+  "methods": {
+    "email": {
+      "title": "E-mail os",
+      "description": "Kom i kontakt via e-mail"
+    },
+    "chat": {
+      "title": "Live chat",
+      "value": "Tilgængelig 24/7",
+      "description": "Chat med vores supportteam"
+    },
+    "phone": {
+      "title": "Ring til os",
+      "description": "Mandag til fredag, 9-17 PST"
+    }
+  },
+  "form": {
+    "title": "Send os en besked",
+    "name": {
+      "label": "Fulde navn",
+      "placeholder": "John Doe"
+    },
+    "email": {
+      "label": "E-mailadresse",
+      "placeholder": "Indtast din e-mailadresse"
+    },
+    "subject": {
+      "label": "Emne",
+      "placeholder": "Vælg et emne"
+    },
+    "subjects": {
+      "general": "Generel forespørgsel",
+      "support": "Teknisk support",
+      "sales": "Salgsspørgsmål",
+      "press": "Presse & medier",
+      "partnerships": "Partnerskabsforespørgsel",
+      "careers": "Karrieremuligheder"
+    },
+    "message": {
+      "label": "Besked",
+      "placeholder": "Fortæl os hvordan vi kan hjælpe..."
+    },
+    "submit": "Send besked",
+    "success": {
+      "title": "Besked sendt!",
+      "description": "Tak fordi du kontaktede os. Vi vender tilbage til dig inden for 24 timer."
+    },
+    "error": {
+      "title": "Ups!",
+      "description": "Noget gik galt. Prøv venligst igen senere."
+    }
+  },
+  "offices": {
+    "title": "Vores kontorer",
+    "sanfrancisco": {
+      "city": "San Francisco",
+      "address": "123 Market Street, Suite 400\nSan Francisco, CA 94103"
+    },
+    "newyork": {
+      "city": "New York",
+      "address": "456 Broadway, 10th Floor\nNew York, NY 10013"
+    }
+  },
+  "responseTime": {
+    "title": "Hurtig svartid",
+    "description": "Vi svarer typisk på alle forespørgsler inden for 24 timer i løbet af arbejdsdage."
+  },
+  "social": {
+    "title": "Følg os"
+  }
+}

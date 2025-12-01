@@ -1,0 +1,36 @@
+{
+  "home": "Home",
+  "news": "News & Updates",
+  "figma": "Figma Designs",
+  "profile": "Profile",
+  "settings": "Settings",
+  "signIn": "Sign In",
+  "signOut": "Sign Out",
+  "openProfile": "Open Profile",
+  "launchApp": "Launch App",
+  "status": "Status",
+  "company": {
+    "title": "Company",
+    "about": "About Us",
+    "aboutDesc": "Learn about our mission and team",
+    "careers": "Careers",
+    "careersDesc": "Join our growing team",
+    "blog": "Blog",
+    "blogDesc": "Fitness tips and insights",
+    "press": "Press",
+    "pressDesc": "News and media resources"
+  },
+  "resources": {
+    "title": "Resources",
+    "help": "Help Center",
+    "helpDesc": "Get support and find answers",
+    "faq": "FAQ",
+    "faqDesc": "Frequently asked questions",
+    "contact": "Contact Us",
+    "contactDesc": "Get in touch with our team"
+  },
+  "sections": {
+    "pages": "Pages",
+    "app": "Application"
+  }
+}

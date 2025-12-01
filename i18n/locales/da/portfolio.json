@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "ctaPrimary": "Kontakt mig",
+    "ctaSecondary": "Se projekter"
+  },
+  "sections": {
+    "services": {
+      "title": "Det jeg hjælper med",
+      "subtitle": "Websites, UX/UI, konceptudvikling og QA med balance mellem design, struktur og frontend."
+    },
+    "skills": {
+      "title": "Mine fokusområder",
+      "core": "Kerner",
+      "tech": "Teknologier",
+      "tools": "Værktøjer & metoder"
+    },
+    "projects": "Udvalgte cases",
+    "experience": "Roller & ansvar",
+    "education": "Uddannelse",
+    "educationSubtitle": "Studie og læring",
+    "experienceSubtitle": "Baggrund i freelance, startup og studier",
+    "values": "Sådan arbejder jeg",
+    "contact": {
+      "title": "Kontakt",
+      "preferred": "Foretrukne samarbejder",
+      "contactInfo": "Kontakt",
+      "emailDesc": "Skriv, så vender jeg tilbage hurtigst muligt.",
+      "linkedinDesc": "Connect til samarbejde, projekter eller netværk.",
+      "ctaPrimary": "Skriv en besked",
+      "ctaSecondary": "Se mine cases"
+    }
+  },
+  "about": {
+    "title": "Om mig",
+    "cardTitle": "Kort om mig",
+    "sections": {
+      "background": "Baggrund",
+      "skills": "Kompetencer",
+      "cases": "Udvalgte cases",
+      "approach": "Tilgang"
+    }
+  },
+  "valuesLabels": {
+    "environment": "Miljø",
+    "management": "Ledelse",
+    "strengths": "Styrker",
+    "approach": "Tilgang"
+  },
+  "stats": {
+    "experience": "Erfaring",
+    "services": "Ydelser",
+    "projects": "Projekter",
+    "education": "Uddannelse"
+  },
+  "nav": {
+    "home": "Hjem",
+    "services": "Ydelser",
+    "projects": "Projekter",
+    "experience": "Erfaring",
+    "about": "Om mig",
+    "contact": "Kontakt"
+  },
+  "form": {
+    "title": "Fortæl om dit projekt",
+    "name": "Navn",
+    "email": "E-mail",
+    "project": "Projekt",
+    "message": "Besked",
+    "submit": "Send"
+  }
+}
