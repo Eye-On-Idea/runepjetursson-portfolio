@@ -1,0 +1,420 @@
+{
+  "caseStudies": [
+    {
+      "id": "eye-on-idea",
+      "slug": "eye-on-idea",
+      "category": "myCompanies",
+      "title": "Eye On Idea",
+      "subtitle": "Web Development & Digital Services",
+      "company": "Eye On Idea",
+      "projectType": "Freelance Business & Brand Website",
+      "year": "2025",
+      "role": "Sole Founder, Designer & Developer",
+      "duration": "February 2025 - Ongoing",
+      "url": "https://eyeonidea.com",
+      "thumbnail": "/assets/cases/eoi/EIU-logo-colored.png",
+      "hero": "/assets/cases/eoi/EIU-landing.png",
+      "tags": [
+        "Web Development",
+        "UX/UI Design",
+        "Branding",
+        "Nuxt.js",
+        "Hosting"
+      ],
+      "technologies": [
+        "Nuxt 4",
+        "Vue.js",
+        "Tailwind CSS",
+        "Google Tag Manager"
+      ],
+      "overview": {
+        "challenge": "Creating a complete freelance business brand from scratch with no existing reference points, building everything from visual identity to service offerings while establishing credibility in web development services.",
+        "solution": "Built a modern, professional website emphasizing integrity, quality, and modernity with clear navigation, strong accessibility standards, and GDPR compliance. Developed comprehensive service offerings including web development, hosting, domain handling, custom domain email, and ongoing support.",
+        "outcome": "Successfully launched Eye On Idea as a full-service web development business serving small to mid-sized companies, with first client (Tegetec) secured. Achieved exceptional Lighthouse scores (97, 100, 100, 100) demonstrating technical excellence."
+      },
+      "keyMetrics": [
+        {
+          "label": "Lighthouse Performance",
+          "value": "97",
+          "description": "Near-perfect performance score"
+        },
+        {
+          "label": "Lighthouse Other Scores",
+          "value": "100",
+          "description": "Perfect accessibility, best practices, and SEO"
+        },
+        {
+          "label": "Business Pivot",
+          "value": "Sept 2025",
+          "description": "From QA to full web development services"
+        }
+      ],
+      "process": [
+        {
+          "phase": "Research & Foundation",
+          "description": "Founded Eye On Idea in February 2025, initially focusing on QA work for W3schools. Conducted extensive research into hosting solutions, GDPR compliance, and security standards to establish a solid foundation.",
+          "deliverables": [
+            "Business registration",
+            "Service model definition",
+            "Compliance research",
+            "Hosting infrastructure analysis"
+          ]
+        },
+        {
+          "phase": "Brand Creation",
+          "description": "Created complete brand identity from scratch with no client briefs or existing assets. Developed visual identity emphasizing integrity, quality, and modernity while maintaining professional tone and readability.",
+          "deliverables": [
+            "Logo design",
+            "Color theme",
+            "Brand guidelines",
+            "Visual direction"
+          ]
+        },
+        {
+          "phase": "Website Development",
+          "description": "Built modern, professional website with Nuxt 4 focusing on accessibility, GDPR compliance, and performance optimization. Implemented clear navigation and professional design system.",
+          "deliverables": [
+            "Nuxt 4 application",
+            "Design system",
+            "GDPR/cookie consent",
+            "Accessibility features"
+          ]
+        },
+        {
+          "phase": "Business Pivot & Growth",
+          "description": "Pivoted from QA services to full web development in September 2025. Expanded service offerings to include hosting, domain handling, custom domain email, and ongoing support for small to mid-sized companies.",
+          "deliverables": [
+            "Service expansion",
+            "Client onboarding (Tegetec)",
+            "Production deployment",
+            "Support infrastructure"
+          ]
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Building Without Reference",
+          "problem": "Creating a complete business brand and website from blank slate with no client input or existing assets to build upon.",
+          "solution": "Relied on personal vision and extensive industry research to develop cohesive brand identity and service offerings that meet market needs."
+        },
+        {
+          "title": "Solo Execution",
+          "problem": "Managing all aspects of business creation, branding, design, development, and deployment as sole founder and employee.",
+          "solution": "Systematic approach focusing on one area at a time while maintaining high quality standards and technical excellence throughout."
+        }
+      ],
+      "results": {
+        "summary": "Eye On Idea successfully launched as a full-service web development business with exceptional technical performance and first client secured. The professional brand identity and compliant infrastructure positions the business for growth in the small to mid-sized company market.",
+        "highlights": [
+          "Lighthouse scores: 97 (Performance), 100 (Accessibility, Best Practices, SEO)",
+          "Successfully pivoted from QA to full web development services",
+          "First client (Tegetec) onboarded with successful project delivery",
+          "Complete brand identity created from scratch",
+          "Full GDPR compliance and security standards implemented"
+        ]
+      },
+      "testimonial": null,
+      "gallery": [
+        "/assets/cases/eoi/EIU-landing.png",
+        "/assets/cases/eoi/lighhouse-eoi.png"
+      ],
+      "learnings": [
+        "Creating for yourself requires more time without client direction or reference points",
+        "Extensive research in hosting solutions and compliance pays off in credibility",
+        "High technical standards (Lighthouse 97+) demonstrate expertise to potential clients",
+        "Professional design and clear service offerings are essential for small business credibility"
+      ],
+      "nextSteps": [
+        "Expand client base beyond Tegetec",
+        "Develop case studies from completed projects",
+        "Build content marketing presence",
+        "Establish recurring revenue through hosting and support services"
+      ]
+    },
+    {
+      "id": "herqulez",
+      "slug": "herqulez",
+      "category": "myCompanies",
+      "title": "Herqulez",
+      "subtitle": "Modular Fitness Ecosystem Platform",
+      "company": "Herqulez",
+      "projectType": "Health Tech Startup & Mobile App Ecosystem",
+      "year": "2025",
+      "role": "Co-founder, CEO, Product Design & Tech Lead",
+      "duration": "Ongoing (Started November 2025)",
+      "url": "https://herqulez.com",
+      "thumbnail": "/assets/cases/herqulez/squared-dark-yellow.png",
+      "hero": "/assets/cases/herqulez/herq-landing.png",
+      "tags": [
+        "Product Design",
+        "UX/UI",
+        "Health Tech",
+        "Startup",
+        "React Native"
+      ],
+      "technologies": [
+        "React Native (Expo)",
+        "TypeScript",
+        "Firebase",
+        "Firestore",
+        "NativeWind/Tailwind"
+      ],
+      "overview": {
+        "challenge": "Designing six interconnected fitness modules (Core Fitness, Nutrition, Sleep/Recovery, Habits, Sport modules, Travel) without overwhelming users, while handling complex cross-module data sharing and maintaining ecosystem coherence.",
+        "solution": "Developed centralized data model with modular onboarding flow, unified Valor progression system, and goal-first setup with optional AI assistance. Standardized data schemas enable seamless cross-module analytics and recommendations.",
+        "outcome": "Currently developing MVP app with expected launch early 2026. Strong validation through user interviews (10 participants) and expert feedback confirming market need for integrated, fewer-apps approach with high automation."
+      },
+      "keyMetrics": [
+        {
+          "label": "Lighthouse Scores",
+          "value": "99/93/96/100",
+          "description": "Performance, Accessibility, Best Practices, SEO"
+        },
+        {
+          "label": "Languages",
+          "value": "2+4",
+          "description": "English, Danish live; German, Spanish, French, Swedish planned"
+        }
+      ],
+      "process": [
+        {
+          "phase": "Research & Validation",
+          "description": "Started November 2025 with co-founder Emil Vindum Koch. Conducted 10 user interviews across fitness-interested adults, students, and beginners. Key insights: users want fewer apps, higher automation, simple UX, and trustworthy guidance. Received validation through FFE competition acceptance and expert feedback from trainers and wellness professionals.",
+          "deliverables": [
+            "User interview findings",
+            "Expert review insights",
+            "Market need confirmation",
+            "FFE competition validation",
+            "Product vision document"
+          ]
+        },
+        {
+          "phase": "Product Architecture",
+          "description": "Designed unified cross-module structure with shared account system, centralized data layer, and Valor progression model. Developed subscription-based modular revenue model: 6-13 EUR/month per module, with 3-module and all-modules bundle pricing. Planned expansion to B2B white-label and B2G institutional contracts.",
+          "deliverables": [
+            "Full modular rollout plan",
+            "Information architecture",
+            "Data model design",
+            "Revenue model structure",
+            "Business roadmap"
+          ]
+        },
+        {
+          "phase": "Design System & UX",
+          "description": "Created high-fidelity prototypes for onboarding, goal setup, dashboards, module previews, and Valor System. Designed fast minimal-input onboarding with optional AI-assisted setup. Developed unified goal model across fitness, nutrition, and recovery with icon-first navigation and high-contrast UI options for accessibility.",
+          "deliverables": [
+            "Design system components",
+            "Typography & color tokens",
+            "Reusable UI patterns",
+            "High-fidelity prototypes",
+            "Accessibility features"
+          ]
+        },
+        {
+          "phase": "Development (MVP)",
+          "description": "Building MVP with React Native (Expo), TypeScript, and Firebase/Firestore backend. Implementing shared authentication layer, data sharing infrastructure across modules, and server-side logic. Working 8-14 hours daily since November 2025. Marketing website built with Nuxt achieving 99/93/96/100 Lighthouse scores. CVR registration and official launch expected early 2026.",
+          "deliverables": [
+            "React Native mobile app",
+            "Firebase backend infrastructure",
+            "Marketing website (Nuxt)",
+            "Figma design system",
+            "Multi-language support (EN/DA)"
+          ]
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Ecosystem Coherence",
+          "problem": "Designing six interconnected modules without overwhelming users while maintaining consistent experience across fitness, nutrition, sleep, and habits tracking.",
+          "solution": "Centralized data model with shared navigation patterns and unified Valor progression system keeps experience consistent. Each module can work independently or contribute to overall ecosystem."
+        },
+        {
+          "title": "Onboarding Complexity",
+          "problem": "Users have different goals, experience levels, and module interests—preventing one-size-fits-all onboarding approach.",
+          "solution": "Modular onboarding flow with goal-first setup and optional AI assistance reduces friction and tailors initial experience. Users select primary goals and preferred modules for customized starting plan."
+        },
+        {
+          "title": "Cross-Module Data Sharing",
+          "problem": "Fitness, nutrition, sleep, and habits all require different data types but must sync smoothly for recommendations and analytics.",
+          "solution": "Standardized data schemas with single account layer enable recommendations and analytics across modules without extra user input. All modules feed into shared profile and data layer."
+        },
+        {
+          "title": "Compliance & Privacy",
+          "problem": "Handling health-related data across EU users requires strict GDPR compliance and privacy controls.",
+          "solution": "GDPR-first architecture with strict permission controls and anonymization in analytics/research features. Clear consent mechanisms for data sharing."
+        }
+      ],
+      "results": {
+        "summary": "Herqulez MVP is in active development with launch expected early 2026. Strong validation from 10 user interviews and FFE competition acceptance confirms market need. Marketing website achieving near-perfect Lighthouse scores (99/93/96/100) demonstrates technical excellence.",
+        "highlights": [
+          "Validated through FFE competition and expert feedback from trainers/wellness professionals",
+          "10 user interviews confirming demand for integrated multi-module fitness ecosystem",
+          "Marketing website Lighthouse: 99 Performance, 93 Accessibility, 96 Best Practices, 100 SEO",
+          "Modular subscription model: 6-13 EUR/month per module with bundle pricing",
+          "Tech stack: React Native (Expo), TypeScript, Firebase, with unified data layer",
+          "GDPR-first architecture with strict privacy controls for health data"
+        ]
+      },
+      "testimonial": null,
+      "gallery": [
+        "/assets/cases/herqulez/herq-landing.png",
+        "/assets/cases/herqulez/herq-fullsystem.png",
+        "/assets/cases/herqulez/herq-fitness.png",
+        "/assets/cases/herqulez/lighthouse-herqulez.png"
+      ],
+      "learnings": [
+        "User research validates need for fewer apps with higher automation and trustworthy guidance",
+        "Centralized data model crucial for seamless cross-module functionality without user friction",
+        "GDPR-first architecture must be built in from start when handling health data",
+        "Modular onboarding with AI assistance reduces complexity for diverse user needs",
+        "Phased rollout (foundation first, then modules) ensures stability and reduces rework"
+      ],
+      "nextSteps": [
+        "Complete CVR registration (expected early 2026)",
+        "Launch MVP with Core Fitness, Nutrition, and Sleep/Recovery modules",
+        "Begin pilot tests with trainers and small businesses",
+        "Implement Valor System data model and progression rules",
+        "Expand language support to German, Spanish, French, Swedish",
+        "Develop B2B white-label platform capabilities"
+      ]
+    },
+    {
+      "id": "tegetec",
+      "slug": "tegetec",
+      "category": "clientWork",
+      "title": "Tegetec",
+      "subtitle": "Industrial Food Processing Equipment Provider",
+      "company": "Tegetec",
+      "projectType": "Complete Website Redesign & Development",
+      "year": "2025",
+      "role": "Solo: Audit, IA, Design, Frontend, SEO",
+      "duration": "~2 working days build, ~1 month elapsed (domain transfer)",
+      "url": "https://tegetec.com",
+      "thumbnail": "/assets/cases/tegetec/tegetec.svg",
+      "hero": "/assets/cases/tegetec/tegetec-landing.png",
+      "tags": ["Web Redesign", "SEO", "B2B", "Static Site", "Industrial"],
+      "technologies": [
+        "Nuxt 4",
+        "@nuxt/ui",
+        "Tailwind CSS v4",
+        "@nuxt/image (IPX)",
+        "Schema.org",
+        "GTM/GA4"
+      ],
+      "overview": {
+        "challenge": "Modernize dated B2B industrial equipment site with thin SEO coverage, limited accessibility, and dense technical content without clear information architecture. Budget ~20K DKK with requirement to maintain 99% mail uptime during domain transfer.",
+        "solution": "Solo delivery across full stack: comprehensive audit identifying UX/SEO gaps, restructured IA with three primary sections, static Nuxt 4 build avoiding backend costs, comprehensive Schema.org markup, EU cookie consent with GTM consent-mode, and carefully planned DNS cutover to preserve MX records.",
+        "outcome": "Launched modern B2B platform with refreshed visual system, compliant policy/cookie layer, and SEO-ready foundation. Static SSG deployment with long-cache headers, performance optimizations, and accessibility features including skip links, reduced-motion handling, and contrast-checked palette."
+      },
+      "keyMetrics": [
+        {
+          "label": "Budget",
+          "value": "~20K DKK",
+          "description": "Fixed budget including domain transfer"
+        },
+        {
+          "label": "Timeline",
+          "value": "2 days build",
+          "description": "~1 month elapsed with domain/mail transfer"
+        },
+        {
+          "label": "Regional Coverage",
+          "value": "3 offices",
+          "description": "Denmark, Spain, Finland"
+        }
+      ],
+      "process": [
+        {
+          "phase": "Audit & Strategy",
+          "description": "Identified issues in old site: dated UX/visuals, thin SEO/meta coverage, limited accessibility focus, dense technical content without clear IA. Light benchmarking of OEM partner materials. Kickoff goals: modernize design, clarify navigation for technical info, tighten SEO hygiene, keep support open post-launch. No numeric KPIs set.",
+          "deliverables": [
+            "UX audit findings",
+            "SEO gap analysis",
+            "Trust signal requirements",
+            "IA modernization plan",
+            "OEM material review"
+          ]
+        },
+        {
+          "phase": "Information Architecture",
+          "description": "Restructured into three primary sections: Equipment & Solutions (system cards, process flow, chubmaker specs), Collaborators, About/Contact. Added dedicated downloads and policy pages with anchors for service/contact. Target segments: food/industrial producers (pasta, rice, vegetables, legumes, meats, adhesives, etc.) in Nordics and selected EU (Denmark, Finland, Spain).",
+          "deliverables": [
+            "New sitemap structure",
+            "Equipment categorization",
+            "Contact flow design",
+            "Downloads section",
+            "Regional office setup"
+          ]
+        },
+        {
+          "phase": "Design & Development",
+          "description": "Built with Nuxt 4 + @nuxt/ui, Tailwind CSS v4, @nuxt/image (IPX), SSG output. Implemented custom design tokens, accordion/table pattern for deep OEM specs without overwhelming users. Local fonts + long-cache headers for assets. No client-side theming to reduce runtime cost. Static generation for CDN hosting.",
+          "deliverables": [
+            "Design system",
+            "Responsive components",
+            "Static site generation",
+            "Asset optimization",
+            "Performance tuning"
+          ]
+        },
+        {
+          "phase": "SEO & Compliance",
+          "description": "Implemented comprehensive Schema.org markup (WebSite, Organization/Service, AboutPage, CollectionPage, policy JSON-LD). Canonicals, custom titles/keywords/descriptions per page, OG/Twitter cards. EU cookie control with GTM/GA via consent-mode defaults, reject-all prominent, script gating before GTM load. Accessibility: skip link, focus-visible styling, reduced-motion handling, semantic tables, SR-only labels.",
+          "deliverables": [
+            "Schema.org implementation",
+            "Meta tag optimization",
+            "EU cookie consent (GDPR)",
+            "GTM/GA4 integration",
+            "Accessibility features"
+          ]
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Domain Transfer with Mail Continuity",
+          "problem": "Transferring domain ownership while maintaining 99% mail uptime required careful DNS and MX record management.",
+          "solution": "Planned DNS cutover to avoid MX downtime. Coordinated transfer timing with client to minimize service interruption."
+        },
+        {
+          "title": "Deep OEM Specs Without Overwhelming",
+          "problem": "Presenting detailed technical specifications for industrial equipment (chubmaker data, system specs) without overwhelming non-technical buyers.",
+          "solution": "Implemented accordion/table pattern for specs, cards and stepper for process overview, allowing progressive disclosure of technical details."
+        },
+        {
+          "title": "EU Consent Compliance",
+          "problem": "Meeting GDPR cookie consent requirements while integrating analytics tracking for future optimization.",
+          "solution": "Reject-all prominent in cookie banner, script gating before GTM load, consent-mode updates ensuring compliant tracking setup."
+        }
+      ],
+      "results": {
+        "summary": "Tegetec successfully launched with modernized visual system, clear IA, and compliant infrastructure. Static SSG build eliminates backend costs while GTM/GA4 integration positions site for data-driven optimization once consented traffic accumulates. No post-launch metrics yet collected but foundation established for measurement.",
+        "highlights": [
+          "Solo delivery across audit, IA, design, frontend, and SEO in ~2 working days",
+          "Static Nuxt 4 build eliminating ongoing backend/hosting costs",
+          "Comprehensive Schema.org markup (WebSite, Organization, Service, AboutPage, policies)",
+          "Full GDPR compliance with EU cookie consent and GTM consent-mode",
+          "Accessibility features: skip links, focus-visible, reduced-motion, semantic tables",
+          "Multi-region contact system: DK/ES/FI offices with mailto/tel direct contact"
+        ]
+      },
+      "testimonial": null,
+      "gallery": [
+        "/assets/cases/tegetec/tegetec-landing.png",
+        "/assets/cases/tegetec/lighthouse-tegetec.png"
+      ],
+      "learnings": [
+        "Domain transfers require careful planning to maintain critical services like email",
+        "Progressive disclosure (accordions, steppers) essential for technical B2B content",
+        "Static SSG builds dramatically reduce costs for content-focused B2B sites",
+        "GDPR compliance must be prominent (reject-all) before any tracking scripts load",
+        "Solo delivery possible with tight scope and modern tooling (Nuxt 4, Tailwind, @nuxt/ui)"
+      ],
+      "nextSteps": [
+        "Wire form/CRM endpoint for contact requests beyond mailto/tel",
+        "Add localized content if needed for broader EU market",
+        "Publish case studies and metrics once traffic data available",
+        "Set up GA4/GTM dashboards after consentable traffic accumulates"
+      ]
+    }
+  ]
+}

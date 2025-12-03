@@ -1,0 +1,120 @@
+{
+  "metaTitle": "Cookie Politik | Rune Pjetursson",
+  "metaDescription": "Lær om de cookies og lokal lagring, der bruges på runepjetursson.com for at forbedre din browseroplevelse.",
+  "title": "Cookie Politik",
+  "lastUpdated": "Sidst opdateret: 3. december 2025",
+  "intro": "Denne Cookie Politik forklarer, hvordan runepjetursson.com bruger cookies og lignende teknologier til at levere og forbedre vores tjenester. Dette er en personlig portfolio-hjemmeside med minimal dataindsamling.",
+
+  "sections": {
+    "whatAreCookies": {
+      "title": "Hvad Er Cookies?",
+      "content": "Cookies er små tekstfiler, der placeres på din enhed af hjemmesider, du besøger. De hjælper hjemmesider med at huske information om dit besøg, hvilket gør din browsing-oplevelse mere effektiv og personlig."
+    },
+
+    "cookiesWeUse": {
+      "title": "Cookies og Lagring Vi Bruger",
+      "intro": "Dette website bruger minimale cookies og browser-lagring for at forbedre din oplevelse. Vi bruger ikke analytics, annoncering eller tredjeparts sporingscookies.",
+
+      "essential": {
+        "title": "Nødvendige Cookies",
+        "description": "Disse er nødvendige for at hjemmesiden kan fungere korrekt og kan ikke deaktiveres.",
+        "items": [
+          {
+            "name": "i18n_redirected",
+            "purpose": "Husker din sprogpræference (engelsk eller dansk)",
+            "type": "Cookie",
+            "duration": "Session eller indtil du ændrer sprog",
+            "category": "Nødvendig"
+          }
+        ]
+      },
+
+      "preferences": {
+        "title": "Præference Lagring",
+        "description": "Vi bruger din browsers lokale lagring (ikke cookies) til at gemme dine præferencer. Disse data forlader aldrig din enhed.",
+        "items": [
+          {
+            "name": "color-mode",
+            "purpose": "Gemmer din tema-præference (lys, mørk eller system)",
+            "type": "LocalStorage",
+            "duration": "Permanent indtil ryddet",
+            "category": "Funktionel"
+          },
+          {
+            "name": "user_language",
+            "purpose": "Gemmer din valgte sprogpræference",
+            "type": "LocalStorage",
+            "duration": "Permanent indtil ryddet",
+            "category": "Funktionel"
+          },
+          {
+            "name": "user_theme",
+            "purpose": "Backup lagring for tema-præference",
+            "type": "LocalStorage",
+            "duration": "Permanent indtil ryddet",
+            "category": "Funktionel"
+          },
+          {
+            "name": "user_units",
+            "purpose": "Gemmer din måleenhedspræference (metrisk/imperial)",
+            "type": "LocalStorage",
+            "duration": "Permanent indtil ryddet",
+            "category": "Funktionel"
+          }
+        ]
+      }
+    },
+
+    "noTracking": {
+      "title": "Ingen Sporing eller Analytics",
+      "content": "Vi ønsker at være helt gennemsigtige: dette website bruger ikke Google Analytics, sociale medie pixels, annonceringscookies eller tredjeparts sporingstjenester. Din browseraktivitet på dette site er privat og bliver ikke overvåget, analyseret eller delt med tredjeparter."
+    },
+
+    "technicalDetails": {
+      "title": "Tekniske Detaljer",
+      "content": "Alle præferencedata gemmes lokalt på din enhed ved hjælp af browser LocalStorage og én sessionscookie til sprogdetektion. Dette betyder:",
+      "points": [
+        "Dine præferencer forbliver på din enhed og transmitteres aldrig til vores servere",
+        "Ingen personlig information indsamles eller gemmes af os",
+        "Ingen sporing på tværs af hjemmesider eller sessioner",
+        "Ingen data sælges eller deles med tredjeparter",
+        "Rydning af dine browserdata nulstiller alle præferencer"
+      ]
+    },
+
+    "control": {
+      "title": "Din Kontrol",
+      "intro": "Du har fuld kontrol over disse indstillinger:",
+
+      "localStorage": {
+        "title": "Ryd Lokal Lagring",
+        "content": "Du kan rydde dine gemte præferencer når som helst gennem din browsers udviklerværktøjer eller ved at rydde dine browserdata. Dette nulstiller hjemmesiden til standardindstillinger (engelsk sprog, systemtema)."
+      },
+
+      "cookies": {
+        "title": "Administrer Cookies",
+        "content": "Du kan kontrollere cookies gennem dine browserindstillinger. Bemærk at blokering af sprogpræference-cookien kan påvirke den automatiske sprogdetektionsfunktion. Her er hvordan du administrerer cookies i populære browsere:"
+      },
+
+      "noImpact": {
+        "title": "Effekt af Deaktivering",
+        "content": "Da vi kun bruger essentielle funktionelle cookies og lokal lagring, vil deaktivering af dem simpelthen nulstille dine præferencer til standardværdier. Hjemmesiden forbliver fuldt funktionel, selvom du måske skal genvælge dit sprog og tema-præferencer ved hvert besøg."
+      }
+    },
+
+    "gdprCompliance": {
+      "title": "GDPR & Privatlivs Overholdelse",
+      "content": "Dette website er designet med privatliv som standard. Vi bruger kun strengt nødvendige og funktionelle lagring, der forbedrer din oplevelse uden at spore dig. Under GDPR kræver disse essentielle cookies ikke eksplicit samtykke, da de er nødvendige for hjemmesidens legitime funktion og ikke behandler persondata."
+    },
+
+    "changes": {
+      "title": "Ændringer til Denne Politik",
+      "content": "Vi kan opdatere denne Cookie Politik for at afspejle ændringer i vores praksis eller af juridiske, operationelle eller regulatoriske årsager. Eventuelle ændringer vil blive offentliggjort på denne side med en opdateret revisionsdato."
+    },
+
+    "contact": {
+      "title": "Kontakt",
+      "content": "Hvis du har spørgsmål om denne Cookie Politik eller hvordan vi håndterer dine præferencer, bedes du kontakte os på:"
+    }
+  }
+}

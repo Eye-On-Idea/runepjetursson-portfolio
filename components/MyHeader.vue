@@ -50,6 +50,10 @@ onBeforeUnmount(() => {
         id="progressBar"
         :value="scrollProgress"
         :max="progressMax"
+        :aria-valuenow="scrollProgress"
+        :aria-valuemin="0"
+        :aria-valuemax="progressMax"
+        aria-label="Page scroll progress"
         class="w-full h-3"
       ></progress>
     </div>
@@ -69,7 +73,7 @@ onBeforeUnmount(() => {
         v-for="link in navLinks"
         :key="link.to"
         :to="link.to"
-        class="relative px-4 py-2.5 text-sm font-bold transition-all duration-300 flex items-center gap-2 rounded-lg overflow-hidden group"
+        class="relative px-4 py-2.5 text-sm font-bold transition-all duration-300 flex items-center gap-2 rounded-lg overflow-hidden group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-400 focus-visible:ring-offset-neutral-900"
         :class="
           route.path === link.to.replace('/#', '/')
             ? 'text-brand-300 bg-brand-500/10'
@@ -95,11 +99,11 @@ onBeforeUnmount(() => {
           <NuxtLink
             v-for="link in navLinks"
             :key="link.to"
-            :to="link.to"
-            class="px-4 py-3 rounded-xl text-base font-bold transition-all duration-300"
-            :class="
-              route.path === link.to.replace('/#', '/')
-                ? 'bg-brand-500/10 text-brand-300 border border-brand-500/20'
+          :to="link.to"
+          class="px-4 py-3 rounded-xl text-base font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-400 focus-visible:ring-offset-neutral-900"
+          :class="
+            route.path === link.to.replace('/#', '/')
+              ? 'bg-brand-500/10 text-brand-300 border border-brand-500/20'
                 : 'text-neutral-200 hover:text-white hover:bg-white/10'
             "
           >

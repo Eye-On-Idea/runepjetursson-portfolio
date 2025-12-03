@@ -1,0 +1,420 @@
+{
+  "caseStudies": [
+    {
+      "id": "eye-on-idea",
+      "slug": "eye-on-idea",
+      "category": "myCompanies",
+      "title": "Eye On Idea",
+      "subtitle": "Webudvikling & Digitale Services",
+      "company": "Eye On Idea",
+      "projectType": "Freelance Forretning & Brand Hjemmeside",
+      "year": "2025",
+      "role": "Eneste Stifter, Designer & Udvikler",
+      "duration": "Februar 2025 - Igangværende",
+      "url": "https://eyeonidea.com",
+      "thumbnail": "/assets/cases/eoi/EIU-logo-colored.png",
+      "hero": "/assets/cases/eoi/EIU-landing.png",
+      "tags": [
+        "Webudvikling",
+        "UX/UI Design",
+        "Branding",
+        "Nuxt.js",
+        "Hosting"
+      ],
+      "technologies": [
+        "Nuxt 4",
+        "Vue.js",
+        "Tailwind CSS",
+        "Google Tag Manager"
+      ],
+      "overview": {
+        "challenge": "At skabe et komplet freelance forretningsbrand fra bunden uden eksisterende referencepunkter, bygge alt fra visuel identitet til servicetilbud, samtidig med at etablere troværdighed inden for webudviklingstjenester.",
+        "solution": "Byggede en moderne, professionel hjemmeside der understreger integritet, kvalitet og modernitet med klar navigation, stærke tilgængelighedsstandarder og GDPR-compliance. Udviklede omfattende servicetilbud inklusive webudvikling, hosting, domænehåndtering, tilpasset domæne-email og løbende support.",
+        "outcome": "Lancerede succesfuldt Eye On Idea som en full-service webudviklingsvirksomhed der betjener små til mellemstore virksomheder, med første klient (Tegetec) sikret. Opnåede exceptionelle Lighthouse-scorer (97, 100, 100, 100) der demonstrerer teknisk ekspertise."
+      },
+      "keyMetrics": [
+        {
+          "label": "Lighthouse Performance",
+          "value": "97",
+          "description": "Næsten perfekt performance-score"
+        },
+        {
+          "label": "Lighthouse Andre Scores",
+          "value": "100",
+          "description": "Perfekt tilgængelighed, best practices og SEO"
+        },
+        {
+          "label": "Forretningsskift",
+          "value": "Sept 2025",
+          "description": "Fra QA til fuld webudviklingsservice"
+        }
+      ],
+      "process": [
+        {
+          "phase": "Research & Fundament",
+          "description": "Grundlagde Eye On Idea i februar 2025, først med fokus på QA-arbejde for W3schools. Gennemførte omfattende research i hostingløsninger, GDPR-compliance og sikkerhedsstandarder for at etablere et solidt fundament.",
+          "deliverables": [
+            "Virksomhedsregistrering",
+            "Servicemodeldefiniering",
+            "Compliance-research",
+            "Hosting-infrastrukturanalyse"
+          ]
+        },
+        {
+          "phase": "Brand Skabelse",
+          "description": "Skabte komplet brandidentitet fra bunden uden klientbriefing eller eksisterende assets. Udviklede visuel identitet der understreger integritet, kvalitet og modernitet, samtidig med professionel tone og læsbarhed.",
+          "deliverables": [
+            "Logo-design",
+            "Farvetema",
+            "Brand-retningslinjer",
+            "Visuel retning"
+          ]
+        },
+        {
+          "phase": "Hjemmeside Udvikling",
+          "description": "Byggede moderne, professionel hjemmeside med Nuxt 4 med fokus på tilgængelighed, GDPR-compliance og performance-optimering. Implementerede klar navigation og professionelt designsystem.",
+          "deliverables": [
+            "Nuxt 4 applikation",
+            "Designsystem",
+            "GDPR/cookie-samtykke",
+            "Tilgængelighedsfunktioner"
+          ]
+        },
+        {
+          "phase": "Forretningsskift & Vækst",
+          "description": "Skiftede fra QA-services til fuld webudvikling i september 2025. Udvidede servicetilbud til at inkludere hosting, domænehåndtering, tilpasset domæne-email og løbende support til små og mellemstore virksomheder.",
+          "deliverables": [
+            "Service-udvidelse",
+            "Klient-onboarding (Tegetec)",
+            "Produktionsudgivelse",
+            "Support-infrastruktur"
+          ]
+        }
+      ],
+      "challenges": [
+        {
+          "title": "At Bygge Uden Reference",
+          "problem": "At skabe et komplet forretningsbrand og hjemmeside fra en blank tavle uden klient-input eller eksisterende assets at bygge på.",
+          "solution": "Stolede på personlig vision og omfattende brancheresearch for at udvikle sammenhængende brandidentitet og servicetilbud der møder markedets behov."
+        },
+        {
+          "title": "Solo Eksekvering",
+          "problem": "At håndtere alle aspekter af forretningsskabelse, branding, design, udvikling og deployment som eneste stifter og medarbejder.",
+          "solution": "Systematisk tilgang med fokus på ét område ad gangen, mens høje kvalitetsstandarder og teknisk ekspertise opretholdes gennem hele processen."
+        }
+      ],
+      "results": {
+        "summary": "Eye On Idea lancerede succesfuldt som en full-service webudviklingsvirksomhed med exceptionel teknisk performance og første klient sikret. Den professionelle brandidentitet og compliance-infrastruktur positionerer virksomheden for vækst i markedet for små til mellemstore virksomheder.",
+        "highlights": [
+          "Lighthouse-scorer: 97 (Performance), 100 (Tilgængelighed, Best Practices, SEO)",
+          "Succesfuldt skiftet fra QA til fuld webudviklingsservice",
+          "Første klient (Tegetec) onboarded med succesfuld projektlevering",
+          "Komplet brandidentitet skabt fra bunden",
+          "Fuld GDPR-compliance og sikkerhedsstandarder implementeret"
+        ]
+      },
+      "testimonial": null,
+      "gallery": [
+        "/assets/cases/eoi/EIU-landing.png",
+        "/assets/cases/eoi/lighhouse-eoi.png"
+      ],
+      "learnings": [
+        "At skabe for sig selv kræver mere tid uden klientvejledning eller referencepunkter",
+        "Omfattende research i hostingløsninger og compliance betaler sig i troværdighed",
+        "Høje tekniske standarder (Lighthouse 97+) demonstrerer ekspertise til potentielle klienter",
+        "Professionelt design og klare servicetilbud er essentielle for små virksomheders troværdighed"
+      ],
+      "nextSteps": [
+        "Udvide klientbase ud over Tegetec",
+        "Udvikle case studies fra gennemførte projekter",
+        "Bygge content marketing-tilstedeværelse",
+        "Etablere tilbagevendende omsætning gennem hosting og support-services"
+      ]
+    },
+    {
+      "id": "herqulez",
+      "slug": "herqulez",
+      "category": "myCompanies",
+      "title": "Herqulez",
+      "subtitle": "Modulær Fitness Økosystem Platform",
+      "company": "Herqulez",
+      "projectType": "Health Tech Startup & Mobil App Økosystem",
+      "year": "2025",
+      "role": "Medstifter, CEO, Produktdesign & Tech Lead",
+      "duration": "Igangværende (Startet November 2025)",
+      "url": "https://herqulez.com",
+      "thumbnail": "/assets/cases/herqulez/squared-dark-yellow.png",
+      "hero": "/assets/cases/herqulez/herq-landing.png",
+      "tags": [
+        "Produktdesign",
+        "UX/UI",
+        "Health Tech",
+        "Startup",
+        "React Native"
+      ],
+      "technologies": [
+        "React Native (Expo)",
+        "TypeScript",
+        "Firebase",
+        "Firestore",
+        "NativeWind/Tailwind"
+      ],
+      "overview": {
+        "challenge": "At designe seks indbyrdes forbundne fitnessmoduler (Core Fitness, Nutrition, Sleep/Recovery, Habits, Sport-moduler, Travel) uden at overvælde brugere, samtidig med at håndtere kompleks tværmodul-datadeling og opretholde økosystem-sammenhæng.",
+        "solution": "Udviklede centraliseret datamodel med modulær onboarding-flow, samlet Valor-progressionssystem og mål-først setup med valgfri AI-assistance. Standardiserede dataskemaer muliggør problemfri tværmodul-analyser og anbefalinger.",
+        "outcome": "Udvikler i øjeblikket MVP-app med forventet lancering tidligt 2026. Stærk validering gennem brugerinterviews (10 deltagere) og ekspertfeedback, der bekræfter markedsbehov for integreret færre-apps-tilgang med høj automatisering."
+      },
+      "keyMetrics": [
+        {
+          "label": "Lighthouse Scores",
+          "value": "99/93/96/100",
+          "description": "Performance, Tilgængelighed, Best Practices, SEO"
+        },
+        {
+          "label": "Sprog",
+          "value": "2+4",
+          "description": "Engelsk, Dansk live; Tysk, Spansk, Fransk, Svensk planlagt"
+        }
+      ],
+      "process": [
+        {
+          "phase": "Research & Validering",
+          "description": "Startede november 2025 med medstifter Emil Vindum Koch. Gennemførte 10 brugerinterviews på tværs af fitness-interesserede voksne, studerende og begyndere. Nøgleindsigter: brugere ønsker færre apps, højere automatisering, simpel UX og troværdig vejledning. Modtog validering gennem FFE-konkurrence-accept og ekspertfeedback fra trænere og wellness-professionelle.",
+          "deliverables": [
+            "Brugerinterview-fund",
+            "Ekspertanmeldelsesindsigter",
+            "Markedsbehovsbekræftelse",
+            "FFE-konkurrencevalidering",
+            "Produktvisionsdokument"
+          ]
+        },
+        {
+          "phase": "Produktarkitektur",
+          "description": "Designede samlet tværmodul-struktur med delt kontosystem, centraliseret datalag og Valor-progressionsmodel. Udviklede abonnementsbaseret modulær omsætningsmodel: 6-13 EUR/måned per modul, med 3-modul og alle-moduler bundle-prissætning. Planlagt udvidelse til B2B white-label og B2G institutionelle kontrakter.",
+          "deliverables": [
+            "Fuld modulær udrulningsplan",
+            "Informationsarkitektur",
+            "Datamodeldesign",
+            "Omsætningsmodelstruktur",
+            "Forretningsvejkort"
+          ]
+        },
+        {
+          "phase": "Designsystem & UX",
+          "description": "Skabte high-fidelity prototyper til onboarding, mål-setup, dashboards, modul-forhåndsvisninger og Valor System. Designede hurtig minimal-input onboarding med valgfri AI-assisteret setup. Udviklede samlet målmodel på tværs af fitness, ernæring og restitution med ikon-først navigation og høj-kontrast UI-valgmuligheder for tilgængelighed.",
+          "deliverables": [
+            "Designsystemkomponenter",
+            "Typografi & farve-tokens",
+            "Genanvendelige UI-mønstre",
+            "High-fidelity prototyper",
+            "Tilgængelighedsfunktioner"
+          ]
+        },
+        {
+          "phase": "Udvikling (MVP)",
+          "description": "Bygger MVP med React Native (Expo), TypeScript og Firebase/Firestore backend. Implementerer delt autentificeringslag, datadelings-infrastruktur på tværs af moduler og server-side logik. Arbejder 8-14 timer dagligt siden november 2025. Marketinghjemmeside bygget med Nuxt opnår 99/93/96/100 Lighthouse-scorer. CVR-registrering og officiel lancering forventet tidligt 2026.",
+          "deliverables": [
+            "React Native mobil-app",
+            "Firebase backend-infrastruktur",
+            "Marketinghjemmeside (Nuxt)",
+            "Figma designsystem",
+            "Flersproget support (EN/DA)"
+          ]
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Økosystem Sammenhæng",
+          "problem": "At designe seks indbyrdes forbundne moduler uden at overvælde brugere, samtidig med at opretholde konsekvent oplevelse på tværs af fitness, ernæring, søvn og vane-tracking.",
+          "solution": "Centraliseret datamodel med delte navigationsmønstre og samlet Valor-progressionssystem holder oplevelsen konsekvent. Hvert modul kan fungere uafhængigt eller bidrage til det samlede økosystem."
+        },
+        {
+          "title": "Onboarding Kompleksitet",
+          "problem": "Brugere har forskellige mål, erfaringsniveauer og modul-interesser—forhindrer en-størrelse-passer-alle onboarding-tilgang.",
+          "solution": "Modulær onboarding-flow med mål-først setup og valgfri AI-assistance reducerer friktion og skræddersyr initial oplevelse. Brugere vælger primære mål og foretrukne moduler til tilpasset startplan."
+        },
+        {
+          "title": "Tværmodul Datadeling",
+          "problem": "Fitness, ernæring, søvn og vaner kræver alle forskellige datatyper, men skal synkronisere problemfrit for anbefalinger og analyser.",
+          "solution": "Standardiserede dataskemaer med enkelt kontolag muliggør anbefalinger og analyser på tværs af moduler uden ekstra bruger-input. Alle moduler føder ind i delt profil og datalag."
+        },
+        {
+          "title": "Compliance & Privatliv",
+          "problem": "Håndtering af sundhedsrelaterede data på tværs af EU-brugere kræver streng GDPR-compliance og privatlivskontroller.",
+          "solution": "GDPR-først arkitektur med strenge tilladelseskontroller og anonymisering i analyse/research-funktioner. Klare samtykkemekanismer for datadeling."
+        }
+      ],
+      "results": {
+        "summary": "Herqulez MVP er under aktiv udvikling med lancering forventet tidligt 2026. Stærk validering fra 10 brugerinterviews og FFE-konkurrence-accept bekræfter markedsbehov. Marketinghjemmeside opnår næsten perfekte Lighthouse-scorer (99/93/96/100) og demonstrerer teknisk ekspertise.",
+        "highlights": [
+          "Valideret gennem FFE-konkurrence og ekspertfeedback fra trænere/wellness-professionelle",
+          "10 brugerinterviews bekræfter efterspørgsel efter integreret multi-modul fitness-økosystem",
+          "Marketinghjemmeside Lighthouse: 99 Performance, 93 Tilgængelighed, 96 Best Practices, 100 SEO",
+          "Modulær abonnementsmodel: 6-13 EUR/måned per modul med bundle-prissætning",
+          "Tech stack: React Native (Expo), TypeScript, Firebase, med samlet datalag",
+          "GDPR-først arkitektur med strenge privatlivskontroller for sundhedsdata"
+        ]
+      },
+      "testimonial": null,
+      "gallery": [
+        "/assets/cases/herqulez/herq-landing.png",
+        "/assets/cases/herqulez/herq-fullsystem.png",
+        "/assets/cases/herqulez/herq-fitness.png",
+        "/assets/cases/herqulez/lighthouse-herqulez.png"
+      ],
+      "learnings": [
+        "Brugerresearch validerer behov for færre apps med højere automatisering og troværdig vejledning",
+        "Centraliseret datamodel afgørende for problemfri tværmodul-funktionalitet uden bruger-friktion",
+        "GDPR-først arkitektur skal bygges ind fra start ved håndtering af sundhedsdata",
+        "Modulær onboarding med AI-assistance reducerer kompleksitet for forskellige brugerbehov",
+        "Fasevis udrulning (fundament først, derefter moduler) sikrer stabilitet og reducerer omarbejde"
+      ],
+      "nextSteps": [
+        "Fuldfør CVR-registrering (forventet tidligt 2026)",
+        "Lancér MVP med Core Fitness, Nutrition og Sleep/Recovery-moduler",
+        "Start pilottest med trænere og små virksomheder",
+        "Implementér Valor System datamodel og progressionsregler",
+        "Udvid sprogsupport til Tysk, Spansk, Fransk, Svensk",
+        "Udvikl B2B white-label platform-kapaciteter"
+      ]
+    },
+    {
+      "id": "tegetec",
+      "slug": "tegetec",
+      "category": "clientWork",
+      "title": "Tegetec",
+      "subtitle": "Industriel Fødevareforarbejdnings Udstyrs Leverandør",
+      "company": "Tegetec",
+      "projectType": "Komplet Hjemmeside Redesign & Udvikling",
+      "year": "2025",
+      "role": "Solo: Audit, IA, Design, Frontend, SEO",
+      "duration": "~2 arbejdsdage bygning, ~1 måned forløbet (domæneoverførsel)",
+      "url": "https://tegetec.com",
+      "thumbnail": "/assets/cases/tegetec/tegetec.svg",
+      "hero": "/assets/cases/tegetec/tegetec-landing.png",
+      "tags": ["Web Redesign", "SEO", "B2B", "Statisk Side", "Industriel"],
+      "technologies": [
+        "Nuxt 4",
+        "@nuxt/ui",
+        "Tailwind CSS v4",
+        "@nuxt/image (IPX)",
+        "Schema.org",
+        "GTM/GA4"
+      ],
+      "overview": {
+        "challenge": "Modernisere forældet B2B industriel udstyrsside med tynd SEO-dækning, begrænset tilgængelighed og tæt teknisk indhold uden klar informationsarkitektur. Budget ~20K DKK med krav om at opretholde 99% mail-oppetid under domæneoverførsel.",
+        "solution": "Solo-levering på tværs af fuld stack: omfattende audit identificerer UX/SEO-huller, omstruktureret IA med tre primære sektioner, statisk Nuxt 4-bygning undgår backend-omkostninger, omfattende Schema.org markup, EU cookie-samtykke med GTM consent-mode, og omhyggeligt planlagt DNS-cutover for at bevare MX-records.",
+        "outcome": "Lancerede moderne B2B-platform med forfrisket visuelt system, compliance policy/cookie-lag og SEO-klar fundament. Statisk SSG-deployment med long-cache headers, performance-optimeringer og tilgængelighedsfunktioner inklusive skip links, reduced-motion håndtering og kontrast-tjekket palet."
+      },
+      "keyMetrics": [
+        {
+          "label": "Budget",
+          "value": "~20K DKK",
+          "description": "Fast budget inklusive domæneoverførsel"
+        },
+        {
+          "label": "Tidslinje",
+          "value": "2 dage bygning",
+          "description": "~1 måned forløbet med domæne/mail-overførsel"
+        },
+        {
+          "label": "Regional Dækning",
+          "value": "3 kontorer",
+          "description": "Danmark, Spanien, Finland"
+        }
+      ],
+      "process": [
+        {
+          "phase": "Audit & Strategi",
+          "description": "Identificerede problemer i gammel side: forældet UX/visuals, tynd SEO/meta-dækning, begrænset tilgængelighedsfokus, tæt teknisk indhold uden klar IA. Let benchmarking af OEM-partnermaterialer. Kickoff-mål: modernisere design, afklare navigation for teknisk info, stramme SEO-hygiejne, holde support åben efter lancering. Ingen numeriske KPI'er sat.",
+          "deliverables": [
+            "UX audit-fund",
+            "SEO gap-analyse",
+            "Tillidssignal-krav",
+            "IA-moderniseringsplan",
+            "OEM-materialegennemgang"
+          ]
+        },
+        {
+          "phase": "Informationsarkitektur",
+          "description": "Omstruktureret i tre primære sektioner: Equipment & Solutions (systemkort, procesflow, chubmaker specs), Collaborators, About/Contact. Tilføjede dedikerede downloads og policy-sider med ankre til service/kontakt. Målsegmenter: fødevare/industrielle producenter (pasta, ris, grøntsager, bælgfrugter, kød, klæbemidler osv.) i Norden og udvalgte EU (Danmark, Finland, Spanien).",
+          "deliverables": [
+            "Ny sitemap-struktur",
+            "Udstyrskategorisering",
+            "Kontaktflow-design",
+            "Downloads-sektion",
+            "Regional kontor-setup"
+          ]
+        },
+        {
+          "phase": "Design & Udvikling",
+          "description": "Bygget med Nuxt 4 + @nuxt/ui, Tailwind CSS v4, @nuxt/image (IPX), SSG output. Implementerede tilpassede design-tokens, accordion/tabel-mønster til dybe OEM-specs uden at overvælde brugere. Lokale fonte + long-cache headers til assets. Ingen klient-side theming for at reducere runtime-omkostning. Statisk generering til CDN-hosting.",
+          "deliverables": [
+            "Designsystem",
+            "Responsive komponenter",
+            "Statisk side-generering",
+            "Asset-optimering",
+            "Performance-tuning"
+          ]
+        },
+        {
+          "phase": "SEO & Compliance",
+          "description": "Implementerede omfattende Schema.org markup (WebSite, Organization/Service, AboutPage, CollectionPage, policy JSON-LD). Canonicals, tilpassede titler/keywords/beskrivelser per side, OG/Twitter-kort. EU cookie-kontrol med GTM/GA via consent-mode defaults, reject-all prominent, script-gating før GTM-load. Tilgængelighed: skip link, focus-visible styling, reduced-motion håndtering, semantiske tabeller, SR-only labels.",
+          "deliverables": [
+            "Schema.org implementering",
+            "Meta tag-optimering",
+            "EU cookie-samtykke (GDPR)",
+            "GTM/GA4 integration",
+            "Tilgængelighedsfunktioner"
+          ]
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Domæneoverførsel med Mail Kontinuitet",
+          "problem": "Overførsel af domæneejerskab samtidig med at opretholde 99% mail-oppetid krævede omhyggelig DNS og MX record-håndtering.",
+          "solution": "Planlagt DNS-cutover for at undgå MX-nedetid. Koordineret overførselstiming med klient for at minimere serviceafbrydelse."
+        },
+        {
+          "title": "Dybe OEM Specs Uden at Overvælde",
+          "problem": "Præsentation af detaljerede tekniske specifikationer for industrielt udstyr (chubmaker-data, systemspecs) uden at overvælde ikke-tekniske købere.",
+          "solution": "Implementerede accordion/tabel-mønster til specs, kort og stepper til procesoverblik, tillader progressiv afsløring af tekniske detaljer."
+        },
+        {
+          "title": "EU Samtykke Compliance",
+          "problem": "Opfyldelse af GDPR cookie-samtykkekrav samtidig med integration af analytics-tracking til fremtidig optimering.",
+          "solution": "Reject-all prominent i cookie-banner, script-gating før GTM-load, consent-mode updates sikrer compliant tracking-setup."
+        }
+      ],
+      "results": {
+        "summary": "Tegetec lancerede succesfuldt med moderniseret visuelt system, klar IA og compliant infrastruktur. Statisk SSG-bygning eliminerer backend-omkostninger, mens GTM/GA4-integration positionerer siden til datadrevet optimering, når samtykket trafik akkumuleres. Ingen post-lancerings metrikker endnu indsamlet, men fundament etableret for måling.",
+        "highlights": [
+          "Solo-levering på tværs af audit, IA, design, frontend og SEO på ~2 arbejdsdage",
+          "Statisk Nuxt 4-bygning eliminerer løbende backend/hosting-omkostninger",
+          "Omfattende Schema.org markup (WebSite, Organization, Service, AboutPage, policies)",
+          "Fuld GDPR-compliance med EU cookie-samtykke og GTM consent-mode",
+          "Tilgængelighedsfunktioner: skip links, focus-visible, reduced-motion, semantiske tabeller",
+          "Multi-region kontaktsystem: DK/ES/FI kontorer med mailto/tel direkte kontakt"
+        ]
+      },
+      "testimonial": null,
+      "gallery": [
+        "/assets/cases/tegetec/tegetec-landing.png",
+        "/assets/cases/tegetec/lighthouse-tegetec.png"
+      ],
+      "learnings": [
+        "Domæneoverførsler kræver omhyggelig planlægning for at opretholde kritiske services som email",
+        "Progressiv afsløring (accordions, steppers) essentiel for teknisk B2B-indhold",
+        "Statiske SSG-bygninger reducerer omkostninger dramatisk for indholdsbaserede B2B-sider",
+        "GDPR-compliance skal være prominent (reject-all) før nogen tracking-scripts loader",
+        "Solo-levering mulig med stram scope og moderne værktøj (Nuxt 4, Tailwind, @nuxt/ui)"
+      ],
+      "nextSteps": [
+        "Wire form/CRM endpoint til kontaktforespørgsler ud over mailto/tel",
+        "Tilføj lokaliseret indhold hvis nødvendigt for bredere EU-marked",
+        "Publicér case studies og metrikker når trafikdata er tilgængelig",
+        "Sæt GA4/GTM dashboards op efter samtykke-trafik akkumuleres"
+      ]
+    }
+  ]
+}

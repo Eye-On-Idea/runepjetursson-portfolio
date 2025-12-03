@@ -109,7 +109,7 @@ useSeo({
     </div>
 
     <main
-      class="relative max-w-7xl mx-auto px-5 sm:px-6 md:px-10 lg:px-12 py-12 md:py-20 space-y-20 md:space-y-28"
+      class="relative max-w-7xl mx-auto px-5 sm:px-6 md:px-10 lg:px-12 py-12 md:py-20 space-y-15 md:space-y-15"
     >
       <IndexHero
         :personal="personal"
@@ -120,14 +120,7 @@ useSeo({
       />
       <IndexBusinessCont />
       <IndexServices :services="services" />
-
-      <IndexExperienceEducation
-        :experience="experience"
-        :education="education"
-      />
-
       <IndexValues :value-blocks="valueBlocks" :approach="values.approach" />
-
       <IndexContact :contact-cta="contactCta" />
     </main>
   </div>

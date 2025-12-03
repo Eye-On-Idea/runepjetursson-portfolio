@@ -7,12 +7,26 @@ const { t } = useI18n();
 const personal = computed(() => getPersonal());
 const contact = computed(() => getContactCta());
 
+const config = useRuntimeConfig();
+const baseUrl = config.public.siteUrl || "https://runepjetursson.com";
+
 useSeo({
-  title: `${personal.value.full_name} – ${t(
-    "portfolio.sections.contact.title"
-  )}`,
+  title: t("portfolio.sections.contact.title"),
   description: contact.value.body,
-  type: "profile",
+  type: "website",
+  keywords: [
+    "Contact",
+    personal.value.full_name,
+    personal.value.company_freelance,
+    "Get in touch",
+    "Hire designer",
+    "UX/UI services",
+    "Freelance",
+  ],
+  breadcrumbs: [
+    { name: "Home", url: `${baseUrl}` },
+    { name: t("portfolio.sections.contact.title"), url: `${baseUrl}/contact` },
+  ],
 });
 
 const methods = computed(() => [
@@ -113,7 +127,7 @@ const methods = computed(() => [
                 :href="method.link"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="group block p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 smooth-hover"
+                class="group block p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 smooth-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
               >
                 <div class="flex gap-4 items-start">
                   <div

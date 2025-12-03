@@ -96,6 +96,29 @@ const { t } = useI18n();
     </header>
 
     <!-- INSERT IMAGE HERE -->
-    <div class="image"></div>
+    <div class="rightside">
+      <GlassCard
+        className="p-2 rounded-full bg-linear-to-br from-brand-500/20 to-accent-500/20 w-fit"
+      >
+        <img
+          src="/assets/img/rune-kontor.png"
+          alt="Image of Rune Pjetursson sitting contemplating work at his desk"
+        />
+      </GlassCard>
+
+      <!-- <GlassCard>
+        <div class="flex flex-row relative">
+          <div class="left"></div>
+        </div>
+      </GlassCard> -->
+    </div>
   </section>
 </template>
+
+<style lang="scss" scoped>
+@media (max-width: 1030px) {
+  .rightside {
+    display: none;
+  }
+}
+</style>

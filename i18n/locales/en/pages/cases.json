@@ -1,0 +1,70 @@
+{
+  "metaTitle": "Case Studies | Rune Pjetursson",
+  "metaDescription": "Explore my portfolio of web development and UX/UI design projects, including Eye On Idea, Herqulez, and Tegetec.",
+
+  "hero": {
+    "title": "Case Studies",
+    "subtitle": "Real projects. Real impact. Real results.",
+    "description": "Explore how I approach web development and UX/UI design through detailed case studies of projects I've designed and built."
+  },
+
+  "categories": {
+    "myCompanies": "My Companies",
+    "clientWork": "Client Work",
+    "sideProjects": "Side Projects"
+  },
+
+  "filter": {
+    "all": "All Projects",
+    "webDev": "Web Development",
+    "uxui": "UX/UI Design",
+    "branding": "Branding",
+    "seo": "SEO"
+  },
+
+  "cta": {
+    "viewCase": "View Case Study",
+    "visitSite": "Visit Website",
+    "readMore": "Read More"
+  },
+
+  "badges": {
+    "eyeOnIdea": "Eye On Idea",
+    "herqulez": "Herqulez",
+    "schoolProject": "School Project",
+    "featured": "Featured"
+  },
+
+  "stats": {
+    "role": "Role",
+    "duration": "Duration",
+    "year": "Year",
+    "technologies": "Technologies"
+  },
+
+  "sections": {
+    "overview": "Overview",
+    "challenge": "The Challenge",
+    "solution": "The Solution",
+    "outcome": "The Outcome",
+    "process": "Process",
+    "keyMetrics": "Key Metrics",
+    "challenges": "Challenges & Solutions",
+    "results": "Results",
+    "learnings": "Key Learnings",
+    "nextSteps": "Next Steps",
+    "gallery": "Gallery"
+  },
+
+  "navigation": {
+    "backToCases": "Back to Cases",
+    "nextCase": "Next Case Study",
+    "previousCase": "Previous Case Study"
+  },
+
+  "contact": {
+    "title": "Interested in working together?",
+    "description": "I'm available for freelance projects and collaborations. Let's create something great together.",
+    "button": "Get in Touch"
+  }
+}

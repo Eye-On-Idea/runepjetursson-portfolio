@@ -15,7 +15,7 @@ const props = withDefaults(
 <template>
   <UCard
     :class="props.wrapperClass"
-    :ui="{ base: '', body: 'p-0', header: 'p-0', footer: 'p-0' }"
+    :ui="{ root: '', body: 'p-0', header: 'p-0', footer: 'p-0' }"
     :padded="false"
     role="presentation"
   >

@@ -17,7 +17,7 @@ import GlassCard from "~/components/GlassCard.vue";
           class="w-full h-full bg-[url(/assets/bg/herqulez-screenshot.png)] bg-cover rounded-2xl"
         ></div>
         <div class="absolute top-2 right-2 w-25 bg-zinc-900 rounded-full p-3">
-          <img src="/assets/logo/herqulez/logo-sunrise-wtext.png" alt="" />
+          <img src="/assets/logo/herqulez/logo-sunrise-wtext.png" alt="Herqulez company logo" />
         </div>
         <h2
           class="absolute bottom-5 right-[30%] p-3 rounded-4xl bg-accent-400/40 ring-1 backdrop-blur-xs"
@@ -32,7 +32,7 @@ import GlassCard from "~/components/GlassCard.vue";
           class="w-full h-full bg-[url(/assets/bg/eoi-screenshot.png)] bg-cover rounded-2xl"
         ></div>
         <div class="absolute top-2 right-2 w-25">
-          <img src="/assets/logo/EOI/Circle_logo.png" alt="" />
+          <img src="/assets/logo/EOI/Circle_logo.png" alt="Eye On Idea company logo" />
         </div>
         <h2
           class="absolute bottom-5 right-[30%] p-3 rounded-4xl bg-primary-400/40 ring-1 backdrop-blur-xs"

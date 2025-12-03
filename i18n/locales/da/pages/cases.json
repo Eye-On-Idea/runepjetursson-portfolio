@@ -1,0 +1,70 @@
+{
+  "metaTitle": "Cases | Rune Pjetursson",
+  "metaDescription": "Udforsk min portfolio af webudviklings- og UX/UI designprojekter, herunder Eye On Idea, Herqulez og Tegetec.",
+
+  "hero": {
+    "title": "Cases",
+    "subtitle": "Rigtige projekter. Rigtig impact. Rigtige resultater.",
+    "description": "Udforsk hvordan jeg tilgår webudvikling og UX/UI design gennem detaljerede cases af projekter jeg har designet og bygget."
+  },
+
+  "categories": {
+    "myCompanies": "Mine Virksomheder",
+    "clientWork": "Klientarbejde",
+    "sideProjects": "Sideprojekter"
+  },
+
+  "filter": {
+    "all": "Alle Projekter",
+    "webDev": "Webudvikling",
+    "uxui": "UX/UI Design",
+    "branding": "Branding",
+    "seo": "SEO"
+  },
+
+  "cta": {
+    "viewCase": "Se Case",
+    "visitSite": "Besøg Hjemmeside",
+    "readMore": "Læs Mere"
+  },
+
+  "badges": {
+    "eyeOnIdea": "Eye On Idea",
+    "herqulez": "Herqulez",
+    "schoolProject": "Skoleprojekt",
+    "featured": "Fremhævet"
+  },
+
+  "stats": {
+    "role": "Rolle",
+    "duration": "Varighed",
+    "year": "År",
+    "technologies": "Teknologier"
+  },
+
+  "sections": {
+    "overview": "Overblik",
+    "challenge": "Udfordringen",
+    "solution": "Løsningen",
+    "outcome": "Resultatet",
+    "process": "Proces",
+    "keyMetrics": "Nøgletal",
+    "challenges": "Udfordringer & Løsninger",
+    "results": "Resultater",
+    "learnings": "Læring",
+    "nextSteps": "Næste Skridt",
+    "gallery": "Galleri"
+  },
+
+  "navigation": {
+    "backToCases": "Tilbage til Cases",
+    "nextCase": "Næste Case",
+    "previousCase": "Forrige Case"
+  },
+
+  "contact": {
+    "title": "Interesseret i at arbejde sammen?",
+    "description": "Jeg er tilgængelig for freelanceprojekter og samarbejder. Lad os skabe noget fantastisk sammen.",
+    "button": "Kontakt Mig"
+  }
+}

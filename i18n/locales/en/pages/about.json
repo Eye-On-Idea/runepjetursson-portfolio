@@ -2,5 +2,10 @@
   "hero": {
     "title": "About Rune",
     "description": "Designer and frontend developer combining UX, UI and product thinking."
+  },
+  "workCta": {
+    "title": "View My Work",
+    "description": "Explore detailed case studies showcasing my approach to web development, UX/UI design, and product strategy.",
+    "button": "Browse Case Studies"
   }
 }

@@ -73,7 +73,7 @@ const socialLinks = [
               :href="social.href"
               target="_blank"
               rel="noopener noreferrer"
-              class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/25 transition-all duration-300 smooth-hover"
+              class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/25 transition-all duration-300 smooth-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
               :aria-label="social.name"
             >
               <UIcon
@@ -85,70 +85,76 @@ const socialLinks = [
         </div>
 
         <!-- Ecosystem Links -->
-        <div>
-          <h3
-            class="text-sm font-bold text-brand-300 uppercase tracking-[0.12em] mb-5"
-          >
-            Sektioner
-          </h3>
-          <ul class="space-y-3">
-            <li v-for="link in ecosystemLinks" :key="link.name">
-              <a
-                :href="link.href"
-                class="group text-neutral-300 hover:text-white transition-colors duration-300 text-base font-medium flex items-center gap-2"
-              >
-                <span
-                  class="w-1.5 h-1.5 rounded-full bg-brand-400 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></span>
-                {{ link.name }}
-              </a>
-            </li>
-          </ul>
-        </div>
+        <nav aria-label="Primary sections">
+          <div>
+            <h3
+              class="text-sm font-bold text-brand-300 uppercase tracking-[0.12em] mb-5"
+            >
+              Sektioner
+            </h3>
+            <ul class="space-y-3">
+              <li v-for="link in ecosystemLinks" :key="link.name">
+                <a
+                  :href="link.href"
+                  class="group text-neutral-300 hover:text-white transition-colors duration-300 text-base font-medium flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
+                >
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-brand-400 opacity-0 group-hover:opacity-100 transition-opacity"
+                  ></span>
+                  {{ link.name }}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
         <!-- Company Links -->
-        <div>
-          <h3
-            class="text-sm font-bold text-brand-300 uppercase tracking-[0.12em] mb-5"
-          >
-            Om
-          </h3>
-          <ul class="space-y-3">
-            <li v-for="link in companyLinks" :key="link.name">
-              <NuxtLink
-                :to="link.href"
-                class="group text-neutral-300 hover:text-white transition-colors duration-300 text-base font-medium flex items-center gap-2"
-              >
-                <span
-                  class="w-1.5 h-1.5 rounded-full bg-brand-400 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></span>
-                {{ link.name }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
+        <nav aria-label="About links">
+          <div>
+            <h3
+              class="text-sm font-bold text-brand-300 uppercase tracking-[0.12em] mb-5"
+            >
+              Om
+            </h3>
+            <ul class="space-y-3">
+              <li v-for="link in companyLinks" :key="link.name">
+                <NuxtLink
+                  :to="link.href"
+                  class="group text-neutral-300 hover:text-white transition-colors duration-300 text-base font-medium flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
+                >
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-brand-400 opacity-0 group-hover:opacity-100 transition-opacity"
+                  ></span>
+                  {{ link.name }}
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
         <!-- Support Links -->
-        <div>
-          <h3
-            class="text-sm font-bold text-brand-300 uppercase tracking-[0.12em] mb-5"
-          >
-            Kontakt
-          </h3>
-          <ul class="space-y-3">
-            <li v-for="link in supportLinks" :key="link.name">
-              <NuxtLink
-                :to="link.href"
-                class="group text-neutral-300 hover:text-white transition-colors duration-300 text-base font-medium flex items-center gap-2"
-              >
-                <span
-                  class="w-1.5 h-1.5 rounded-full bg-brand-400 opacity-0 group-hover:opacity-100 transition-opacity"
-                ></span>
-                {{ link.name }}
-              </NuxtLink>
-            </li>
-          </ul>
-        </div>
+        <nav aria-label="Support links">
+          <div>
+            <h3
+              class="text-sm font-bold text-brand-300 uppercase tracking-[0.12em] mb-5"
+            >
+              Kontakt
+            </h3>
+            <ul class="space-y-3">
+              <li v-for="link in supportLinks" :key="link.name">
+                <NuxtLink
+                  :to="link.href"
+                  class="group text-neutral-300 hover:text-white transition-colors duration-300 text-base font-medium flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
+                >
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-brand-400 opacity-0 group-hover:opacity-100 transition-opacity"
+                  ></span>
+                  {{ link.name }}
+                </NuxtLink>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
 
       <!-- Newsletter Section 
@@ -190,7 +196,7 @@ const socialLinks = [
             v-for="link in legalLinks"
             :key="link.name"
             :to="link.href"
-            class="hover:text-white transition-colors"
+            class="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
           >
             {{ link.name }}
           </NuxtLink>

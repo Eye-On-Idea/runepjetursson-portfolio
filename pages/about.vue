@@ -20,10 +20,27 @@ const skills = computed(() => getSkills());
 const experience = computed(() => getExperience());
 const projects = computed(() => getProjects());
 
+const config = useRuntimeConfig();
+const baseUrl = config.public.siteUrl || "https://runepjetursson.com";
+
 useSeo({
-  title: `${personal.value.full_name} – ${t("portfolio.about.title")}`,
+  title: t("portfolio.about.title"),
   description: profile.value.short,
   type: "profile",
+  keywords: [
+    personal.value.full_name,
+    personal.value.title_primary,
+    "About",
+    "Professional background",
+    "Experience",
+    "Skills",
+    ...skills.value.core.slice(0, 5),
+  ],
+  image: `${baseUrl}/assets/img/rune-kontor.png`,
+  breadcrumbs: [
+    { name: "Home", url: `${baseUrl}` },
+    { name: t("portfolio.about.title"), url: `${baseUrl}/about` },
+  ],
 });
 </script>
 
@@ -174,7 +191,7 @@ useSeo({
                 {{ t("portfolio.sections.skills.core") }}
               </h3>
             </div>
-            <ul class="space-y-3 text-neutral-200">
+            <ul class="space-y-3 text-neutral-200 mt-5">
               <li
                 v-for="item in skills.core"
                 :key="item"
@@ -203,7 +220,7 @@ useSeo({
                 {{ t("portfolio.sections.skills.tech") }}
               </h3>
             </div>
-            <ul class="space-y-3 text-neutral-200">
+            <ul class="space-y-3 text-neutral-200 mt-5">
               <li
                 v-for="item in skills.technologies"
                 :key="item"
@@ -232,7 +249,7 @@ useSeo({
                 {{ t("portfolio.sections.skills.tools") }}
               </h3>
             </div>
-            <ul class="space-y-3 text-neutral-200">
+            <ul class="space-y-3 text-neutral-200 mt-5">
               <li
                 v-for="item in [
                   ...(skills.tools || []),
@@ -253,38 +270,52 @@ useSeo({
 
       <!-- Projects Section -->
       <section class="space-y-8">
-        <h2
-          class="text-3xl md:text-4xl font-bold text-white text-center lg:text-left"
+        <GlassCard
+          :displacement-scale="40"
+          :blur-amount="0.07"
+          :corner-radius="20"
+          wrapper-class="relative p-8 lg:p-12 rounded-3xl bg-linear-to-br from-brand-500/10 to-accent-500/10 border border-white/10 overflow-hidden glass-card-hover"
         >
-          {{ t("portfolio.about.sections.cases") }}
-        </h2>
-        <div class="space-y-6">
-          <GlassCard
-            v-for="project in projects"
-            :key="project.name"
-            :displacement-scale="36"
-            :blur-amount="0.07"
-            :corner-radius="20"
-            wrapper-class="group p-6 lg:p-8 rounded-2xl bg-white/5 border border-white/10 space-y-4 glass-card-hover"
-          >
-            <div class="space-y-2">
-              <h3
-                class="text-xl md:text-2xl font-bold text-white group-hover:text-brand-300 transition-colors"
+          <!-- Decorative blur elements -->
+          <div
+            class="absolute -top-24 -right-24 w-48 h-48 rounded-full blur-3xl bg-brand-500/20 pointer-events-none"
+          />
+          <div
+            class="absolute -bottom-24 -left-24 w-48 h-48 rounded-full blur-3xl bg-accent-500/20 pointer-events-none"
+          />
+
+          <div class="relative space-y-6 text-center lg:text-left">
+            <div
+              class="flex items-center gap-3 justify-center lg:justify-start"
+            >
+              <div
+                class="w-12 h-12 rounded-xl bg-linear-to-br from-brand-500/20 to-accent-500/20 border border-white/10 flex items-center justify-center shrink-0"
               >
-                {{ project.name }}
-              </h3>
-              <div class="flex flex-wrap items-center gap-3">
-                <UBadge color="primary" variant="solid" class="font-semibold">{{
-                  project.role
-                }}</UBadge>
-                <span class="text-sm text-neutral-400">{{ project.type }}</span>
+                <UIcon
+                  name="i-lucide-folder-open"
+                  class="w-6 h-6 text-brand-300"
+                />
               </div>
+              <h2 class="text-2xl md:text-3xl font-bold text-white">
+                {{ t("pages.about.workCta.title") }}
+              </h2>
             </div>
-            <p class="text-neutral-200 leading-relaxed">
-              {{ project.summary }}
+            <p
+              class="text-neutral-200 text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0"
+            >
+              {{ t("pages.about.workCta.description") }}
             </p>
-          </GlassCard>
-        </div>
+            <div class="flex justify-center lg:justify-start">
+              <NuxtLink
+                to="/cases"
+                class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-linear-to-r from-brand-500 to-accent-500 text-white font-bold shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40 hover:-translate-y-1 transition-all duration-300"
+              >
+                <span>{{ t("pages.about.workCta.button") }}</span>
+                <UIcon name="i-lucide-arrow-right" class="w-5 h-5" />
+              </NuxtLink>
+            </div>
+          </div>
+        </GlassCard>
       </section>
 
       <!-- Approach Section -->

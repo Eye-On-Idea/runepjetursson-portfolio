@@ -26,7 +26,7 @@ export const usePreferencesStore = defineStore('preferences', {
     async setLanguage(language: string) {
       this.language = language
 
-      if (process.client) {
+      if (import.meta.client) {
         localStorage.setItem('user_language', language)
       }
     },
@@ -39,7 +39,7 @@ export const usePreferencesStore = defineStore('preferences', {
       colorMode.preference = theme
 
       // Persist to localStorage
-      if (process.client) {
+      if (import.meta.client) {
         localStorage.setItem('user_theme', theme)
       }
     },
@@ -47,7 +47,7 @@ export const usePreferencesStore = defineStore('preferences', {
     async setUnits(units: 'metric' | 'imperial') {
       this.units = units
 
-      if (process.client) {
+      if (import.meta.client) {
         localStorage.setItem('user_units', units)
       }
     },
@@ -56,7 +56,7 @@ export const usePreferencesStore = defineStore('preferences', {
       this.loading = true
 
       try {
-        if (process.client) {
+        if (import.meta.client) {
           const savedLanguage = localStorage.getItem('user_language')
           const savedUnits = localStorage.getItem('user_units')
 

@@ -1,0 +1,120 @@
+{
+  "metaTitle": "Cookie Policy | Rune Pjetursson",
+  "metaDescription": "Learn about the cookies and local storage used on runepjetursson.com to enhance your browsing experience.",
+  "title": "Cookie Policy",
+  "lastUpdated": "Last updated: December 3, 2025",
+  "intro": "This Cookie Policy explains how runepjetursson.com uses cookies and similar technologies to provide and improve our services. This is a personal portfolio website with minimal data collection.",
+
+  "sections": {
+    "whatAreCookies": {
+      "title": "What Are Cookies?",
+      "content": "Cookies are small text files placed on your device by websites you visit. They help websites remember information about your visit, making your browsing experience more efficient and personalized."
+    },
+
+    "cookiesWeUse": {
+      "title": "Cookies and Storage We Use",
+      "intro": "This website uses minimal cookies and browser storage to enhance your experience. We do not use any analytics, advertising, or third-party tracking cookies.",
+
+      "essential": {
+        "title": "Essential Cookies",
+        "description": "These are necessary for the website to function properly and cannot be disabled.",
+        "items": [
+          {
+            "name": "i18n_redirected",
+            "purpose": "Remembers your language preference (English or Danish)",
+            "type": "Cookie",
+            "duration": "Session or until you change language",
+            "category": "Essential"
+          }
+        ]
+      },
+
+      "preferences": {
+        "title": "Preference Storage",
+        "description": "We use your browser's local storage (not cookies) to save your preferences. This data never leaves your device.",
+        "items": [
+          {
+            "name": "color-mode",
+            "purpose": "Stores your theme preference (light, dark, or system)",
+            "type": "LocalStorage",
+            "duration": "Persistent until cleared",
+            "category": "Functional"
+          },
+          {
+            "name": "user_language",
+            "purpose": "Stores your selected language preference",
+            "type": "LocalStorage",
+            "duration": "Persistent until cleared",
+            "category": "Functional"
+          },
+          {
+            "name": "user_theme",
+            "purpose": "Backup storage for theme preference",
+            "type": "LocalStorage",
+            "duration": "Persistent until cleared",
+            "category": "Functional"
+          },
+          {
+            "name": "user_units",
+            "purpose": "Stores your measurement unit preference (metric/imperial)",
+            "type": "LocalStorage",
+            "duration": "Persistent until cleared",
+            "category": "Functional"
+          }
+        ]
+      }
+    },
+
+    "noTracking": {
+      "title": "No Tracking or Analytics",
+      "content": "We want to be completely transparent: this website does not use Google Analytics, social media pixels, advertising cookies, or any third-party tracking services. Your browsing activity on this site is private and is not monitored, analyzed, or shared with any third parties."
+    },
+
+    "technicalDetails": {
+      "title": "Technical Details",
+      "content": "All preference data is stored locally on your device using browser LocalStorage and one session cookie for language detection. This means:",
+      "points": [
+        "Your preferences stay on your device and are never transmitted to our servers",
+        "No personal information is collected or stored by us",
+        "No tracking across websites or sessions",
+        "No data is sold or shared with third parties",
+        "Clearing your browser data will reset all preferences"
+      ]
+    },
+
+    "control": {
+      "title": "Your Control",
+      "intro": "You have full control over these settings:",
+
+      "localStorage": {
+        "title": "Clear Local Storage",
+        "content": "You can clear your saved preferences at any time through your browser's developer tools or by clearing your browsing data. This will reset the website to default settings (English language, system theme)."
+      },
+
+      "cookies": {
+        "title": "Manage Cookies",
+        "content": "You can control cookies through your browser settings. Note that blocking the language preference cookie may affect the automatic language detection feature. Here's how to manage cookies in popular browsers:"
+      },
+
+      "noImpact": {
+        "title": "Impact of Disabling",
+        "content": "Since we only use essential functional cookies and local storage, disabling them will simply reset your preferences to defaults. The website will remain fully functional, though you may need to reselect your language and theme preferences on each visit."
+      }
+    },
+
+    "gdprCompliance": {
+      "title": "GDPR & Privacy Compliance",
+      "content": "This website is designed with privacy by default. We use only strictly necessary and functional storage that enhances your experience without tracking you. Under GDPR, these essential cookies do not require explicit consent as they are necessary for the legitimate functioning of the website and do not process personal data."
+    },
+
+    "changes": {
+      "title": "Changes to This Policy",
+      "content": "We may update this Cookie Policy to reflect changes in our practices or for legal, operational, or regulatory reasons. Any changes will be posted on this page with an updated revision date."
+    },
+
+    "contact": {
+      "title": "Contact",
+      "content": "If you have questions about this Cookie Policy or how we handle your preferences, please contact us at:"
+    }
+  }
+}

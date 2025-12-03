@@ -6,6 +6,9 @@ import index from "./pages/index.json";
 import about from "./pages/about.json";
 import contact from "./pages/contact.json";
 import legal from "./pages/legal.json";
+import cookies from "./pages/cookies.json";
+import cases from "./pages/cases.json";
+import caseStudiesContent from "./pages/caseStudiesContent.json";
 import portfolio from "./portfolio.json";
 
 export default {
@@ -14,8 +17,13 @@ export default {
   errors,
   footer,
   landing: index,
-  about,
-  contact,
-  legal,
+  pages: {
+    about,
+    contact,
+    legal,
+    cookies,
+    cases,
+  },
+  caseStudiesContent,
   portfolio,
 };

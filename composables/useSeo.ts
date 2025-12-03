@@ -1,6 +1,11 @@
 /**
- * SEO Composable for consistent meta tags across pages
- * Follows best practices for SEO optimization
+ * Enhanced SEO Composable for consistent meta tags across pages
+ * Follows best practices for SEO optimization including:
+ * - Open Graph & Twitter Cards
+ * - Structured Data (JSON-LD)
+ * - Multilingual support (hreflang)
+ * - Breadcrumbs
+ * - Rich snippets
  */
 
 interface SeoOptions {
@@ -8,7 +13,7 @@ interface SeoOptions {
   description: string;
   image?: string;
   url?: string;
-  type?: "website" | "article" | "profile" | "product";
+  type?: "website" | "article" | "profile" | "product" | "portfolio";
   noindex?: boolean;
   canonical?: string;
   keywords?: string[];
@@ -16,6 +21,9 @@ interface SeoOptions {
   publishedTime?: string;
   modifiedTime?: string;
   structuredData?: any; // Additional structured data to merge
+  breadcrumbs?: Array<{ name: string; url: string }>; // Breadcrumb navigation
+  ogType?: string; // Override OG type
+  twitterCard?: "summary" | "summary_large_image" | "app" | "player"; // Twitter card type
 }
 
 export const useSeo = (options: SeoOptions) => {
@@ -31,8 +39,8 @@ export const useSeo = (options: SeoOptions) => {
   // Construct full URL
   const fullUrl = options.url || `${baseUrl}${route.path}`;
 
-  // Default OG image - use logo as default
-  const ogImage = options.image || `${baseUrl}/assets/logo/squared-light.png`;
+  // Default OG image - use a proper Open Graph image
+  const ogImage = options.image || `${baseUrl}/android-chrome-512x512.png`;
 
   // Construct page title
   const pageTitle = options.title;
@@ -69,6 +77,12 @@ export const useSeo = (options: SeoOptions) => {
                 "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
             },
           ]),
+
+      // Additional SEO meta tags
+      { name: "language", content: locale.value },
+      { name: "revisit-after", content: "7 days" },
+      { name: "distribution", content: "global" },
+      { name: "rating", content: "general" },
 
       // Open Graph / Facebook
       { property: "og:type", content: options.type || "website" },
@@ -111,7 +125,10 @@ export const useSeo = (options: SeoOptions) => {
         : []),
 
       // Twitter
-      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:card",
+        content: options.twitterCard || "summary_large_image",
+      },
       { name: "twitter:url", content: fullUrl },
       { name: "twitter:title", content: fullTitle },
       { name: "twitter:description", content: options.description },
@@ -139,25 +156,54 @@ export const useSeo = (options: SeoOptions) => {
   // Structured Data (JSON-LD)
   const schemas: any[] = [];
 
-  if (options.type === "website") {
-    schemas.push({
-      "@type": "WebPage",
-      "@id": fullUrl,
-      url: fullUrl,
-      name: fullTitle,
-      description: options.description,
-      isPartOf: {
-        "@id": `${baseUrl}/#website`,
-      },
-      inLanguage: locale.value,
-      image: ogImage,
-      breadcrumb: {
-        "@type": "BreadcrumbList",
-        "@id": `${fullUrl}#breadcrumb`,
-      },
-    });
+  // Always add WebPage schema for all page types
+  const webPageSchema: any = {
+    "@type": "WebPage",
+    "@id": fullUrl,
+    url: fullUrl,
+    name: fullTitle,
+    description: options.description,
+    isPartOf: {
+      "@id": `${baseUrl}/#website`,
+    },
+    inLanguage: locale.value,
+    image: {
+      "@type": "ImageObject",
+      url: ogImage,
+      width: 1200,
+      height: options.image ? 630 : 1200,
+    },
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: ogImage,
+    },
+    datePublished: options.publishedTime,
+    dateModified:
+      options.modifiedTime || options.publishedTime || new Date().toISOString(),
+    author: {
+      "@type": "Person",
+      "@id": `${baseUrl}/#person`,
+      name: options.author || personal.full_name,
+    },
+  };
+
+  // Add breadcrumb to WebPage if provided
+  if (options.breadcrumbs && options.breadcrumbs.length > 0) {
+    webPageSchema.breadcrumb = {
+      "@type": "BreadcrumbList",
+      "@id": `${fullUrl}#breadcrumb`,
+      itemListElement: options.breadcrumbs.map((crumb, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: crumb.name,
+        item: crumb.url,
+      })),
+    };
   }
 
+  schemas.push(webPageSchema);
+
+  // Article schema for blog posts and case studies
   if (options.type === "article" && options.publishedTime) {
     schemas.push({
       "@type": "Article",
@@ -167,29 +213,83 @@ export const useSeo = (options: SeoOptions) => {
       image: {
         "@type": "ImageObject",
         url: ogImage,
+        width: 1200,
+        height: 630,
       },
       datePublished: options.publishedTime,
       dateModified: options.modifiedTime || options.publishedTime,
       author: {
-        "@type": "Organization",
-        "@id": `${baseUrl}#organization`,
+        "@type": "Person",
+        "@id": `${baseUrl}/#person`,
         name: options.author || personal.full_name,
         url: baseUrl,
       },
       publisher: {
         "@type": "Organization",
-        "@id": `${baseUrl}#organization`,
-        name: personal.full_name,
+        "@id": `${baseUrl}/#organization`,
+        name: personal.company_freelance,
         url: baseUrl,
         logo: {
           "@type": "ImageObject",
-          url: `${baseUrl}/assets/logo/logosvg_sunrise.svg`,
+          url: `${baseUrl}/android-chrome-512x512.png`,
         },
       },
       mainEntityOfPage: {
         "@type": "WebPage",
         "@id": fullUrl,
       },
+    });
+  }
+
+  // Profile/Person schema for about page
+  if (options.type === "profile") {
+    schemas.push({
+      "@type": "ProfilePage",
+      "@id": fullUrl,
+      mainEntity: {
+        "@type": "Person",
+        "@id": `${baseUrl}/#person`,
+        name: personal.full_name,
+        jobTitle: personal.title_primary,
+        description: options.description,
+        url: baseUrl,
+        image: {
+          "@type": "ImageObject",
+          url: `${baseUrl}/assets/img/rune-kontor.png`,
+        },
+        sameAs: [
+          "https://www.linkedin.com/in/rune-m-p-pjetursson-361870115/",
+          "https://runepjetursson.com",
+        ],
+        worksFor: {
+          "@type": "Organization",
+          "@id": `${baseUrl}/#organization`,
+          name: personal.company_freelance,
+        },
+        knowsAbout: options.keywords || [],
+      },
+    });
+  }
+
+  // Portfolio/CreativeWork schema for case studies
+  if (options.type === "portfolio") {
+    schemas.push({
+      "@type": "CreativeWork",
+      "@id": fullUrl,
+      name: fullTitle,
+      description: options.description,
+      image: {
+        "@type": "ImageObject",
+        url: ogImage,
+      },
+      creator: {
+        "@type": "Person",
+        "@id": `${baseUrl}/#person`,
+        name: personal.full_name,
+      },
+      datePublished: options.publishedTime,
+      dateModified: options.modifiedTime || options.publishedTime,
+      inLanguage: locale.value,
     });
   }
 

@@ -25,6 +25,8 @@ const form = reactive({
         v-model="form.name"
         type="text"
         name="name"
+        autocomplete="name"
+        required
         class="w-full px-5 py-3.5 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all"
         :placeholder="t('portfolio.form.name')"
       />
@@ -39,6 +41,8 @@ const form = reactive({
         v-model="form.email"
         type="email"
         name="email"
+        autocomplete="email"
+        required
         class="w-full px-5 py-3.5 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all"
         placeholder="you@example.com"
       />
@@ -53,6 +57,7 @@ const form = reactive({
         v-model="form.project"
         type="text"
         name="project"
+        autocomplete="organization-title"
         class="w-full px-5 py-3.5 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all"
         :placeholder="t('portfolio.form.project')"
       />
@@ -67,6 +72,8 @@ const form = reactive({
         v-model="form.message"
         rows="5"
         name="message"
+        autocomplete="off"
+        required
         class="w-full px-5 py-3.5 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-white/10 text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:border-transparent transition-all resize-none"
         :placeholder="t('portfolio.form.message')"
       ></textarea>

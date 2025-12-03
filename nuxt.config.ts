@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite";
 import runeContent from "./runeportfoliocontent.json";
+import caseStudiesContent from "./i18n/locales/en/pages/caseStudiesContent.json";
 
 const personal = runeContent.personal;
 const headline = runeContent.headline;
@@ -10,6 +11,8 @@ const servicesList = runeContent.services.map((service, index) => ({
   name: service.title,
   description: service.description,
 }));
+const caseStudyRoutes =
+  caseStudiesContent.caseStudies?.map((c) => `/cases/${c.slug}`) ?? [];
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
@@ -25,12 +28,17 @@ export default defineNuxtConfig({
   ssr: true,
 
   nitro: {
-    preset: "cloudflare-pages",
+    // Static output for FTP uploads (use `npm run generate`)
+    preset: "static",
     minify: true,
     sourceMap: false,
     output: {
-      dir: "dist",
+      // Emit static site to /dist for manual upload
       publicDir: "dist",
+    },
+    prerender: {
+      crawlLinks: true,
+      routes: ["/cases", ...caseStudyRoutes],
     },
   },
   css: ["~/assets/css/main.css"],
@@ -60,13 +68,13 @@ export default defineNuxtConfig({
       escapeHtml: false,
     },
     // SEO: Enable automatic alternate links for better multilingual SEO
-    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://runepjetursson.com",
+    baseUrl: "https://runepjetursson.com",
   },
 
   // Runtime configuration for environment variables
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://runepjetursson.com",
+      siteUrl: "https://runepjetursson.com",
     },
   },
 
@@ -166,21 +174,19 @@ export default defineNuxtConfig({
         },
         {
           name: "description",
-          content:
-            headline.short,
+          content: headline.short,
         },
         {
           name: "keywords",
-          content:
-            [
-              personal.full_name,
-              personal.title_primary,
-              personal.title_secondary,
-              "UX/UI design",
-              "Digital produktdesign",
-              "Frontend udvikling",
-              "Freelance designer Aalborg",
-            ].join(", "),
+          content: [
+            personal.full_name,
+            personal.title_primary,
+            personal.title_secondary,
+            "UX/UI design",
+            "Digital produktdesign",
+            "Frontend udvikling",
+            "Freelance designer Aalborg",
+          ].join(", "),
         },
         // Additional SEO meta tags
         { name: "classification", content: "Portfolio" },
@@ -200,27 +206,24 @@ export default defineNuxtConfig({
         { property: "og:locale:alternate", content: "da_DK" },
         {
           property: "og:title",
-          content:
-            `${personal.full_name} – ${personal.title_primary}`,
+          content: `${personal.full_name} – ${personal.title_primary}`,
         },
         {
           property: "og:description",
-          content:
-            headline.tagline,
+          content: headline.tagline,
         },
         { property: "og:url", content: "https://runepjetursson.com" },
         {
           property: "og:image",
-          content: "https://runepjetursson.com/assets/logo/squared-light.png",
+          content: "https://runepjetursson.com/android-chrome-512x512.png",
         },
         {
           property: "og:image:secure_url",
-          content:
-            "https://runepjetursson.com/assets/logo/squared-light.png",
+          content: "https://runepjetursson.com/android-chrome-512x512.png",
         },
         { property: "og:image:type", content: "image/png" },
-        { property: "og:image:width", content: "1200" },
-        { property: "og:image:height", content: "1200" },
+        { property: "og:image:width", content: "512" },
+        { property: "og:image:height", content: "512" },
         {
           property: "og:image:alt",
           content: `${personal.full_name} – ${personal.title_primary}`,
@@ -236,13 +239,11 @@ export default defineNuxtConfig({
         },
         {
           name: "twitter:description",
-          content:
-            headline.tagline,
+          content: headline.tagline,
         },
         {
           name: "twitter:image",
-          content:
-            "https://runepjetursson.com/assets/logo/squared-light.png",
+          content: "https://runepjetursson.com/android-chrome-512x512.png",
         },
         {
           name: "twitter:image:alt",
@@ -289,33 +290,96 @@ export default defineNuxtConfig({
                 url: "https://runepjetursson.com",
                 description: headline.tagline,
                 foundingDate: "2025",
+                founder: {
+                  "@type": "Person",
+                  "@id": "https://runepjetursson.com#person",
+                  name: personal.full_name,
+                },
                 logo: {
                   "@type": "ImageObject",
-                  url: "https://runepjetursson.com/assets/logo/squared-light.png",
+                  url: "https://runepjetursson.com/android-chrome-512x512.png",
                   contentUrl:
-                    "https://runepjetursson.com/assets/logo/squared-light.png",
-                  width: "438",
-                  height: "412",
+                    "https://runepjetursson.com/android-chrome-512x512.png",
+                  width: "512",
+                  height: "512",
                   caption: personal.company_freelance,
                 },
-                image: "https://runepjetursson.com/assets/logo/squared-light.png",
+                image: "https://runepjetursson.com/android-chrome-512x512.png",
                 sameAs: [
                   "https://runepjetursson.com",
+                  "https://www.linkedin.com/in/rune-m-p-pjetursson-361870115/",
                 ],
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Aalborg",
+                  addressCountry: "DK",
+                },
                 contactPoint: {
                   "@type": "ContactPoint",
-                  contactType: "Business",
+                  contactType: "Customer Service",
                   email: "hello@runepjetursson.com",
                   availableLanguage: [
-                    "English",
-                    "Dansk",
+                    { "@type": "Language", name: "English" },
+                    { "@type": "Language", name: "Danish" },
                   ],
+                },
+                areaServed: {
+                  "@type": "Place",
+                  name: "Worldwide",
                 },
               },
               {
+                "@type": "Person",
+                "@id": "https://runepjetursson.com#person",
+                name: personal.full_name,
+                givenName: "Rune",
+                familyName: "Pjetursson",
+                jobTitle: personal.title_primary,
+                description: headline.short,
+                url: "https://runepjetursson.com",
+                image: {
+                  "@type": "ImageObject",
+                  url: "https://runepjetursson.com/assets/img/rune-kontor.png",
+                  caption: personal.full_name,
+                },
+                worksFor: { "@id": "https://runepjetursson.com#organization" },
+                sameAs: [
+                  "https://www.linkedin.com/in/rune-m-p-pjetursson-361870115/",
+                  "https://runepjetursson.com",
+                ],
+                knowsAbout: [
+                  "UX Design",
+                  "UI Design",
+                  "Frontend Development",
+                  "Digital Product Design",
+                  "Web Development",
+                  "Nuxt.js",
+                  "Vue.js",
+                ],
+                alumniOf: [
+                  {
+                    "@type": "EducationalOrganization",
+                    name: "UCN Aalborg",
+                  },
+                ],
+              },
+              {
                 "@type": "ItemList",
-                name: "Services",
+                name: "Services Offered",
+                description: "Digital services provided by Eye On Idea",
                 itemListElement: servicesList,
+              },
+              {
+                "@type": "BreadcrumbList",
+                "@id": "https://runepjetursson.com#breadcrumb",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://runepjetursson.com",
+                  },
+                ],
               },
             ],
           }),

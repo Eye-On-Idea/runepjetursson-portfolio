@@ -2,5 +2,10 @@
   "hero": {
     "title": "Om Rune",
     "description": "Designer og frontend-udvikler med fokus på UX, UI og produkt."
+  },
+  "workCta": {
+    "title": "Se Mit Arbejde",
+    "description": "Udforsk detaljerede case studies der viser min tilgang til webudvikling, UX/UI design og produktstrategi.",
+    "button": "Gennemse Cases"
   }
 }
