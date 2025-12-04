@@ -98,7 +98,7 @@ const handleSubmit = async (event: Event) => {
     }, 500);
   }
 };
-
+</script>
 
 <template>
   <form

@@ -48,6 +48,37 @@ const imageVariant = variant({
     transition: { duration: 600, ease: "easeOut", delay: 0.4 },
   },
 });
+
+// Image carousel logic
+const images = [
+  {
+    src: "/assets/img/rune-kontor.png",
+    alt: "Image of Rune Pjetursson sitting contemplating work at his desk",
+  },
+  {
+    src: "/assets/img/rune-kontor2.png",
+    alt: "Image of Rune Pjetursson sitting contemplating work at his desk",
+  },
+];
+
+const currentImageIndex = ref(0);
+const isTransitioning = ref(false);
+
+// Auto-rotate images every 5 seconds
+onMounted(() => {
+  setInterval(() => {
+    isTransitioning.value = true;
+    setTimeout(() => {
+      currentImageIndex.value = (currentImageIndex.value + 1) % images.length;
+      isTransitioning.value = false;
+    }, 300); // Half of transition duration
+  }, 5000); // Change image every 5 seconds
+});
+
+const currentImage = computed(() => images[currentImageIndex.value]);
+const nextImageIndex = computed(
+  () => (currentImageIndex.value + 1) % images.length
+);
 </script>
 
 <template>
@@ -183,25 +214,32 @@ const imageVariant = variant({
       </ul>
     </header>
 
-    <!-- INSERT IMAGE HERE -->
+    <!-- Rotating Image Carousel -->
     <div class="rightside">
       <div
         v-motion
         :initial="imageVariant.initial"
         :visible="imageVariant.visible"
-        class="p-2 rounded-full bg-linear-to-br from-brand-500/20 to-accent-500/20 w-fit"
+        class="relative p-3 rounded-full bg-linear-to-br from-brand-500/20 to-accent-500/20 overflow-hidden w-[70%]"
       >
-        <img
-          src="/assets/img/rune-kontor.png"
-          alt="Image of Rune Pjetursson sitting contemplating work at his desk"
-        />
+        <!-- Current Image -->
+        <Transition
+          enter-active-class="transition-all duration-700 ease-out"
+          leave-active-class="transition-all duration-700 ease-in"
+          enter-from-class="opacity-0 scale-110 rotate-12"
+          enter-to-class="opacity-100 scale-100 rotate-0"
+          leave-from-class="opacity-100 scale-100 rotate-0"
+          leave-to-class="opacity-0 scale-90 -rotate-12"
+          mode="out-in"
+        >
+          <img
+            :key="currentImageIndex"
+            :src="currentImage.src"
+            :alt="currentImage.alt"
+            class="w-full rounded-full"
+          />
+        </Transition>
       </div>
-
-      <!-- <GlassCard>
-        <div class="flex flex-row relative">
-          <div class="left"></div>
-        </div>
-      </GlassCard> -->
     </div>
   </section>
 </template>

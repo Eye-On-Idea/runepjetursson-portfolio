@@ -67,6 +67,13 @@
     "email": "Email",
     "project": "Project",
     "message": "Message",
-    "submit": "Send"
+    "submit": "Send",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "errors": {
+      "nameRequired": "Name must be at least 2 characters",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Message must be at least 10 characters"
+    }
   }
 }

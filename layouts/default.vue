@@ -20,7 +20,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="default-layout min-h-screen text-default flex flex-col">
+  <div class="default-layout min-h-screen text-default flex flex-col relative">
+    <!-- Background Effects -->
+    <GradientMesh :opacity="0.12" :speed="0.8" />
+
     <!-- Skip to main content link for accessibility -->
     <a
       href="#main-content"

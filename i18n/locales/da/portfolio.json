@@ -67,6 +67,13 @@
     "email": "E-mail",
     "project": "Projekt",
     "message": "Besked",
-    "submit": "Send"
+    "submit": "Send",
+    "sending": "Sender...",
+    "success": "Besked sendt!",
+    "errors": {
+      "nameRequired": "Navn skal være mindst 2 tegn",
+      "emailInvalid": "Indtast venligst en gyldig e-mailadresse",
+      "messageRequired": "Besked skal være mindst 10 tegn"
+    }
   }
 }
