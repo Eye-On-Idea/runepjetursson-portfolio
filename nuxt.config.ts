@@ -22,6 +22,7 @@ export default defineNuxtConfig({
     "@tresjs/nuxt",
     "@pinia/nuxt",
     "@nuxtjs/i18n",
+    "@vueuse/motion/nuxt",
   ],
 
   // Cloudflare Pages SSR configuration

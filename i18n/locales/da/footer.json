@@ -1,35 +1,27 @@
 {
-  "tagline": "Dit komplette sundheds- og fitnessøkosystem. Træn smartere, spis bedre og restituér hurtigere med vores integrerede platform.",
   "ecosystem": {
-    "title": "Økosystem",
-    "coreFitness": "Kerne Fitness",
-    "nutrition": "Ernæringscoach",
-    "recovery": "Restitution & Søvn"
+    "title": "Sektioner",
+    "services": "Ydelser",
+    "projects": "Projekter",
+    "experience": "Erfaring"
   },
   "company": {
-    "title": "Virksomhed",
-    "about": "Om os",
-    "careers": "Karriere",
-    "blog": "Blog",
-    "press": "Presse kit"
+    "title": "Om",
+    "about": "Om mig"
   },
   "support": {
-    "title": "Support",
-    "help": "Hjælpecenter",
-    "contact": "Kontakt os",
-    "faq": "FAQ",
-    "status": "Systemstatus"
+    "title": "Kontakt",
+    "contact": "Kontakt"
   },
   "legal": {
-    "privacy": "Privatlivspolitik",
-    "terms": "Servicevilkår",
-    "cookies": "Cookie politik"
+    "privacy": "Privatliv",
+    "terms": "Vilkår",
+    "cookies": "Cookies"
   },
   "newsletter": {
     "title": "Hold dig opdateret",
-    "description": "Få de seneste fitness tips, opdateringer og eksklusive tilbud leveret til din indbakke.",
+    "description": "Få de seneste opdateringer og eksklusive tilbud leveret til din indbakke.",
     "placeholder": "Indtast din e-mail",
     "subscribe": "Abonner"
-  },
-  "copyright": "© {year} Rune Pjetursson. Alle rettigheder forbeholdes."
+  }
 }

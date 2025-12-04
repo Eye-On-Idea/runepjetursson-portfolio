@@ -4,6 +4,18 @@ const colorMode = useColorMode();
 // Force dark mode
 onMounted(() => {
   colorMode.preference = "dark";
+
+  // Add class to body for custom cursor
+  if (typeof window !== 'undefined') {
+    document.body.classList.add('custom-cursor-active');
+  }
+});
+
+onUnmounted(() => {
+  // Clean up cursor class
+  if (typeof window !== 'undefined') {
+    document.body.classList.remove('custom-cursor-active');
+  }
 });
 </script>
 
@@ -18,9 +30,19 @@ onMounted(() => {
     </a>
     <MyHeader />
     <main id="main-content" class="flex-1">
-      <slot />
+      <NuxtPage :transition="{
+        name: 'page',
+        mode: 'out-in',
+        duration: 300
+      }" />
     </main>
     <MyFooter />
+
+    <!-- Custom Cursor -->
+    <CustomCursor />
+
+    <!-- Global Loading Overlay -->
+    <GlobalLoadingOverlay />
   </div>
 </template>
 

@@ -353,10 +353,7 @@ For questions or updates to this SEO implementation:
 - Nuxt 3
 - @nuxtjs/i18n
 - @nuxt/image
-- Cloudflare Pages
 
 ---
 
-**Last Updated**: December 3, 2025  
-**Version**: 1.0.0  
-**Author**: Cline AI Assistant
+**Last Updated**: December 3, 2025

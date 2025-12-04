@@ -20,6 +20,11 @@ const props = defineProps<{
 }>();
 
 const { t } = useI18n();
+const { variant, animationPresets } = useAccessibleMotion();
+
+// Alternating slide animations for timeline effect
+const slideLeftVariant = variant(animationPresets.slideInLeft);
+const slideRightVariant = variant(animationPresets.slideInRight);
 </script>
 
 <template>
@@ -38,7 +43,20 @@ const { t } = useI18n();
     <div class="grid lg:grid-cols-2 gap-8 lg:gap-10">
       <section aria-label="Experience timeline" class="space-y-6">
         <ul class="space-y-6 list-none p-0">
-          <li v-for="role in props.experience" :key="role.company + role.role" class="m-0">
+          <li
+            v-for="(role, index) in props.experience"
+            :key="role.company + role.role"
+            v-motion
+            :initial="slideLeftVariant.initial"
+            :visible="{
+              ...slideLeftVariant.visible,
+              transition: {
+                ...slideLeftVariant.visible.transition,
+                delay: index * 0.15,
+              },
+            }"
+            class="m-0"
+          >
             <GlassCard
               :displacement-scale="36"
               :blur-amount="0.06"
@@ -84,7 +102,20 @@ const { t } = useI18n();
           <p class="text-neutral-300 text-lg leading-relaxed">{{ t("portfolio.sections.educationSubtitle") }}</p>
         </header>
         <ul class="space-y-6 list-none p-0">
-          <li v-for="edu in props.education" :key="edu.institution + edu.program" class="m-0">
+          <li
+            v-for="(edu, index) in props.education"
+            :key="edu.institution + edu.program"
+            v-motion
+            :initial="slideRightVariant.initial"
+            :visible="{
+              ...slideRightVariant.visible,
+              transition: {
+                ...slideRightVariant.visible.transition,
+                delay: index * 0.15,
+              },
+            }"
+            class="m-0"
+          >
             <GlassCard
               :displacement-scale="36"
               :blur-amount="0.06"

@@ -9,6 +9,10 @@ const props = defineProps<{
 }>();
 
 const { t } = useI18n();
+const { variant, animationPresets } = useAccessibleMotion();
+
+// Card animation variant
+const cardVariant = variant(animationPresets.fadeInUpScale);
 </script>
 
 <template>
@@ -27,7 +31,20 @@ const { t } = useI18n();
       </p>
     </header>
     <ul class="grid md:grid-cols-2 gap-6 lg:gap-8 list-none p-0">
-      <li v-for="service in props.services" :key="service.id" class="h-full">
+      <li
+        v-for="(service, index) in props.services"
+        :key="service.id"
+        v-motion
+        :initial="cardVariant.initial"
+        :visible="{
+          ...cardVariant.visible,
+          transition: {
+            ...cardVariant.visible.transition,
+            delay: index * 0.1,
+          },
+        }"
+        class="h-full"
+      >
         <GlassCard
           :displacement-scale="48"
           :blur-amount="0.08"
@@ -36,8 +53,11 @@ const { t } = useI18n();
         >
           <article class="space-y-5 h-full">
             <header class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-xl bg-linear-to-br from-brand-500/20 to-accent-500/20 border border-white/10 flex items-center justify-center shrink-0">
-                <UIcon name="i-lucide-sparkles" class="w-6 h-6 text-brand-300" />
+              <div class="w-12 h-12 rounded-xl bg-linear-to-br from-brand-500/20 to-accent-500/20 border border-white/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <UIcon
+                  name="i-lucide-sparkles"
+                  class="w-6 h-6 text-brand-300 group-hover:rotate-12 transition-transform duration-300"
+                />
               </div>
               <div class="flex-1">
                 <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-brand-300 transition-colors">

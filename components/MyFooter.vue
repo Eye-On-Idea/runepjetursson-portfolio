@@ -1,25 +1,34 @@
 <!-- components/MyFooter.vue -->
 <script setup lang="ts">
+const { t } = useI18n();
+const { variant, animationPresets } = useAccessibleMotion();
 const currentYear = new Date().getFullYear();
 const { getPersonal, getHeadline } = useRuneContent();
 const personal = computed(() => getPersonal());
 const headline = computed(() => getHeadline());
 
-const ecosystemLinks = [
-  { name: "Ydelser", href: "/#services" },
-  { name: "Projekter", href: "/#projects" },
-  { name: "Erfaring", href: "/#experience" },
-];
+// Animation variant for social icons
+const iconVariant = variant(animationPresets.fadeInUp);
 
-const companyLinks = [{ name: "Om mig", href: "/about" }];
+const ecosystemLinks = computed(() => [
+  { name: t("footer.ecosystem.services"), href: "/#services" },
+  { name: t("footer.ecosystem.projects"), href: "/#projects" },
+  { name: t("footer.ecosystem.experience"), href: "/#experience" },
+]);
 
-const supportLinks = [{ name: "Kontakt", href: "/contact" }];
+const companyLinks = computed(() => [
+  { name: t("footer.company.about"), href: "/about" },
+]);
 
-const legalLinks = [
-  { name: "Privatliv", href: "/privacy" },
-  { name: "Vilkår", href: "/terms" },
-  { name: "Cookies", href: "/cookies" },
-];
+const supportLinks = computed(() => [
+  { name: t("footer.support.contact"), href: "/contact" },
+]);
+
+const legalLinks = computed(() => [
+  { name: t("footer.legal.privacy"), href: "/privacy" },
+  { name: t("footer.legal.terms"), href: "/terms" },
+  { name: t("footer.legal.cookies"), href: "/cookies" },
+]);
 
 const socialLinks = [
   {
@@ -68,8 +77,17 @@ const socialLinks = [
           <!-- Social Links -->
           <div class="flex gap-3">
             <a
-              v-for="social in socialLinks"
+              v-for="(social, index) in socialLinks"
               :key="social.name"
+              v-motion
+              :initial="iconVariant.initial"
+              :visible="{
+                ...iconVariant.visible,
+                transition: {
+                  ...iconVariant.visible.transition,
+                  delay: 0.1 + index * 0.05,
+                },
+              }"
               :href="social.href"
               target="_blank"
               rel="noopener noreferrer"
@@ -78,7 +96,7 @@ const socialLinks = [
             >
               <UIcon
                 :name="social.icon"
-                class="w-6 h-6 text-neutral-300 group-hover:text-brand-300 transition-colors"
+                class="w-6 h-6 text-neutral-300 group-hover:text-brand-300 group-hover:scale-110 transition-all duration-300"
               />
             </a>
           </div>
@@ -90,7 +108,7 @@ const socialLinks = [
             <h3
               class="text-sm font-bold text-brand-300 uppercase tracking-[0.12em] mb-5"
             >
-              Sektioner
+              {{ t("footer.ecosystem.title") }}
             </h3>
             <ul class="space-y-3">
               <li v-for="link in ecosystemLinks" :key="link.name">
@@ -114,7 +132,7 @@ const socialLinks = [
             <h3
               class="text-sm font-bold text-brand-300 uppercase tracking-[0.12em] mb-5"
             >
-              Om
+              {{ t("footer.company.title") }}
             </h3>
             <ul class="space-y-3">
               <li v-for="link in companyLinks" :key="link.name">
@@ -138,7 +156,7 @@ const socialLinks = [
             <h3
               class="text-sm font-bold text-brand-300 uppercase tracking-[0.12em] mb-5"
             >
-              Kontakt
+              {{ t("footer.support.title") }}
             </h3>
             <ul class="space-y-3">
               <li v-for="link in supportLinks" :key="link.name">

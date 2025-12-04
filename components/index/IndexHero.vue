@@ -17,6 +17,37 @@ const props = defineProps<{
 }>();
 
 const { t } = useI18n();
+const { variant, animationPresets } = useAccessibleMotion();
+
+// Animation variants with staggered delays
+const badgeVariant = variant({
+  initial: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 400, ease: "easeOut", delay: 0.1 },
+  },
+});
+
+const titleVariant = variant(animationPresets.fadeInUp);
+
+const ctaVariant = variant({
+  initial: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 500, ease: "easeOut" },
+  },
+});
+
+const imageVariant = variant({
+  initial: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 600, ease: "easeOut", delay: 0.4 },
+  },
+});
 </script>
 
 <template>
@@ -26,6 +57,9 @@ const { t } = useI18n();
   >
     <header class="space-y-7 lg:space-y-8">
       <p
+        v-motion
+        :initial="badgeVariant.initial"
+        :visible="badgeVariant.visible"
         class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-white/15 bg-white/6 backdrop-blur-sm smooth-hover"
       >
         <span class="text-sm font-bold text-neutral-50">{{
@@ -38,28 +72,68 @@ const { t } = useI18n();
       </p>
       <div class="space-y-4">
         <p
+          v-motion
+          :initial="titleVariant.initial"
+          :visible="{
+            ...titleVariant.visible,
+            transition: { ...titleVariant.visible.transition, delay: 0.15 },
+          }"
           class="text-base md:text-lg text-accent-300 font-bold uppercase tracking-wide"
         >
           {{ props.personal.title_secondary }}
         </p>
         <h1
+          v-motion
+          :initial="titleVariant.initial"
+          :visible="{
+            ...titleVariant.visible,
+            transition: { ...titleVariant.visible.transition, delay: 0.3 },
+          }"
           class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] text-white bg-clip-text"
         >
           {{ props.personal.full_name }}
         </h1>
         <p
+          v-motion
+          :initial="titleVariant.initial"
+          :visible="{
+            ...titleVariant.visible,
+            transition: { ...titleVariant.visible.transition, delay: 0.45 },
+          }"
           class="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-300 leading-tight"
         >
           {{ props.personal.title_primary }}
         </p>
       </div>
-      <p class="text-lg md:text-xl text-neutral-200 leading-relaxed max-w-2xl">
+      <p
+        v-motion
+        :initial="titleVariant.initial"
+        :visible="{
+          ...titleVariant.visible,
+          transition: { ...titleVariant.visible.transition, delay: 0.6 },
+        }"
+        class="text-lg md:text-xl text-neutral-200 leading-relaxed max-w-2xl"
+      >
         {{ props.headline.short }}
       </p>
-      <p class="text-base md:text-lg text-neutral-300 leading-relaxed max-w-xl">
+      <p
+        v-motion
+        :initial="titleVariant.initial"
+        :visible="{
+          ...titleVariant.visible,
+          transition: { ...titleVariant.visible.transition, delay: 0.75 },
+        }"
+        class="text-base md:text-lg text-neutral-300 leading-relaxed max-w-xl"
+      >
         {{ props.headline.tagline }}
       </p>
       <nav
+        v-motion
+        :initial="ctaVariant.initial"
+        :visible="{
+          ...ctaVariant.visible,
+          transition: { ...ctaVariant.visible.transition, delay: 0.9 },
+        }"
         aria-label="Primary calls to action"
         class="flex flex-wrap gap-4 pt-4"
       >
@@ -76,14 +150,28 @@ const { t } = useI18n();
           </span>
         </NuxtLink>
         <NuxtLink
-          to="#projects"
+          to="/cases"
           class="px-6 py-3.5 rounded-xl border-2 border-white/20 text-neutral-100 font-bold hover:bg-white/10 hover:border-white/30 hover:-translate-y-0.5 transition-all duration-300"
         >
           {{ t("portfolio.hero.ctaSecondary") }}
         </NuxtLink>
       </nav>
       <ul class="flex flex-wrap gap-2.5 pt-2 list-none p-0">
-        <li v-for="chip in props.focusChips" :key="chip">
+        <li
+          v-for="(chip, index) in props.focusChips"
+          :key="chip"
+          v-motion
+          :initial="{ opacity: 0, scale: 0.9 }"
+          :visible="{
+            opacity: 1,
+            scale: 1,
+            transition: {
+              duration: 300,
+              ease: 'easeOut',
+              delay: 1.05 + index * 0.05,
+            },
+          }"
+        >
           <UBadge
             color="primary"
             variant="soft"
@@ -97,14 +185,17 @@ const { t } = useI18n();
 
     <!-- INSERT IMAGE HERE -->
     <div class="rightside">
-      <GlassCard
-        className="p-2 rounded-full bg-linear-to-br from-brand-500/20 to-accent-500/20 w-fit"
+      <div
+        v-motion
+        :initial="imageVariant.initial"
+        :visible="imageVariant.visible"
+        class="p-2 rounded-full bg-linear-to-br from-brand-500/20 to-accent-500/20 w-fit"
       >
         <img
           src="/assets/img/rune-kontor.png"
           alt="Image of Rune Pjetursson sitting contemplating work at his desk"
         />
-      </GlassCard>
+      </div>
 
       <!-- <GlassCard>
         <div class="flex flex-row relative">

@@ -8,6 +8,10 @@ const props = defineProps<{
 }>();
 
 const { t } = useI18n();
+const { variant, animationPresets } = useAccessibleMotion();
+
+// Card animation variant
+const cardVariant = variant(animationPresets.fadeInUpScale);
 </script>
 
 <template>
@@ -23,7 +27,20 @@ const { t } = useI18n();
       </h2>
     </header>
     <ul class="grid md:grid-cols-3 gap-6 lg:gap-8 mb-8 list-none p-0">
-      <li v-for="block in props.valueBlocks" :key="block.title" class="h-full">
+      <li
+        v-for="(block, index) in props.valueBlocks"
+        :key="block.title"
+        v-motion
+        :initial="cardVariant.initial"
+        :visible="{
+          ...cardVariant.visible,
+          transition: {
+            ...cardVariant.visible.transition,
+            delay: index * 0.1,
+          },
+        }"
+        class="h-full"
+      >
         <GlassCard
           :displacement-scale="28"
           :blur-amount="0.05"
@@ -32,8 +49,11 @@ const { t } = useI18n();
         >
           <article class="space-y-4 h-full">
             <header class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-linear-to-br from-brand-500/20 to-accent-500/20 border border-white/10 flex items-center justify-center shrink-0">
-                <UIcon :name="block.icon" class="w-5 h-5 text-brand-300" />
+              <div class="w-10 h-10 rounded-lg bg-linear-to-br from-brand-500/20 to-accent-500/20 border border-white/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <UIcon
+                  :name="block.icon"
+                  class="w-5 h-5 text-brand-300 group-hover:rotate-12 transition-transform duration-300"
+                />
               </div>
               <h3 class="text-lg font-bold text-white">{{ block.title }}</h3>
             </header>
@@ -48,12 +68,23 @@ const { t } = useI18n();
         </GlassCard>
       </li>
     </ul>
-    <GlassCard
-      :displacement-scale="32"
-      :blur-amount="0.06"
-      :corner-radius="18"
-      wrapper-class="p-8 lg:p-10 rounded-2xl bg-white/5 border border-white/10 space-y-4 glass-card-hover"
+    <div
+      v-motion
+      :initial="cardVariant.initial"
+      :visible="{
+        ...cardVariant.visible,
+        transition: {
+          ...cardVariant.visible.transition,
+          delay: props.valueBlocks.length * 0.1,
+        },
+      }"
     >
+      <GlassCard
+        :displacement-scale="32"
+        :blur-amount="0.06"
+        :corner-radius="18"
+        wrapper-class="p-8 lg:p-10 rounded-2xl bg-white/5 border border-white/10 space-y-4 glass-card-hover"
+      >
       <article class="space-y-4">
         <header class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-lg bg-linear-to-br from-brand-500/20 to-accent-500/20 border border-white/10 flex items-center justify-center shrink-0">
@@ -64,5 +95,6 @@ const { t } = useI18n();
         <p class="text-neutral-200 leading-relaxed text-base lg:text-lg">{{ props.approach }}</p>
       </article>
     </GlassCard>
+    </div>
   </section>
 </template>

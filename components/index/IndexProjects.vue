@@ -10,6 +10,10 @@ const props = defineProps<{
 }>();
 
 const { t } = useI18n();
+const { variant, animationPresets } = useAccessibleMotion();
+
+// Project card animation
+const projectVariant = variant(animationPresets.fadeInUpScale);
 </script>
 
 <template>
@@ -25,7 +29,20 @@ const { t } = useI18n();
       </h2>
     </header>
     <ol class="space-y-8 list-none p-0">
-      <li v-for="project in props.projects" :key="project.name" class="m-0">
+      <li
+        v-for="(project, index) in props.projects"
+        :key="project.name"
+        v-motion
+        :initial="projectVariant.initial"
+        :visible="{
+          ...projectVariant.visible,
+          transition: {
+            ...projectVariant.visible.transition,
+            delay: index * 0.15,
+          },
+        }"
+        class="m-0"
+      >
         <GlassCard
           :displacement-scale="40"
           :blur-amount="0.07"
@@ -48,8 +65,11 @@ const { t } = useI18n();
             <div class="border-t border-white/10 pt-6">
               <h4 class="text-sm font-bold text-brand-200 uppercase tracking-wider mb-4">Key Contributions</h4>
               <ul class="grid md:grid-cols-2 gap-4 text-neutral-200">
-                <li v-for="item in project.contributions" :key="item" class="flex gap-3 items-start">
-                  <UIcon name="i-lucide-check-circle" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5" />
+                <li v-for="item in project.contributions" :key="item" class="flex gap-3 items-start group/item">
+                  <UIcon
+                    name="i-lucide-check-circle"
+                    class="w-5 h-5 text-brand-400 shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform duration-200"
+                  />
                   <span class="text-base">{{ item }}</span>
                 </li>
               </ul>

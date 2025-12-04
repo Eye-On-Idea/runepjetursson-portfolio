@@ -58,9 +58,9 @@ onBeforeUnmount(() => {
       ></progress>
     </div>
     <template #title>
-      <NuxtLink to="/" class="flex items-center gap-3 group smooth-hover">
+      <NuxtLink to="/" class="flex items-center gap-3 group">
         <span
-          class="hidden sm:block text-xl font-extrabold tracking-widest text-white group-hover:text-brand-300 transition-colors"
+          class="hidden sm:block text-xl font-extrabold tracking-widest text-white group-hover:text-brand-300 transition-all duration-300 group-hover:scale-102 group-hover:tracking-wide"
         >
           {{ personal.full_name }}
         </span>
@@ -81,10 +81,19 @@ onBeforeUnmount(() => {
         "
       >
         <span class="relative z-10 text-accent-50!">{{ link.label }}</span>
-        <div
-          v-if="route.path === link.to.replace('/#', '/')"
-          class="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-brand-400 to-accent-400"
-        ></div>
+        <Transition
+          enter-active-class="transition-all duration-300 ease-out"
+          leave-active-class="transition-all duration-200 ease-in"
+          enter-from-class="opacity-0 scale-x-0"
+          enter-to-class="opacity-100 scale-x-100"
+          leave-from-class="opacity-100 scale-x-100"
+          leave-to-class="opacity-0 scale-x-0"
+        >
+          <div
+            v-if="route.path === link.to.replace('/#', '/')"
+            class="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-brand-400 to-accent-400 origin-left"
+          ></div>
+        </Transition>
       </NuxtLink>
     </nav>
 

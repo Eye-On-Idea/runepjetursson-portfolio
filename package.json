@@ -20,6 +20,7 @@
     "@tresjs/cientos": "^5.1.0",
     "@tresjs/core": "^5.1.0",
     "@tresjs/nuxt": "^5.1.0",
+    "@vueuse/motion": "^3.0.3",
     "@wxperia/liquid-glass-vue": "^1.0.9",
     "nuxt": "^4.2.0",
     "pinia": "^3.0.4",
