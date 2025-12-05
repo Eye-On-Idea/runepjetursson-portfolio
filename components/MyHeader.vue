@@ -60,7 +60,7 @@ onBeforeUnmount(() => {
     <template #title>
       <NuxtLink to="/" class="flex items-center gap-3 group">
         <span
-          class="hidden sm:block text-xl font-extrabold tracking-widest text-white group-hover:text-brand-300 transition-all duration-300 group-hover:scale-102 group-hover:tracking-wide"
+          class="sm:block text-xl font-extrabold tracking-widest text-white group-hover:text-brand-300 transition-all duration-300 group-hover:scale-102 group-hover:tracking-wide"
         >
           {{ personal.full_name }}
         </span>
@@ -108,15 +108,15 @@ onBeforeUnmount(() => {
           <NuxtLink
             v-for="link in navLinks"
             :key="link.to"
-          :to="link.to"
-          class="px-4 py-3 rounded-xl text-base font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-400 focus-visible:ring-offset-neutral-900"
-          :class="
-            route.path === link.to.replace('/#', '/')
-              ? 'bg-brand-500/10 text-brand-300 border border-brand-500/20'
+            :to="link.to"
+            class="px-4 py-3 rounded-xl text-base font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-400 focus-visible:ring-offset-neutral-900"
+            :class="
+              route.path === link.to.replace('/#', '/')
+                ? 'bg-brand-500/10 text-brand-500! border border-brand-500/20'
                 : 'text-neutral-200 hover:text-white hover:bg-white/10'
             "
           >
-            {{ link.label }}
+            <span class="text-accent-50!">{{ link.label }}</span>
           </NuxtLink>
         </div>
       </div>

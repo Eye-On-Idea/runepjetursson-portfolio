@@ -1,10 +1,24 @@
 <script setup lang="ts">
 const { cursorX, cursorY, isHovering, prefersReducedMotion } = useCursorFollow();
+
+// Detect mobile/touch devices
+const isMobile = ref(false);
+
+onMounted(() => {
+  // Check if device has touch capability or is mobile
+  isMobile.value =
+    'ontouchstart' in window ||
+    navigator.maxTouchPoints > 0 ||
+    window.matchMedia('(max-width: 1024px)').matches;
+});
+
+// Show cursor only on desktop with no reduced motion preference
+const showCursor = computed(() => !prefersReducedMotion.value && !isMobile.value);
 </script>
 
 <template>
-  <!-- Only render if motion is not reduced -->
-  <div v-if="!prefersReducedMotion" class="custom-cursor-wrapper">
+  <!-- Only render on desktop with motion enabled -->
+  <div v-if="showCursor" class="custom-cursor-wrapper">
     <!-- Main cursor dot -->
     <div
       class="custom-cursor-dot"

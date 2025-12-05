@@ -55,15 +55,10 @@ export default defineNuxtConfig({
       { code: "en", iso: "en-US", name: "English", file: "en/index.ts" },
       { code: "da", iso: "da-DK", name: "Dansk", file: "da/index.ts" },
     ],
+    langDir: "locales",
     defaultLocale: "en",
     strategy: "no_prefix",
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: "i18n_redirected",
-      redirectOn: "root",
-      alwaysRedirect: false,
-      fallbackLocale: "en",
-    },
+    detectBrowserLanguage: false,
     compilation: {
       strictMessage: false,
       escapeHtml: false,

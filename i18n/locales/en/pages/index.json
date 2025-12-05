@@ -3,6 +3,23 @@
     "badge": "Portfolio",
     "title": "Rune Pjetursson",
     "brandName": "Eye On Idea",
-    "subtitle": "Digital Product & UI Designer"
+    "subtitle": "Digital Product & UI Designer",
+    "rotatingTitles": [
+      "Digital Product Designer",
+      "Front-End Developer",
+      "UI/UX Designer",
+      "Product Designer",
+      "React Native Developer",
+      "Digital Concept Developer",
+      "UX Engineer",
+      "Product Design Lead",
+      "Mobile App Designer",
+      "Design Technologist",
+      "Pixel Mechanic",
+      "Front-End Wizard",
+      "UX Therapist",
+      "Bug Hunter Supreme",
+      "Chief \"It Shouldn't Work But It Does\" Engineer"
+    ]
   }
 }

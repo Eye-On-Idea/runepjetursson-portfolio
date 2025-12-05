@@ -46,9 +46,10 @@ export function useCursorFollow() {
   const handleMouseEnter = (e: MouseEvent) => {
     const target = e.target as HTMLElement
     if (
-      target.tagName === 'A' ||
+      target &&
+      (target.tagName === 'A' ||
       target.tagName === 'BUTTON' ||
-      target.classList.contains('cursor-interactive')
+      target.classList?.contains('cursor-interactive'))
     ) {
       isHovering.value = true
       targetElement.value = target.tagName
@@ -62,7 +63,13 @@ export function useCursorFollow() {
   }
 
   onMounted(() => {
-    if (prefersReducedMotion.value) return
+    // Don't run on mobile or with reduced motion
+    const isMobile =
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints > 0 ||
+      window.matchMedia('(max-width: 1024px)').matches
+
+    if (prefersReducedMotion.value || isMobile) return
 
     document.addEventListener('mousemove', handleMouseMove, { passive: true })
     document.addEventListener('mouseenter', handleMouseEnter, { capture: true })
@@ -132,7 +139,13 @@ export function useMagneticCursor(strength: number = 0.3, radius: number = 100) 
   }
 
   onMounted(() => {
-    if (prefersReducedMotion.value) return
+    // Don't run on mobile or with reduced motion
+    const isMobile =
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints > 0 ||
+      window.matchMedia('(max-width: 1024px)').matches
+
+    if (prefersReducedMotion.value || isMobile) return
 
     window.addEventListener('mousemove', handleMouseMove, { passive: true })
     window.addEventListener('mouseleave', handleMouseLeave)

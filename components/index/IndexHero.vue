@@ -19,6 +19,25 @@ const props = defineProps<{
 const { t } = useI18n();
 const { variant, animationPresets } = useAccessibleMotion();
 
+// Hardcoded rotating titles
+const rotatingTitles = [
+  "Digital Product Designer",
+  "Front-End Developer",
+  "UI/UX Designer",
+  "Product Designer",
+  "React Native Developer",
+  "Digital Concept Developer",
+  "UX Engineer",
+  "Product Design Lead",
+  "Mobile App Designer",
+  "Design Technologist",
+  "Pixel Mechanic",
+  "Front-End Wizard",
+  "UX Therapist",
+  "Bug Hunter Supreme",
+  "Chief \"It Shouldn't Work But It Does\" Engineer"
+];
+
 // Animation variants with staggered delays
 const badgeVariant = variant({
   initial: { opacity: 0, scale: 0.95 },
@@ -62,23 +81,15 @@ const images = [
 ];
 
 const currentImageIndex = ref(0);
-const isTransitioning = ref(false);
 
 // Auto-rotate images every 5 seconds
 onMounted(() => {
   setInterval(() => {
-    isTransitioning.value = true;
-    setTimeout(() => {
-      currentImageIndex.value = (currentImageIndex.value + 1) % images.length;
-      isTransitioning.value = false;
-    }, 300); // Half of transition duration
-  }, 5000); // Change image every 5 seconds
+    currentImageIndex.value = (currentImageIndex.value + 1) % images.length;
+  }, 5000);
 });
 
 const currentImage = computed(() => images[currentImageIndex.value]);
-const nextImageIndex = computed(
-  () => (currentImageIndex.value + 1) % images.length
-);
 </script>
 
 <template>
@@ -109,9 +120,15 @@ const nextImageIndex = computed(
             ...titleVariant.visible,
             transition: { ...titleVariant.visible.transition, delay: 0.15 },
           }"
-          class="text-base md:text-lg text-accent-300 font-bold uppercase tracking-wide"
+          class="text-base md:text-lg text-accent-300 font-bold uppercase tracking-wide min-h-7"
         >
-          {{ props.personal.title_secondary }}
+          <RotatingTypewriter
+            :titles="rotatingTitles"
+            :speed="60"
+            :deleteSpeed="30"
+            :pauseDuration="2500"
+            :random="false"
+          />
         </p>
         <h1
           v-motion

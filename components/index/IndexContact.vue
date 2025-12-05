@@ -25,11 +25,13 @@ const sectionVariant = variant(animationPresets.scaleIn);
         :displacement-scale="56"
         :blur-amount="0.09"
         :corner-radius="32"
-        wrapper-class="relative overflow-hidden p-10 lg:p-16 rounded-4xl bg-linear-to-br from-brand-500/20 via-accent-500/15 to-brand-400/20 border border-white/20 shadow-2xl space-y-8"
-        className="relative overflow-hidden p-10 lg:p-16 rounded-4xl bg-linear-to-br from-brand-500/20 via-accent-500/15 to-brand-400/20 border border-white/20 shadow-2xl space-y-8"
+        wrapper-class="relative overflow-hidden p-10 lg:p-16 rounded-4xl bg-neutral-900 border border-white/20 shadow-2xl space-y-8"
+        className="relative overflow-hidden p-10 lg:p-16 rounded-4xl bg-neutral-900 border border-white/20 shadow-2xl space-y-8"
       >
+        <!-- Gradient overlay with cross-browser fallback -->
         <div
-          class="absolute inset-0 bg-linear-to-br from-brand-500/10 via-transparent to-accent-500/10 pointer-events-none"
+          class="absolute inset-0 pointer-events-none"
+          style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.2) 0%, rgba(236, 72, 153, 0.15) 50%, rgba(14, 165, 233, 0.2) 100%);"
         ></div>
 
         <header class="relative space-y-6">

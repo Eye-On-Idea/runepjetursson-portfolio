@@ -488,7 +488,9 @@ const getColorClasses = (
           <UButton
             to="/contact"
             size="xl"
-            class="bg-white text-brand-600 hover:bg-zinc-100"
+            color="primary"
+            variant="solid"
+            class="text-brand-50! hover:bg-zinc-900!"
           >
             {{ t("pages.cases.contact.button") }}
             <template #trailing>

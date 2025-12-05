@@ -4,31 +4,40 @@ const props = defineProps<{
   speed?: number // Typing speed in ms per character
   pauseDuration?: number // Pause before switching to next title
   deleteSpeed?: number // Deletion speed in ms per character
+  random?: boolean // Randomize title order
 }>();
 
-const {
-  speed = 80,
-  pauseDuration = 2000,
-  deleteSpeed = 40
-} = props;
-
 const displayText = ref('');
-const currentTitleIndex = ref(0);
 const isDeleting = ref(false);
 const isPaused = ref(false);
 
 const { prefersReducedMotion } = useAccessibleMotion();
 
+// Shuffle array for random order
+const shuffledTitles = ref<string[]>([]);
+const currentIndex = ref(0);
+
 let timeoutId: ReturnType<typeof setTimeout> | null = null;
+
+const shuffleArray = (array: string[]) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
 
 const typewriterEffect = () => {
   // If reduced motion, just show the first title
   if (prefersReducedMotion.value) {
-    displayText.value = props.titles[0];
+    displayText.value = shuffledTitles.value[0] || '';
     return;
   }
 
-  const currentTitle = props.titles[currentTitleIndex.value];
+  if (shuffledTitles.value.length === 0) return;
+
+  const currentTitle = shuffledTitles.value[currentIndex.value];
 
   if (isPaused.value) {
     // Wait during pause
@@ -36,7 +45,7 @@ const typewriterEffect = () => {
       isPaused.value = false;
       isDeleting.value = true;
       typewriterEffect();
-    }, pauseDuration);
+    }, props.pauseDuration || 2000);
     return;
   }
 
@@ -44,18 +53,29 @@ const typewriterEffect = () => {
     // Deleting characters
     if (displayText.value.length > 0) {
       displayText.value = displayText.value.slice(0, -1);
-      timeoutId = setTimeout(typewriterEffect, deleteSpeed);
+      timeoutId = setTimeout(typewriterEffect, props.deleteSpeed || 40);
     } else {
       // Move to next title
       isDeleting.value = false;
-      currentTitleIndex.value = (currentTitleIndex.value + 1) % props.titles.length;
+
+      // Increment index first
+      currentIndex.value = currentIndex.value + 1;
+
+      // Re-shuffle when we complete a full cycle through all titles
+      if (currentIndex.value >= shuffledTitles.value.length) {
+        currentIndex.value = 0;
+        if (props.random !== false) {
+          shuffledTitles.value = shuffleArray(props.titles);
+        }
+      }
+
       timeoutId = setTimeout(typewriterEffect, 500); // Brief pause before typing next
     }
   } else {
     // Typing characters
     if (displayText.value.length < currentTitle.length) {
       displayText.value = currentTitle.slice(0, displayText.value.length + 1);
-      timeoutId = setTimeout(typewriterEffect, speed);
+      timeoutId = setTimeout(typewriterEffect, props.speed || 80);
     } else {
       // Finished typing, pause before deleting
       isPaused.value = true;
@@ -65,10 +85,15 @@ const typewriterEffect = () => {
 };
 
 onMounted(() => {
+  // Initialize shuffled titles
+  shuffledTitles.value = props.random !== false
+    ? shuffleArray(props.titles)
+    : [...props.titles];
+
   // Start typing after a brief delay
   setTimeout(() => {
     typewriterEffect();
-  }, 500);
+  }, 800);
 });
 
 onUnmounted(() => {

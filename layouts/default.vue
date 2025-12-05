@@ -5,9 +5,16 @@ const colorMode = useColorMode();
 onMounted(() => {
   colorMode.preference = "dark";
 
-  // Add class to body for custom cursor
+  // Add class to body for custom cursor (only on desktop)
   if (typeof window !== 'undefined') {
-    document.body.classList.add('custom-cursor-active');
+    const isMobile =
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints > 0 ||
+      window.matchMedia('(max-width: 1024px)').matches;
+
+    if (!isMobile) {
+      document.body.classList.add('custom-cursor-active');
+    }
   }
 });
 
